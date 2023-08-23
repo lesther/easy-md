@@ -1,0 +1,202 @@
+/////////////////////////////
+// groups
+@mixin inline {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1;
+}
+  
+@mixin stack {
+    flex-direction: column;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    flex: initial;
+    @include stack;
+    gap: 20px;
+}
+
+@mixin group-modifiers($size: "") {
+    .group_inline#{$size} {
+        @include inline;
+    }
+
+    .group_stack#{$size} {
+        @include stack;
+    }
+
+    //content align
+    .group_content-center#{$size} {
+        justify-content: center;
+    }
+    .group_content-end#{$size} {
+        justify-content: flex-end;
+    }
+    .group_content-start#{$size} {
+        justify-content: flex-start;
+    }
+    .group_content-between#{$size} {
+        justify-content: space-between;
+    }
+  
+    //group align
+    .group_align-center#{$size} {
+        align-items: center;
+    }
+    .group_align-start#{$size} {
+        align-items: flex-start;
+    }
+    .group_align-end#{$size} {
+        align-items: flex-end;
+    }
+    .group_align-initial#{$size} {
+        align-items: initial;
+    }
+
+    //fill
+    .group_fill#{$size} {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    //wrap
+    .group_wrap#{$size} {
+        flex-wrap: wrap;
+    }
+    .group_nowrap#{$size} {
+        flex-wrap: nowrap;
+    }
+
+    //flex
+    .group_flex-initial {
+        flex: initial;
+    }
+
+    //direction
+    .group_row-reverse#{$size} {
+        flex-direction: row-reverse;
+    }
+
+    .group_column-reverse#{$size} {
+        flex-direction: column-reverse;
+    }
+
+    //size
+    .group_half#{$size} {
+        max-width: 50%;
+    }
+    .group_third_quarter#{$size} {
+        max-width: 75%;
+    }
+    .group_full-width#{$size} {
+        max-width: 100%;
+    }
+    .group_xs#{$size} {
+        max-width: 300px;
+    }
+    .group_xs-1#{$size} {
+        max-width: 350px;
+    }
+
+    //spacing
+    .group_spacing-none#{$size} {
+		gap: 0;
+	}
+    .group_spacing-minimal#{$size} {
+		gap: 1px;
+	}
+    .group_spacing-xxs#{$size} {
+		gap: 5px;
+	}
+	.group_spacing-xs#{$size} {
+		gap: 10px;
+	}
+	.group_spacing-sm#{$size} {
+		gap: 20px;
+	}
+	.group_spacing-md#{$size} {
+		gap: 30px;
+	}
+	.group_spacing-lg#{$size} {
+		gap: 40px;
+	}
+	.group_spacing-xl#{$size} {
+		gap: 50px;
+	}
+
+    //flex grid     
+    .flex_grid-half#{$size} {
+      flex: auto 1 1;
+      max-width: 50%;
+    }
+    .flex_grid-half_gap-sm#{$size} {
+        flex: auto 1 1;
+        max-width: calc(50% - 15px);
+    }
+    .flex_grid-third#{$size} {
+      flex: auto 1 1;
+      max-width: 33.33%;
+    }
+    .flex_grid-third_gap-sm#{$size} {
+        flex: auto 1 1;
+        max-width: calc(33.33% - 15px);
+    }
+    .flex_grid-quarter#{$size} {
+      flex: auto 1 1;
+      max-width: 25%;
+    }
+    .flex_grid-quarter_gap-sm#{$size} {
+        flex: auto 1 1;
+        max-width: calc(25% - 15px);
+    }
+
+    //grow
+    .flex_grow-none#{$size} {
+        flex-grow: initial;
+    }
+    .flex_grow-1#{$size} {
+        flex-grow: 1;
+    }
+    .flex_gro-2#{$size} {
+        flex-grow: 2;
+    }
+    .flex_grow-3#{$size} {
+        flex-grow: 3;
+    }
+    .flex_width-auto#{$size} {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .flex_fill#{$size} {
+        flex: 1;
+    }
+}
+
+// Generate font size helpers
+@include group-modifiers();
+@include sm {
+    @include group-modifiers("--sm");
+}
+
+@include md {
+    @include group-modifiers("--md");
+}
+
+@include lg {
+    @include group-modifiers("--lg");
+}
+
+@include xl {
+	@include group-modifiers("--xl");
+}
+
+.group_nowrap-scroll {
+    @extend .group;
+    @extend .group_inline;
+    white-space: nowrap;
+    overflow-x: auto;
+    //scroll
+    @include scroll(null, 0px);
+}

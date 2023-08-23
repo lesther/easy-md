@@ -1,0 +1,160 @@
+/////////////////////////////
+// panels
+.panel {
+    position: relative;
+    z-index: 99;
+}
+
+// overlay
+.panel_overlay:before {
+    @include side-section__overlay;
+}
+.panel_overlay-transparent:before {
+    @extend .panel_overlay;
+    background-color: rgba($color: $light-color, $alpha: 0);
+}
+.panel_overlay-light:before {
+    @extend .panel_overlay;
+    background-color: rgba($color: $light-color, $alpha: 0.9);
+}
+//borders
+.panel__wrap-left.panel_border {
+    border-right: 1px solid $gray-border-color;
+}
+.panel__wrap-right.panel_border {
+    border-left: 1px solid $gray-border-color;
+}
+
+//container
+.panel_side-container {
+    display: none;
+    flex-grow: 1;
+    align-items: baseline;
+    > .flex_grow-1 {
+        height: 100%;
+    }
+}
+
+//vertical space
+/* .panel_side-container:before,
+.panel_side-container:after {
+    content: "";
+    background-color: inherit;
+}
+.panel_side-container:after {
+    @include position(absolute, 100%, null, 0, null, 100%, 20px);
+}
+.panel_side-container:before {
+    @include position(fixed, null, 100%, 0, null, 100%, 20px);
+} */
+
+
+/////////////////////////////
+
+//views
+//active
+.panel_active {
+    overflow: hidden;
+}
+.menu_active {
+    .panel_menu {
+        @include transform(translateX(0));
+    }
+    .panel_overlay--menu:before {
+        visibility: visible;
+        @include opacity(100);
+    }
+}
+
+//close
+.panel_close {
+    @include position(absolute, 20px, null, null, 20px, null, null);
+}
+
+//headline
+.panel_headline {
+    padding-right: 40px;
+    @extend .group_flex-initial;
+}
+
+
+//general panel
+.panel_active {
+    .panel_side {
+        @include transform(translateX(0));
+    }
+    .panel_side + [class*="panel_overlay"]:before {
+        visibility: visible;
+        @include opacity(100);
+    }
+}
+.panel_filter-advanced--active .panel_filter-advanced,
+.panel_ticket--active .panel_ticket,
+.panel_note--active .panel_note,
+.panel_coder--active .panel_coder,
+.panel_diagnosis--active .panel_diagnosis,
+.panel_diagnosis-add--active .panel_diagnosis-add,
+.panel_procedure-add--active .panel_procedure-add,
+.panel_query-add--active .panel_query-add,
+.panel_query-view--active .panel_query-view,
+.panel_query-status--active .panel_query-status,
+.panel_drg--active .panel_drg,
+.panel_timeline--active .panel_timeline,
+.panel_timeline-filter--active .panel_timeline-filter,
+.panel_code-information--active .panel_code-information,
+.panel_rebuttal--active .panel_rebuttal,
+.panel_rejected--active .panel_rejected,
+.panel_add-facility--active .panel_add-facility,
+.panel_download-report--active .panel_download-report,
+.panel_filter--active .panel_filter {
+    display: flex;
+}
+
+// format
+@each $colorClass, $value in $colorClass-palette {
+    .panel__wrap-#{$colorClass} {
+		background-color: $value;
+	}
+}
+
+//resize
+.panel_resizable {
+    touch-action: none;
+    user-select: none;
+    max-width: none;
+    @include sm {
+        width: 400px;
+    }
+}
+.panel_resizable-handle:before {
+    content: "";
+    cursor: ew-resize;
+    @include transition(0.3s);
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+.panel__wrap-left .panel_resizable-handle:before {
+    @include position(absolute, 0, null, null, 0, 25px, 100%);
+}
+.panel__wrap-right .panel_resizable-handle:before {
+    @include position(absolute, 0, null, 0, null, 25px, 100%);
+}
+
+//hover
+.panel__wrap-right .panel_resizable-handle:hover:before {
+    border-left: 6px solid rgba($status-accepted, $alpha: 0.3);
+}
+.panel__wrap-left .panel_resizable-handle:hover:before {
+    border-right: 6px solid rgba($status-accepted, $alpha: 0.3);
+}
+
+//active
+.panel__wrap-right .panel_resizable-handle:active:before {
+    border-left: 12px solid rgba($status-accepted, $alpha: 0.3);
+}
+.panel__wrap-left .panel_resizable-handle:active:before {
+    border-right: 12px solid rgba($status-accepted, $alpha: 0.3);
+}
+.panel_resizable[style*="ew-resize"] {
+    border-color: $status-accepted;
+}

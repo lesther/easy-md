@@ -1,0 +1,132 @@
+/////////////////////////////
+//box
+.box {
+	position: relative;
+	padding: 20px;
+	@include corner(10px);
+	border: 1px solid transparent;
+}
+.box_pad-none {
+	padding: 0;
+}
+.box_xs {
+	padding: 5px;
+	@include corner(5px);
+}
+.box_xs-1 {
+	padding: 10px;
+	@include corner(5px);
+}
+.box_sm {
+	padding: 15px;
+	@include corner(10px);
+}
+.box_md {
+	padding: 20px;
+	@include corner(10px);
+}
+.box_lg {
+	padding: 30px;
+	@include corner(10px);
+}
+.box_rounded-none {
+	@include corner(0);
+}
+.box_rounded-xs {
+	@include corner(5px);
+}
+.box_rounded-sm {
+	@include corner(10px);
+}
+.box_rounded-md {
+	@include corner(20px);
+}
+.box_rounded-oval {
+	@include corner(50px);
+}
+.box_shadow-sm {
+    @include shadow(0 0 10px 0 rgba($color: $dark-color, $alpha: 0.15));
+}
+.box_shadow-lg {
+    @include shadow(0 0 3rem 0 rgba($color: $dark-color, $alpha: 0.15));
+}
+// outline 
+.box_outline {
+	@extend .box;
+	border-color: $gray-border-color;
+}
+.box_outline-md {
+	border-width: 2px
+}
+.box_outline--dashed {
+	border-style: dashed;
+}
+
+// breakpoints
+.box--web {
+	@include only-mobile {
+		padding: 0;
+		border-color: transparent;
+		background: transparent;
+	}
+}
+
+//error/success
+.box_info-error {
+	border-color: $danger-color;
+	@include shadow(0 0 0 0.25rem rgba($color: $danger-color, $alpha: 0.15));
+}
+.box_info-success {
+	border-color: $success-color;
+	@include shadow(0 0 0 0.25rem rgba($color: $success-color, $alpha: 0.15));
+}
+
+//format color
+@each $colorClass, $value in $mixClass-palette {
+	.box_highlight-#{$colorClass} {
+		@extend .box;
+		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+	}
+	.box_outline-#{$colorClass} {
+		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.3);
+	}
+	.box_outline-solid-#{$colorClass} {
+		border-color: map-get($value, 'bg');
+	}
+	.box_outline-vertical-#{$colorClass} {
+		border-top-color: rgba($color: map-get($value, 'bg'), $alpha: 0.4);
+		border-bottom-color: rgba($color: map-get($value, 'bg'), $alpha: 0.4);
+	}
+	.box_#{$colorClass} {
+		@extend .box;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+	.box_hover-#{$colorClass} {
+		@include transition(0.3s);
+	}
+	.box_hover-#{$colorClass}:hover {
+		border-color: rgba($color: map-get($value, 'bg'), $alpha: 1);
+		@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15));
+	}
+}
+
+//cards
+.box_cards {
+	@extend .box_rounded-xs;
+	@extend .box_sm;
+	background-color: rgba($color: $primary-color, $alpha: 0.1);
+}
+@each $colorClass, $value in $colorClass-palette {
+	.box_cards-#{$colorClass} {
+		@extend .box_cards;
+	}
+	.box_cards-#{$colorClass},
+	.box_cards[data-status="#{$colorClass}"]{
+		background-color: rgba($color: $value, $alpha: 0.1);
+	}
+	.box_cards-#{$colorClass} .text_highlight,
+	[data-status="#{$colorClass}"] .text_highlight {
+		background-color: $value;
+	}
+}

@@ -1,0 +1,169 @@
+/////////////////////////////
+//tooltip
+%tooltip {
+    padding: 5px;
+    background-color: rgba($color: $primary-color--dark, $alpha: 0.8);
+    color: $light-color;
+    visibility: hidden;
+    width: max-content;
+    max-width: 300px;
+    margin: auto;
+    @include corner(5px);
+    @include opacity(0);
+    line-height: 1;
+    @include transition(0.3s);
+    display: block;
+    z-index: 5;
+}
+%tooltip[data-title]:hover:before {
+    @include opacity(100);
+    visibility: visible;
+}
+[data-title] {
+    position: relative;
+}
+[data-title]:before {
+    content: attr(data-title);
+    pointer-events: none;
+    @extend %tooltip;
+}
+
+//position
+[data-title]:not([class*=tooltip_]):before {
+    @include transform(translateX(-50%));
+}   
+[data-title]:before {
+    @include position(absolute, auto, calc(100% + 10px), 50%, null, null, null);
+}
+.tooltip_left:before {
+    @include position(absolute, auto, calc(100% + 10px), 0, auto, null, null);
+}
+.tooltip_left-middle:before {
+    @include position(absolute, 50%, auto, auto, calc(100% + 10px), null, null);
+    @include transform(translateY(-50%));
+}
+.tooltip_right:before {
+    @include position(absolute, auto, calc(100% + 10px), auto, 0, null, null);
+}
+.tooltip_right-middle:before {
+    @include position(absolute, 50%, auto, calc(100% + 10px), auto, null, null);
+    @include transform(translateY(-50%));
+}
+.tooltip_bottom:before {
+    @include position(absolute, calc(100% + 10px), auto, 50%, auto, null, null);
+    @include transform(translateX(-50%));
+}
+//html
+.tooltip_html-wrap {
+    position: relative;
+}
+.tooltip_html {
+    @extend %tooltip;
+    @extend .text_default;
+    padding: 15px;
+    display: none;
+    @include position(absolute, auto, calc(100% + 10px), 50%, null, null, null);
+    background-color: $light-color;
+    color: $text-color;
+    @include transform(translateX(-50%));
+    @include lg {
+        display: block;
+    }
+    @include xl {
+        max-width: 420px;
+    }
+}
+.tooltip_html:hover,
+.tooltip_html-wrap:hover .tooltip_html {
+    @include opacity(100);
+    visibility: visible;
+}
+//position
+@mixin tooltip_html-atr($size: "") {
+    .tooltip_html-left-middle#{$size} {
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        bottom: auto;
+        right: calc(100% + 10px);
+        left: auto;
+    }
+    .tooltip_html-left#{$size} {
+        position: absolute;
+        top: auto;
+        bottom: calc(100% + 10px);
+        left: auto;
+        right: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    .tooltip_html-right#{$size} {
+        position: absolute;
+        top: auto;
+        bottom: calc(100% + 10px);
+        left: 0;
+        right: auto;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    .tooltip_html-right-middle#{$size} {
+        position: absolute;
+        top: 50%;
+        bottom: auto;
+        left: calc(100% + 10px);
+        right: auto;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .tooltip_html-bottom#{$size} {
+        position: absolute;
+        bottom: auto;
+        top: calc(100% + 10px);
+        left: 50%;
+        right: auto;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .tooltip_html-top#{$size} {
+        position: absolute;
+        top: auto;
+        bottom: calc(100% + 10px);
+        left: 50%;
+        right: auto;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+// Generate
+@include tooltip_html-atr();
+@include sm {
+	@include tooltip_html-atr("--sm");
+}
+@include md {
+	@include tooltip_html-atr("--md");
+}
+@include lg {
+	@include tooltip_html-atr("--lg");
+}
+@include xl {
+	@include tooltip_html-atr("--xl");
+}

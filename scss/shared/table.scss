@@ -1,0 +1,172 @@
+/////////////////////////////
+//tables
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid transparent;
+    @extend .text_sm-1;
+}
+.table-fixed {
+    table-layout: fixed;
+}
+th,
+td {
+    vertical-align: top;
+    padding: 12px 15px;
+    border: 1px solid transparent;
+    border-bottom: 0px;
+    border-top: 0px;
+    &[style*='width'] {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+//table color
+:root {
+    --odd-row: #{hexToRGB($primary-color--dark)};
+}
+td {
+    border-left-color: $light-color;
+    border-right-color: $light-color;
+}
+tr td:last-child,
+tr td:first-child {
+    border-left-color: transparent;
+}
+tr td:last-child {
+    border-right-color: transparent;
+}
+tr {
+    background-color: $light-color;
+}
+thead ~ tbody tr:nth-of-type(even) {
+    background-color: rgba($color: var(--odd-row), $alpha: 0.05);
+}
+thead ~ tbody tr:nth-of-type(odd) {
+    background-color: initial;
+}
+tr:nth-of-type(odd) {
+    background-color: rgba($color: var(--odd-row), $alpha: 0.05);
+}
+
+//rows inside rows
+thead tr,
+thead tr:first-of-type,
+thead tr:nth-of-type(even),
+thead tr:nth-of-type(odd) {
+    @extend .row_soft-primary-highlight;
+}
+thead ~ tbody tr tr:nth-of-type(even),
+tr tr:nth-of-type(odd),
+tr tr,
+td td {
+    background-color: initial;
+    overflow: initial;
+}
+tfoot tr,
+tfoot tr:first-of-type,
+tfoot tr:nth-of-type(even),
+tfoot tr:nth-of-type(odd) {
+    @extend .row_soft-primary-highlight;
+}
+tfoot td {
+    color: $primary-color;
+    border-top: 1px solid $primary-color--highlight;
+    border-bottom: 1px solid $primary-color--highlight;
+}
+tfoot td:first-of-type {
+    border-left: 1px solid $primary-color--highlight;
+}
+tfoot td:last-of-type {
+    border-right: 1px solid $primary-color--highlight;
+}
+
+
+
+td td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+table table tr:first-of-type td {
+    padding-top: 12px;
+}
+table table tr:last-of-type td {
+    padding-bottom: 12px;
+}
+
+//overflow
+.table-responsive {
+    overflow: auto;
+    @include scroll;
+}
+
+//light
+.table_light {
+    --odd-row: #{$light-color};
+    border-spacing: 0 2px;
+    border-collapse: separate;
+    tr:nth-of-type(odd) {
+        background-color: var(--odd-row);
+    }
+}
+
+//notification
+.row_notification {
+    position: relative;
+}
+.row_notification:after {
+    content: "\e7f7";
+    @include position(absolute, 5px, null, null, 10px, 20px, 20px);
+    @include material-icons;
+    font-size: 20px;
+    @include transition(0.3s);
+    color: $primary-color--accent;
+}
+.row_notification:hover:after {
+    color: $secondary-color;
+}
+
+//rows
+@each $colorClass, $value in $mixClass-palette {
+    .row_soft-#{$colorClass}:nth-of-type(even),
+    .row_soft-#{$colorClass}:nth-of-type(odd),
+	.row_soft-#{$colorClass} {
+        background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+		color: map-get($value, 'bg');
+	}
+    .row_#{$colorClass}:nth-of-type(even),
+    .row_#{$colorClass}:nth-of-type(odd),
+    .row_#{$colorClass} {
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+}
+
+//table fixed
+.table-fixed_header tr {
+    display: table;
+    width: 100%;
+}
+
+.table-fixed_header tr td,
+.table-fixed_header tr th {
+    @include word-break;
+}
+  
+.table-fixed_header tbody {
+    overflow-y: auto;
+    max-height: 200px;
+    display: block;
+    @include scroll(vertical, 0px);
+    max-height: 500px;
+}
+
+//dividers
+.cell_divider-vertical {
+    border-left: 2px solid $primary-color--highlight;
+}
+.cell_divider-horizontal {
+    border-bottom: 2px solid $primary-color--highlight;
+}

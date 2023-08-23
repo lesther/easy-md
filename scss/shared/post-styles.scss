@@ -1,0 +1,38 @@
+/////////////////////////////
+//post-styles
+p {
+	@extend .text;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+h1 {
+	@extend .title_md;
+}
+h2 {
+	@extend .title_sm;
+}
+h3 {
+	@extend .title_xs;
+}
+h4 {
+	@extend .title_xxs;
+}
+h1,
+h2,
+h3,
+h4 {
+	&:not([class]){
+		@extend .title_primary-highlight;
+	}
+}
+ul {
+	@extend .bullet-list;	
+}
+li {
+	@extend .bullet-list__item-primary-accent;
+}
+ol {
+	@extend .bullet-list;
+	@extend .bullet-list--decimal;
+}

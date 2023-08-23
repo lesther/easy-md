@@ -1,0 +1,238 @@
+/////////////////////////////
+//title
+.title {
+	font-family: $font-family-secondary;
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-weight: bold;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@mixin title-atr($size: "") {
+	//text align
+	//align
+	.title_align-center#{$size} {
+		text-align: center;
+	}
+
+	.title_align-left#{$size} {
+		text-align: left;
+	}
+
+	//sizes
+	.title_xxs#{$size} {
+		font-size: 15px;
+	}
+
+	.title_xs#{$size} {
+		font-size: 16px;
+	}
+
+	.title_xs-1#{$size} {
+		font-size: 20px;
+		line-height: 1.3;
+	}
+
+	.title_sm#{$size} {
+		font-size: 22px;
+		line-height: 1.1;
+	}
+
+	.title_sm-1#{$size} {
+		font-size: 25px;
+		line-height: 1.1;
+	}
+
+	.title_md#{$size} {
+		font-size: 30px;
+		line-height: 1.1;
+	}
+
+	.title_lg#{$size} {
+		font-size: 35px;
+		line-height: 1;
+	}
+
+	.title_xl#{$size} {
+		font-size: 40px;
+		line-height: 1;
+	}
+
+	.title_xxl#{$size} {
+		font-size: 45px;
+		line-height: 1;
+	}
+
+	.title_hero#{$size} {
+		font-size: 50px;
+		line-height: 1;
+	}
+	
+	.title_hero-1#{$size} {
+		font-size: 60px;
+		line-height: 1;
+	}
+
+	.title_hero-2#{$size} {
+		font-size: 65px;
+		line-height: 1;
+	}
+
+	//spacing
+	.title_spacing-none#{$size} {
+		margin-bottom: 0;
+	}
+	.title_spacing-xs#{$size} {
+		margin-bottom: 5px;
+	}
+	.title_spacing-sm#{$size} {
+		margin-bottom: 10px;
+	}
+	.title_spacing-md#{$size} {
+		margin-bottom: 15px;
+	}
+	.title_spacing-lg#{$size} {
+		margin-bottom: 20px;
+	}
+	.title_spacing-xl#{$size} {
+		margin-bottom: 30px;
+	}
+	.title_spacing-xxl#{$size} {
+		margin-bottom: 40px;
+	}
+
+}
+
+// Generate
+@include title-atr();
+@include sm {
+	@include title-atr("--sm");
+}
+@include md {
+	@include title-atr("--md");
+}
+@include lg {
+	@include title-atr("--lg");
+}
+@include xl {
+	@include title-atr("--xl");
+}
+
+//weight
+.title_weight {
+	&-extra-light {
+		font-weight: 200;
+	}
+	&-light {
+		font-weight: 300;
+	}
+	&-regular {
+		font-weight: 400;
+	}
+	&-semi-bold {
+		font-weight: 600;
+	}
+	&-bold {
+		font-weight: 700;
+	}
+	&-extra-bold {
+		font-weight: 800;
+	}
+	&-black {
+		font-weight: 900;
+	}
+}
+//to do - refactor
+//themes
+.title_letter-group {
+	position: relative;
+}
+
+$title_letter: var(--title_letter);
+$title_letter-font: var(--title_letter-font);
+
+.title_letter {
+	--title_letter: 37px;
+	--title_letter-font: 1rem;
+
+	@include width-height($title_letter, $title_letter);
+	@include corner(100%);
+	text-align: center;
+	font-weight: 900;
+	text-transform: uppercase;
+	display: block;
+	font-size: 0;
+	border: 0 solid transparent;
+	@include background(cover, center, no-repeat);
+	&::first-letter {
+		font-size: $title_letter-font;
+		line-height: $title_letter;
+	}
+}
+.title_letter *{
+	display: inline-block;
+	&::first-letter {
+		font-size: $title_letter-font;
+		line-height: $title_letter;
+	}
+}
+
+.title_letter-sm {
+	--title_letter: 25px;
+	--title_letter-font: 0.8rem;
+}
+.title_letter-md {
+	--title_letter: 48px;
+	--title_letter-font: 1.3rem;
+}
+.title_letter-lg {
+	--title_letter: 55px;
+	--title_letter-font: 1.5rem;
+}
+
+.title_letter-outline {
+	border-width: 2px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.title_letter-outline-sm {
+	border-width: 1px;
+}
+.title_letter[style*="background-image"],
+.title_letter[style*="background-image"]:hover,
+.title_letter[style*="background-image"]:first-letter {
+	background-color: $light-color;
+	color: transparent;
+	font-size: 0;
+}
+
+/////////////////////////////
+//colors
+//format
+@each $colorClass, $value in $mixClass-palette {
+	.title_letter-#{$colorClass} {
+		@extend .title_letter;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+		border-color: map-get($value, 'border');
+		&:hover {
+			color: map-get($value, 'color');
+		}
+	}
+	.title_letter-shadow-#{$colorClass} {
+		@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.2));
+	}
+}
+@each $colorClass, $value in $colorClass-palette {
+	.title_#{$colorClass} {
+		@extend .title;
+		color: $value;
+	}
+	.title_letter-outline-#{$colorClass} {
+		@extend .title_letter-outline;
+		border-color: $value;
+	}
+}

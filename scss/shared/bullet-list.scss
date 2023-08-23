@@ -1,0 +1,84 @@
+/////////////////////////////
+//bullet list
+.bullet-list {
+    list-style-type: none;
+	margin-left: 0;
+    margin-top: 0;
+	margin-bottom: 30px;
+    padding: 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.bullet-list__item {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    counter-increment: li;
+}
+.bullet-list__item:before {
+    content: "";
+    @include corner(100%);
+    @include position(absolute, 6px, auto, 0, auto, 6px, 6px);
+    display: block;
+    font-weight: bold;
+    display: block;
+}
+
+//decimal
+.bullet-list--decimal {
+    counter-reset: item;
+}
+.bullet-list--decimal li {
+    padding-left: 40px;
+}
+.bullet-list--decimal li:before {
+    content: counters(item, ".") " .";
+    counter-increment: item;
+    background-color: transparent;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    top: 0;
+    font-size: inherit;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.bullet-list--check li {
+    padding-left: 20px;
+}
+.bullet-list--check li:before{
+    width: 10px;
+    height: 10px;
+    @include background(10px, center, no-repeat);
+    background-color: initial;
+}
+.bullet-list--check_light {
+    @extend .bullet-list--check;
+}
+.bullet-list--check_light li:before {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzMyMzdfNjA5KSI+CjxwYXRoIGQ9Ik01LjQ3NzEgMTIuNzcwN0M1LjEyNzYxIDEyLjc3MDcgNC43NzgxMiAxMi42MzY5IDQuNTEwNTQgMTIuMzcyTDAuMzk4NTg2IDguMjU3MzZDLTAuMTMzODM5IDcuNzI0OTQgLTAuMTMzODM5IDYuODU5NCAwLjM5ODU4NiA2LjMyNjk4QzAuOTMxMDExIDUuNzk0NTUgMS43OTY1NCA1Ljc5NDU1IDIuMzI4OTcgNi4zMjY5OEw1LjQ3NzEgOS40NzUxMUwxNC41NTAyIDAuMzk5MzE4QzE1LjA4MjYgLTAuMTMzMTA2IDE1Ljk0ODEgLTAuMTMzMTA2IDE2LjQ4MDUgMC4zOTkzMThDMTcuMDEzIDAuOTMxNzQzIDE3LjAxMyAxLjc5NzI3IDE2LjQ4MDUgMi4zMjk3TDYuNDQzNjUgMTIuMzY5M0M2LjE3NjA4IDEyLjYzNjkgNS44MjY1OSAxMi43NjggNS40NzcxIDEyLjc2OFYxMi43NzA3WiIgZmlsbD0id2hpdGUiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8zMjM3XzYwOSI+CjxyZWN0IHdpZHRoPSIxNi44ODIiIGhlaWdodD0iMTIuNzciIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==');
+}
+
+/////////////////////////////
+//color
+@each $colorClass, $value in $colorClass-palette {
+	.bullet-list__item-#{$colorClass} {
+        @extend .bullet-list__item;
+	}
+    .bullet-list__item-#{$colorClass}:before {
+        background: $value;
+        color: $value;
+    }
+}
+@each $colorClass, $value in $mixClass-palette {
+    .bullet-list__item-#{$colorClass}-full {
+        @extend .bullet-list__item;
+        color: map-get($value, 'bg');
+	}
+	.bullet-list__item-#{$colorClass}-full:before {
+		background-color: map-get($value, 'bg');
+	}
+}

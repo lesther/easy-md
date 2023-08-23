@@ -1,0 +1,459 @@
+@mixin xs {
+	@media (min-width: #{$screen-xs}) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: #{$screen-sm}) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: #{$screen-xl}) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media (min-width: #{$screen-xxl}) {
+		@content;
+	}
+}
+
+@mixin hd {
+	@media (min-width: #{$screen-hd}) {
+		@content;
+	}
+}
+//specific
+@mixin only-mobile {
+	@media (max-width: #{$screen-md}) {
+		@content;
+	}
+}
+@mixin only-panel-menu {
+	@media (min-width: #{$screen-md}) and (max-width: #{$screen-xxl}) {
+		@content;
+	}
+}
+@mixin to-xl {
+	@media (max-width: #{$screen-xl}) {
+		@content;
+	}
+}
+//none standard browser
+@mixin ie-browser {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@content;
+	}
+  }
+  @mixin safari-browser {
+	@media not all and (min-resolution: 0.001dpcm) {
+		@supports (-webkit-appearance: none) {
+			@content;
+		}
+	}
+  }
+  @mixin none-standard-browser {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@content;
+	}
+	@media not all and (min-resolution: 0.001dpcm) {
+		@supports (-webkit-appearance: none) {
+			@content;
+		}
+	}
+	@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 360px),
+	(-o-min-device-pixel-ratio: 3/2) and (max-width: 360px),
+	(min--moz-device-pixel-ratio: 1.5) and (max-width: 360px),
+	(min-device-pixel-ratio: 1.5) and (max-width: 360px)
+	{  
+		@content;
+	}  
+}
+//sizes
+$sizes: "", "--sm", "--md", "--lg", "--xl";
+
+//////////////////////////////
+//transitions
+@mixin transition($transitionValue) {
+	-moz-transition: all $transitionValue ease;
+	-webkit-transition: all $transitionValue ease;
+	-o-transition: all $transitionValue ease;
+	transition: all $transitionValue ease;
+}
+@mixin transition-mix($transitionMix...) {
+	-moz-transition: $transitionMix;
+	-webkit-transition: $transitionMix;
+	-o-transition: $transitionMix;
+	transition: $transitionMix;
+}
+
+//////////////////////////////
+// border radius
+@mixin corner($tl:null, $tr:null, $br:null, $bl:null){
+	-webkit-border-radius: $tl;
+	-moz-border-radius: $tl;
+	border-radius: $tl;
+	border-top-left-radius: $tl;
+	border-top-right-radius: $tr;
+	border-bottom-right-radius: $br;
+	border-bottom-left-radius: $bl;
+}
+
+//////////////////////////////
+// shadow
+@mixin shadow($shadowValue) {
+	-webkit-box-shadow: $shadowValue;
+	-moz-box-shadow: $shadowValue;
+	box-shadow: $shadowValue;
+}
+
+//////////////////////////////
+// opacity
+@mixin opacity($opacityValue) {
+	filter: alpha(opacity=#{$opacityValue});
+	-moz-opacity: calc(#{$opacityValue} / 100);
+	opacity: calc(#{$opacityValue} / 100);
+}
+
+//////////////////////////////
+// positions
+//fixed
+@mixin fixed {
+	position: fixed;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+@mixin position($posValue, $ptpValue:null, $btfValue:null, $plfValue:null, $prtValue:null, $widthValue:null, $heightValue:null) {
+	position: $posValue;
+	top: $ptpValue;
+	bottom: $btfValue;
+	left: $plfValue;
+	right: $prtValue;
+	width: $widthValue;
+	height: $heightValue;
+}
+
+// fonts
+//font awesome
+@mixin awesome-icons {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+}
+// material-icons
+@mixin material-icons {
+	font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+	font-size: $icon-font-size;
+    direction: ltr;
+	line-height: 1;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.material-symbols-outlined {
+	font-variation-settings:
+	'FILL' 0,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 48
+}
+
+//forms
+// placeholder
+@mixin placeholder($colorPh, $colorAlphaPh, $weightPh:null, $transformPh:null) {
+	&::-webkit-input-placeholder {
+		transform-origin: 0 0;
+		color: rgba($color: $colorPh, $alpha: $colorAlphaPh);
+		font-weight: $weightPh;
+		@include transition(0.2s);
+		@include transform(#{$transformPh})
+	}
+	&::-moz-placeholder {
+		transform-origin: 0 0;
+		color: rgba($color: $colorPh, $alpha: $colorAlphaPh);
+		font-weight: $weightPh;
+		@include transition(0.2s);
+		@include transform(#{$transformPh})
+	}
+	&:-ms-input-placeholder {
+		transform-origin: 0 0;
+		color: rgba($color: $colorPh, $alpha: $colorAlphaPh);
+		font-weight: $weightPh;
+		@include transition(0.2s);
+		@include transform(#{$transformPh})
+	}
+	&:-moz-placeholder {
+		transform-origin: 0 0;
+		color: rgba($color: $colorPh, $alpha: $colorAlphaPh);
+		font-weight: $weightPh;
+		@include transition(0.2s);
+		@include transform(#{$transformPh})
+	}
+}
+@mixin form_reset {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+// truncate
+@mixin truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+// word break
+@mixin word-break {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+// background size
+// cover
+@mixin background($bgSizeValue, $bgPositionValue:null, $bgRepeatValue:null) {
+	-webkit-background-size: $bgSizeValue;
+	-moz-background-size: $bgSizeValue;
+	-o-background-size: $bgSizeValue;
+	background-size: $bgSizeValue;
+	background-position: $bgPositionValue;
+	background-repeat: $bgRepeatValue;
+}
+//transform
+@mixin transform($transformValue) {
+	-webkit-transform: $transformValue;
+	-moz-transform: $transformValue;
+	-ms-transform: $transformValue;
+	-o-transform: $transformValue;
+	transform: $transformValue;
+}
+
+
+//gradient
+//@include bg-gradient(90deg, $color-1, $alpha, 0%, $color-2, $alpha, 100% );
+//@include bg-gradient(left, $color-1, $alpha, 0%, $color-2, $alpha, 100%);
+@mixin bg-gradient(
+	$orientation,
+	$initColor,
+	$initAlpha,
+	$initPosition,
+	$endingColor,
+	$endingAlpha,
+	$endingPosition
+) {
+	$gradientFormat: rgba(
+		$color: $initColor,
+		$alpha: $initAlpha,
+	)
+	/* 0%, */
+	$initPosition,
+    rgba(
+		$color: $endingColor,
+		$alpha: $endingAlpha,
+	)
+	/* 100%, */
+	$endingPosition;
+	background: $initColor;
+	background: -moz-linear-gradient($orientation, $gradientFormat);
+	background: -webkit-linear-gradient($orientation, $gradientFormat);
+
+	@if $orientation == left {
+		background: linear-gradient(to right, $gradientFormat);
+	} @else if $orientation == right {
+		background: linear-gradient(to left, $gradientFormat);
+	} @else if $orientation == top {
+		background: linear-gradient(to bottom, $gradientFormat);
+	} @else if $orientation == bottom {
+		background: linear-gradient(to top, $gradientFormat);
+	}
+	background-repeat: no-repeat;
+}
+
+
+//image cover
+@mixin background-image($image-mobile, $image-web) {
+	background-image: url($image-mobile);
+
+	@include md {
+		background-image: url($image-web);
+	}
+}
+
+//////////////////////////////
+//minimal scroll
+@mixin scroll($scrollPosition:null, $scrollSize: 5px) {
+	@include md {
+		&::-webkit-scrollbar {
+			border: 0;
+			@include corner(30px);
+		}
+		&::-webkit-scrollbar-track {
+			@include shadow(none);
+			@include corner(30px);
+			background-color: rgba($color: $lighter-color, $alpha: 0);
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba($color: $gray-color, $alpha: 0);
+			outline: 0;
+			@include corner(30px);
+		}
+		&:hover::-webkit-scrollbar-thumb {
+			background-color: rgba($color: $gray-color, $alpha: 1);
+		}
+		&:hover::-webkit-scrollbar-track {
+			background-color: rgba($color: $lighter-color, $alpha: 1);
+		}
+		@if $scrollPosition == vertical {
+			&::-webkit-scrollbar {
+				width: $scrollSize;
+			}
+		}
+		@else {
+			&::-webkit-scrollbar {
+				height: $scrollSize;
+			}
+		}
+	}
+}
+//scroll
+.scrollable {
+    overflow: auto;
+}
+
+//panel
+@mixin side-section($positionValue) {
+	padding: 20px;
+	@include transition-mix(transform 0.3s ease);
+	@include position(fixed, 0, null, null, null, calc(100% - 40px), 100%);
+	//@include shadow(0 0 20px rgba($color: $dark-color, $alpha: 0.05));
+	overflow: auto;
+	@include scroll(vertical);
+	z-index: 99;
+	max-width: 350px;
+	flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+	@include md {
+		max-width: 400px;
+	}
+	@if $positionValue == left {
+		left: 0;
+		@include transform(translateX(-100%));
+	}
+	@else {
+		@include transform(translateX(100%));
+		right: 0;
+	}
+}
+@mixin side-section__overlay {
+	content: "";
+	@include position(fixed, 0, null, 0, null, 100%, 100%);
+    display: block;
+    z-index: 98;
+    background-color: rgba($color: $darkness-color, $alpha: 0.7);
+    visibility: hidden;
+	cursor: pointer;
+    @include opacity(0);
+	@include transition(0.3s);
+}
+.panel__wrap-left {
+	@include side-section(left);
+}
+.panel__wrap-right {
+	@include side-section(right);
+}
+
+//reset
+@mixin side-section--reset {
+	padding: 0;
+	@include position(initial, auto, auto, auto,auto, auto, auto );
+	max-width: none;
+	@include transform(initial);
+    @include transition(0s);
+    overflow: initial;
+}
+@mixin panel-atr($size: "") {
+    .panel_reset#{$size} {
+        @include side-section--reset;
+    }
+}
+
+// Generate
+@include panel-atr();
+@include sm {
+	@include panel-atr("--sm");
+}
+@include md {
+	@include panel-atr("--md");
+}
+@include lg {
+	@include panel-atr("--lg");
+}
+@include xl {
+	@include panel-atr("--xl");
+}
+
+// width/height
+@mixin width-height($WH-width, $WH-height) {
+	width: $WH-width;
+	height: $WH-height;
+}
+
+//hex to rgba
+@function hexToRGB($hex) {
+	@return red($hex), green($hex), blue($hex);
+}
+
+//reusable
+//collapsible
+%collapsible_body {
+	overflow: hidden;
+	max-height: 0;
+	@include transition(0.4s);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+%collapsible_body-active {
+	@include transition(1.5s);
+    max-height: 100rem;
+    overflow: initial;
+}
+%collapsible_body-content {
+	overflow: auto;
+    height: 100%;
+	@include scroll(vertical);
+}

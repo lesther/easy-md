@@ -1,0 +1,17 @@
+/////////////////////////////
+//background
+
+/////////////////////////////
+// color
+//format
+@each $colorClass, $value in $colorClass-palette {
+	.color_#{$colorClass} {
+		color: $value;
+	}
+}
+@each $colorClass, $value in $mixClass-palette {
+	.bg_#{$colorClass} {
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+}

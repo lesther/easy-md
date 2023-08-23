@@ -1,0 +1,139 @@
+/////////////////////////////
+//card
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    overflow: hidden;
+    background-color: $light-color;
+	border: 1px solid transparent;
+    position: relative;
+}
+.tile_rounded-sm {
+    @include corner(10px);
+}
+.tile_rounded-sm-1 {
+    @include corner(15px);
+}
+.tile_rounded-md {
+    @include corner(20px);
+}
+.tile_shadow-sm {
+    @include shadow(0 0 10px 0 rgba($color: $dark-color, $alpha: 0.15));
+}
+.tile_shadow-lg {
+    @include shadow(0 0 3rem 0 rgba($color: $dark-color, $alpha: 0.15));
+}
+.tile_outline {
+    border-color: $split-color;
+}
+.tile_outline-md {
+    border-width: 2px;
+}
+
+
+//header
+.tile__header {
+    padding: 20px;
+    @include md {
+        padding: 20px 40px;
+    }
+}
+.tile__header-image {
+    position: relative;
+    @include background(cover, center, no-repeat);
+}
+.tile__header-image-contain {
+    position: relative;
+    @include background(contain, center, no-repeat);
+}
+.tile__header-corner-sm {
+    @include corner(10px);
+}
+.tile__header-corner-md {
+    @include corner(20px);
+}
+.tile__header-xs {
+    padding: 10px;
+}
+.tile__header-xs-1 {
+    padding: 20px;
+}
+.tile__headline {
+    margin: 4px;
+    padding: 10px;
+    @include md {
+        padding: 10px 40px;
+    }
+}
+
+//body
+.tile__body {
+    padding: 20px;
+    @include md {
+        padding: 40px
+    }
+}
+.tile__body-xs {
+    padding: 10px;
+}
+.tile__body-xs-1 {
+    padding: 20px;
+}
+.tile__body-sm {
+    padding: 20px;
+    @include md {
+        padding: 20px 40px
+    }
+}
+
+.tile__footer {
+    padding: 20px;
+    @include md {
+        padding: 40px;
+    }
+}
+.tile__footer-pad_top-none {
+    padding-top: 0;
+}
+
+.tile__footer_wrap {
+    padding: 15px;
+    @extend .tile_rounded-sm;
+} 
+
+@each $colorClass, $value in $mixClass-palette {
+    .tile__headline-#{$colorClass} {
+        @extend .tile__headline;
+        background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+    }
+    .tile__header-#{$colorClass} {
+        @extend .tile__header;
+        background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+    }
+    .tile_#{$colorClass} {
+        @extend .tile;
+        background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+    }
+    .tile_highlight-#{$colorClass} {
+        @extend .tile;
+        background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+		color: map-get($value, 'bg');
+    }
+    .tile__footer-#{$colorClass} {
+        @extend .tile__footer;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+    .tile__footer_wrap-#{$colorClass} {
+        @extend .tile__footer_wrap;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+    .tile_outline-#{$colorClass} {
+		border-color: map-get($value, 'bg');
+	}
+}

@@ -1,0 +1,22 @@
+
+/////////////////////////////
+// icon images
+.icon_sm {
+    @extend .text_md;
+    line-height: 1;
+}
+
+.icon_md {
+    @extend .text_lg;
+    line-height: 1;
+}
+
+.icon_md-1 {
+    @extend .text_lg-1;
+    line-height: 1;
+}
+
+.icon_lg {
+    @extend .text_xl-1;
+    line-height: 1;
+}

@@ -1,0 +1,188 @@
+/////////////////////////////
+// material-icons
+.fa, .fas,
+.material-icons {
+    line-height: 1;
+	font-size: $icon-font-size;
+}
+
+//text
+.text {
+	margin-bottom: 15px;
+	margin-top: 0;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+//text styles
+.text_style-italic {
+	font-style: italic;
+}
+
+//text weight
+.text_weight {
+	&-extra-light {
+		font-weight: 200;
+	}
+	&-light {
+		font-weight: 300;
+	}
+	&-regular {
+		font-weight: 400;
+	}
+	&-semi-bold {
+		font-weight: 600;
+	}
+	&-bold {
+		font-weight: 700;
+	}
+	&-extra-bold {
+		font-weight: 800;
+	}
+	&-black {
+		font-weight: 900;
+	}
+}
+
+@mixin text-atr($size: "") {
+	//text align
+	.text_align-left#{$size} {
+		text-align: left;
+	}
+
+	.text_align-right#{$size} {
+		text-align: right;
+	}
+
+	.text_align-center#{$size} {
+		text-align: center;
+	}
+
+	.text_align-justify#{$size} {
+		text-align: justify;
+	}
+
+	//size
+	.text_xs#{$size} {
+		font-size: 10px;
+	}
+
+	.text_sm#{$size} {
+		font-size: 12px;
+	}
+
+	.text_sm-1#{$size} {
+		font-size: 14px;
+	}
+
+	.text_default#{$size} {
+		font-size: $body-font-size;
+	}
+
+	.text_md#{$size} {
+		font-size: 16px;
+	}
+
+	.text_lg#{$size} {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+
+	.text_lg-1#{$size}{
+		font-size: 20px;
+		line-height: 1.1;
+	}
+
+	.text_xl#{$size} {
+		font-size: 25px;
+		line-height: 1.1;
+	}
+
+	.text_xl-1#{$size} {
+		font-size: 27px;
+		line-height: 1.1;
+	}
+
+	.text_xxl#{$size} {
+		font-size: 30px;
+		line-height: 1;
+	}
+
+	.text_hero#{$size} {
+		font-size: 40px;
+		line-height: 1;
+	}
+
+	//spacing
+	.text_spacing-none#{$size} {
+		margin-bottom: 0;
+	}
+	.text_spacing-xs#{$size} {
+		margin-bottom: 5px;
+	}
+	.text_spacing-sm#{$size} {
+		margin-bottom: 10px;
+	}
+	.text_spacing-md#{$size} {
+		margin-bottom: 15px;
+	}
+	.text_spacing-lg#{$size} {
+		margin-bottom: 20px;
+	}
+	.text_spacing-xl#{$size} {
+		margin-bottom: 30px;
+	}
+	.text_spacing-xxl#{$size} {
+		margin-bottom: 40px;
+	}
+}
+
+// Generate
+@include text-atr();
+@include sm {
+	@include text-atr("--sm");
+}
+@include md {
+	@include text-atr("--md");
+}
+@include lg {
+	@include text-atr("--lg");
+}
+@include xl {
+	@include text-atr("--xl");
+}
+
+//decoration
+.text_highlight {
+	padding: 5px 10px;
+	display: inline;
+	@include corner(5px);
+	position: relative;
+	background-color: $primary-color;
+	color: $light-color;
+	margin: 5px;
+	line-height: 1;
+}
+
+/////////////////////////////
+//format color
+@each $colorClass, $value in $colorClass-palette {
+	.text_#{$colorClass} {
+		@extend .text;
+		color: $value;
+	}
+}
+
+@each $colorClass, $value in $mixClass-palette {
+	.text_highlight-#{$colorClass} {
+		@extend .text_highlight;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+	}
+	.text_highlight-soft-#{$colorClass} {
+		@extend .text_highlight;
+		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+		color: map-get($value, 'bg');
+	}
+}

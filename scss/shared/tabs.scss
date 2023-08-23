@@ -1,0 +1,47 @@
+//tabs
+//head
+.tab_head {
+    @extend .group_nowrap-scroll;
+}
+.tab_head-container {
+    @extend .group;
+    @extend .group_inline;
+    gap: 0;
+    border-bottom: 1px solid $gray-border-color;
+    min-width: min-content;
+}
+//links
+.tab_btn {
+    padding: 10px 20px;
+    position: relative;
+    @include transition(0.3s);
+}
+.tab_btn:active {
+    background-color: rgba($color: $primary-color, $alpha: 0.05);
+    color: $primary-color--dark;
+}
+.tab_btn:before {
+    content: "";
+    @include position(absolute, null, -1px, 0, 0, 0, 3px);
+    @include transition(0.3s);
+    background-color: $primary-color--accent;
+    display: block;
+    z-index: 1;
+    margin: auto;
+}
+.tab_btn--active {
+    color: $primary-color--accent;
+    font-weight: bold;
+}
+.tab_btn--active:before {
+    width: 100%;
+}
+
+//container
+.tab_content {
+    padding-top: 30px;
+    display: none;
+}
+.tab_content--active {
+    display: block;
+}

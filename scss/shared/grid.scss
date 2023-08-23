@@ -1,0 +1,68 @@
+/////////////////////////////
+// grid
+.grid {
+    width: 100%;
+    display: grid;
+}
+.grid_wrap {
+    flex-wrap: wrap;
+}
+
+@mixin grid-modifiers($size: "") {
+	.grid_half#{$size} {
+		grid-template-columns: 1fr 1fr;
+	}
+    .grid_sm#{$size} {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .grid_md#{$size} {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+    .grid_lg#{$size} {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+
+	//gap
+    .grid_spacing-none#{$size} {
+		gap: 0;
+	}
+    .grid_spacing-minimal#{$size} {
+		gap: 1px;
+	}
+    .grid_spacing-xxs#{$size} {
+		gap: 5px;
+	}
+	.grid_spacing-xs#{$size} {
+		gap: 10px;
+	}
+    .grid_spacing-xs-1#{$size} {
+		gap: 15px;
+	}
+	.grid_spacing-sm#{$size} {
+		gap: 20px;
+	}
+	.grid_spacing-md#{$size} {
+		gap: 30px;
+	}
+	.grid_spacing-lg#{$size} {
+		gap: 40px;
+	}
+	.grid_spacing-xl#{$size} {
+		gap: 50px;
+	}
+}
+
+// Generate font size helpers
+@include grid-modifiers();
+@include sm {
+    @include grid-modifiers("--sm");
+}
+@include md {
+    @include grid-modifiers("--md");
+}
+@include lg {
+    @include grid-modifiers("--lg");
+}
+@include xl {
+	@include grid-modifiers("--xl");
+}

@@ -1,0 +1,39 @@
+/////////////////////////////
+//header
+//sidebar
+$sidebar-width: 79px;
+.sidebar_header {
+	position: static;
+	top: 0;
+	padding: 10px 25px;
+	//scroll
+	@include scroll(vertical, 0px);
+	@include sm {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include md {
+		padding: 30px 12px;
+		@include fixed;
+		height: 100%;
+		top: 0;
+		left: 0;
+		width: $sidebar-width;
+		overflow: auto;
+	}
+}
+.sidebar_header--dark {
+	background-color: $text-color;
+}
+
+//body wrapper
+body#wrapper {
+	@include md {
+		padding-left: $sidebar-width;
+	}
+}
+
+//breadcrumb
+.section_breadcrumb {
+	border-bottom: 1px solid $split-color;
+}

@@ -1,0 +1,176 @@
+//section
+.section {
+	padding: 60px 25px;
+	position: relative;
+	@include background(cover, center center, no-repeat);
+	@include sm {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include md {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+}
+
+// align
+@mixin section_align {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+@mixin section_pad($size: "") {
+	// full height
+	.section_full_height#{$size} {
+		min-height: calc(100vh - #{$header-height});
+	}
+
+	// align
+	.section_align-middle#{$size} {
+		@include section_align;
+		justify-content: center;
+	}
+
+	// pad sizes
+	.section_spacing-none#{$size} {
+		padding: 0;
+	}
+
+	.section_pad-none#{$size} {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.section_pad-minimal#{$size} {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.section_pad-xxs#{$size} {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.section_pad-xs#{$size} {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.section_pad-sm#{$size} {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.section_pad-md#{$size} {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+	.section_pad-lg#{$size} {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+
+	.section_pad-xl#{$size} {
+		padding-top: 250px;
+		padding-bottom: 250px;
+	}
+
+	/**
+	 * Top padding
+	 */
+
+	.section_pad-top_none#{$size} {
+		padding-top: 0;
+	}
+
+	.section_pad-top_xs#{$size} {
+		padding-top: 40px;
+	}
+
+	.section_pad-top_sm#{$size} {
+		padding-top: 60px;
+	}
+
+	.section_pad-top_md#{$size} {
+		padding-top: 150px;
+	}
+
+	.section_pad-top_lg#{$size} {
+		padding-top: 200px;
+	}
+
+	.section_pad-top_xl#{$size} {
+		padding-top: 250px;
+	}
+
+	.section_pad-top_xl-1#{$size} {
+		padding-top: 300px;
+	}
+
+	.section_pad-top_xxl#{$size} {
+		padding-top: 400px;
+	}
+
+	/**
+	 * Bottom padding
+	 */
+
+	.section_pad-bottom_none#{$size} {
+		padding-bottom: 0;
+	}
+
+	.section_pad-bottom_xs#{$size} {
+		padding-bottom: 40px;
+	}
+
+	.section_pad-bottom_sm#{$size} {
+		padding-bottom: 60px;
+	}
+
+	.section_pad-bottom_md#{$size} {
+		padding-bottom: 150px;
+	}
+
+	.section_pad-bottom_lg#{$size} {
+		padding-bottom: 200px;
+	}
+
+	.section_pad-bottom_xl#{$size} {
+		padding-bottom: 250px;
+	}
+}
+
+
+// Generate font size helpers
+@include section_pad();
+@include sm {
+	@include section_pad("--sm");
+}
+@include md {
+	@include section_pad("--md");
+}
+@include lg {
+	@include section_pad("--lg");
+}
+@include xl {
+	@include section_pad("--xl");
+}
+
+.section-side {
+	@extend .section;
+	@include md {
+		padding-left: calc(40px + #{$width-menu-icons});
+	}
+}
+
+//format color
+@each $colorClass, $value in $colorClass-palette {
+	.section_#{$colorClass} {
+		@extend .section;
+		background-color: $value;
+	}
+}

@@ -1,0 +1,149 @@
+@charset "UTF-8";
+*,
+:after,
+:before {
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+html,
+input,
+li,
+pre,
+td,
+textarea,
+th{
+	margin: 0;
+	padding: 0;
+}
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+a.btn:active,
+a.btn:focus,
+button:focus {
+	outline: 0;
+}
+button::-moz-focus-inner {
+	outline: 0;
+}
+input::-moz-focus-inner {
+	outline: 0;
+}
+input[type="reset"]::-moz-focus-inner {
+	outline: 0;
+}
+input[type="button"]::-moz-focus-inner {
+	outline: 0;
+}
+input[type="submit"]::-moz-focus-inner {
+	outline: 0;
+}
+select::-moz-focus-inner {
+	outline: 0;
+}
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	outline: 0;
+}
+button,
+fieldset,
+iframe,
+img,
+input,
+textarea {
+	border: 0;
+}
+li,
+ol,
+ul {
+	list-style: none;
+}
+html {
+	margin: 0 auto;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+a,
+button,
+img:active,
+input,
+textarea {
+	outline: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+button {
+	background: initial;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+div,
+div iframe,
+div img,
+embed,
+object,
+param {
+	vertical-align: top;
+}
+a,
+label {
+	display: inline-block;
+	vertical-align: middle;
+}
+input,
+textarea {
+	vertical-align: middle;
+}
+body {
+	overflow-x: hidden;
+}
+textarea {
+	resize: vertical;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+body,
+html {
+	text-rendering: optimizeLegibility;
+}
+::-webkit-input-placeholder {
+	text-transform: none;
+}
+:-moz-placeholder {
+	text-transform: none;
+}
+::-moz-placeholder {
+	text-transform: none;
+}
+:-ms-input-placeholder {
+	text-transform: none;
+}
+button,
+label,
+input,
+select {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+.ignore_all,
+.ignore_all * {
+	all: initial;
+}

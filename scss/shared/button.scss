@@ -1,0 +1,500 @@
+/////////////////////////////
+//buttons
+.btn {
+	padding: 6px 15px;
+	background-color: $primary-color;
+	color: $light-color;
+	border: 1px solid transparent;
+	font-size: inherit;
+	font-weight: inherit;
+	text-align: inherit;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+
+	@include transition(0.3s);
+	@include corner(7px);
+	&:active, &.active, &:focus {
+		border-width: 1px;
+		@include shadow(none)
+	}
+}
+[disabled],
+.disabled,
+.btn_hover-none {
+	pointer-events: none;
+}
+.btn_content-center {
+	justify-content: center;
+}
+//icon spacing
+.btn_spacing-sm {
+	gap: 5px
+}
+//size
+.btn_xxs {
+	@extend .btn;
+	@extend .text_xs;
+	padding: 3px 7px;
+	line-height: 1;
+}
+.btn_xs {
+	@extend .btn;
+	@extend .text_xs;
+	padding: 5px;
+	line-height: 1;
+}
+.btn_sm {
+	@extend .btn;
+	@extend .text_sm;
+	padding: 6px;
+	line-height: 1;
+}
+.btn_md {
+	@extend .btn;
+	padding: 10px 20px;
+	@extend .text_md;
+	line-height: 1.2;
+}
+.btn_lg {
+	@extend .btn;
+	padding: 10px 25px;
+	@extend .text_lg;
+	line-height: 1.2;
+}
+.btn_xl {
+	@extend .btn;
+	padding: 15px 30px;
+	@extend .text_xl;
+	line-height: 1.1;
+}
+//full
+.btn_block {
+	text-align: center;
+	//display: block;
+	justify-content: center;
+    width: 100%;
+}
+.btn_full {
+    width: 100%;
+}
+//nowrap
+.btn_nowrap {
+	white-space: nowrap;
+}
+//rounded
+.btn_rounded-oval {
+	@include corner(30px);
+}
+.btn_rounded-none {
+	@include corner(0);
+}
+.btn_rounded-sm {
+	@include corner(5px);
+}
+.btn_rounded-md {
+	@include corner(10px);
+}
+.btn_circle {
+	padding: 0;
+	@extend .btn;
+	@include corner(100%);
+	position: relative;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	justify-content: center;
+	&:hover{
+		color: $light-color;
+	}
+}
+.btn_circle-xxs {
+	@extend .btn_circle;
+	width: 20px;
+	height: 20px;
+	@extend .text_sm;
+}
+.btn_circle-xs {
+	@extend .btn_circle;
+	width: 22px;
+	height: 22px;
+	@extend .text_sm;
+}
+.btn_circle-sm {
+	@extend .btn_circle;
+	width: 30px;
+	height: 30px;
+	@extend .text_default;
+}
+.btn_circle-md {
+	@extend .btn_circle;
+	width: 40px;
+	height: 40px;
+	@extend .text_xl;
+}
+
+/////////////////////////////
+//colors
+//outline
+.btn_outline {
+	background-color: transparent;
+	border-color: $gray-border-color;
+	color: $primary-color;
+	&:hover{
+		background-color: $primary-color;
+		color: $light-color;
+		border-color: $primary-color;
+	}
+}
+
+//link
+.btn_link {
+	@extend .btn;
+	background-color: transparent;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	&:active, &.active, &:focus {
+		border-width: 1px;
+		@include shadow(none)
+	}
+	&:disabled, &.disabled,
+	&-hover-none{
+		pointer-events: none;
+	}
+}
+.btn_link-hover-circle {
+	position: relative;
+	z-index: 1;
+}
+.btn_link-hover-circle:after {
+	content: "";
+	background-color: currentcolor;
+	@include position(absolute, 0, 0, 0, 0, 100%, 100%);
+	@include corner(100%);
+	@include transition(0.3s);
+	@include transition-mix(transform 0.3s ease, opacity 0.3s ease);
+	@include opacity(0);
+	@include transform(scale(1));
+
+}
+.btn_link-hover-circle:hover:after {
+	@include opacity(20);
+	@include transform(scale(2));
+}
+
+// fixed
+.btn_fixed-bottom-right {
+	@include position(fixed, null, 30px, null, 25px, null, null);
+	z-index: 2;
+	@include md {
+		right: 55px;
+	}
+}
+.btn_fixed-bottom-left {
+	@include position(fixed, null, 30px, 25px, null,  null, null);
+	z-index: 2;
+	@include md {
+		left: calc(55px + #{$sidebar-width});
+	}
+}
+.btn_fixed-left {
+	@include position(fixed, null, null, 25px, null,  null, null);
+	z-index: 2;
+	@include md {
+		left: calc(55px + #{$sidebar-width});
+	}
+}
+.btn_fixed-right {
+	@include position(fixed, null, null, null, 25px,  null, null);
+	z-index: 2;
+	@include md {
+		right: 55px;
+	}
+}
+//group
+.btn_fixed-group {
+	position: fixed;
+    margin-top: 10px;
+}
+.btn_fixed-group_wrap {
+	@include position(absolute, 0, null, 0, null, 100%, null);
+	@include transition(0.3s);
+}
+.btn_fixed-group_item {
+	height: 0;
+	position: relative;
+	@include transition(0.3s);
+    @include transform(scale(0.5))
+}
+.btn_fixed-group_header {
+    position: relative;
+    z-index: 1;
+}
+.btn_fixed-group_item .btn_circle {
+    @include position(absolute, 0, null, 0, 0 null, null);
+    margin: auto;
+}
+//active
+.btn_fixed-group_header--active {
+    background-color: $primary-color--accent;
+}
+.btn_fixed-group_wrap--active,
+.btn_fixed-group:hover .btn_fixed-group_wrap {
+	padding-top: 42.5px;
+}
+.btn_fixed-group_wrap--active .btn_fixed-group_item,
+.btn_fixed-group:hover .btn_fixed-group_item {
+	height: 45px;
+    @include transform(scale(1))
+}
+.btn_fixed-group_wrap--active .btn_fixed-group_item .btn_circle,
+.btn_fixed-group:hover .btn_fixed-group_item .btn_circle {
+	top: 2.5px;
+}
+
+
+//flag
+.btn_flag {
+	padding: 5px;
+	@include corner(5px);
+	@include transition(0.3s);
+	position: relative;
+	font-weight: 900;
+	display: inline-block;
+	line-height: 1;
+	border: 1px solid transparent;
+}
+.btn_flag-close {
+	padding: 5px 5px 5px 12px;
+}
+.btn_flag-close:after {
+	content: "\e5c9";
+	@include position(absolute, -5px, null, -5px, null, 15px, 15px);
+	@include material-icons;
+	@include corner(100%);
+	@include transition(0.2s);
+	@include opacity(0);
+	@include transform(scale(0.5));
+	color: $danger-color;
+	z-index: 1;
+	line-height: 15px;
+	text-align: center;
+	cursor: pointer;
+	background-color: $light-color;
+	font-size: 15px;
+	display: block;
+}
+.btn_flag-close:hover:after {
+	@include transform(scale(1));
+	@include opacity(100);
+}
+
+//codes
+.btn_code {
+	@extend .btn_flag;
+	font-weight: normal;
+	z-index: 1;
+}
+.btn_code:hover {
+	border-color: $secondary-color;
+	background-color: rgba($color: $secondary-color, $alpha: 0.1);
+}
+.btn_code-group {
+	display: inline-flex;
+	position: relative;
+	.btn_code-group:hover .btn_code {
+		border-color: $secondary-color;
+		background-color: rgba($color: $secondary-color, $alpha: 0.1);
+	}
+}
+//close
+.btn_code-close {
+	@extend .btn_flag-close;
+	padding: 0;
+}
+.btn_code-group:hover .btn_code-close:after {
+	@include transform(scale(1));
+	@include opacity(100);
+}
+.btn_code-group:hover .btn_code-close:hover:after {
+	@include transform(scale(1.4));
+}
+.btn_code-comment {
+	@extend .btn_code-close;
+	&:after {
+		content: "\e645";
+		font-size: 26px;
+		@include width-height(26px, 26px);
+		line-height: 26px;
+		top: -13px;
+		left: -13px;
+		@include opacity(100);
+		@include transform(scale(0.7));
+	}
+}
+//text color
+.btn_code[class*="text_"] {
+	border-color: currentColor;
+	z-index: 1;
+	margin: 0;
+}
+.btn_code-group:hover .btn_code[class*="text_"] {
+	border-color: currentColor;
+	background-color: transparent;
+}
+.btn_code[class*="text_"]:before {
+	content: "";
+	@include position(absolute, 0, null, 0, null, 100%, 100%);
+	@include transition(0.3s);
+	@include opacity(0);
+	background-color: currentColor;
+	z-index: -1;
+	@include corner(5px);
+}
+.btn_code-group:hover .btn_code[class*="text_"]:before {
+	@include opacity(10);
+}
+
+
+//tags
+.btn_tag-container {
+	position: relative;
+	display: flex;
+}
+.btn_tag {
+	@extend .btn_rounded-oval;
+	@extend .truncate-text;
+	@extend .h-max-width-sm;
+	position: relative;
+	padding: 8px 30px 8px 10px;
+	line-height: 1;
+	background-color: rgba($color: $primary-color--highlight, $alpha: 0.1);
+}
+.btn_tag-close:before {
+	content: "\e5c9";
+	margin: auto;
+	@extend .icon_md;
+	@include position(absolute, 0, 0, null, 5px, 18px, 18px);
+	@include material-icons;
+	@include corner(100%);
+	@include transition(0.3s);
+	color: $primary-color--highlight;
+}
+.btn_tag-close:hover:before {
+	color: $danger-color;
+}
+
+//format color
+@each $colorClass, $value in $buttons-palette {
+	.btn_flag-#{$colorClass} {
+		@extend .btn_flag;
+		color: map-get($value, 'bg');
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			border: 1px solid map-get($value, 'bg');
+			background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
+		}
+	}
+	.btn_#{$colorClass} {
+		@extend .btn;
+		background-color: map-get($value, 'bg');
+		color: $light-color;
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			color: $light-color;
+			background-color: map-get($value, 'hover');
+		}
+		&:focus {
+			@include shadow(0 0 0 0.25rem rgba(map-get($value, 'hover'), $alpha: 0.25));
+		}
+	}
+	.btn_soft-#{$colorClass}{
+		@extend .btn;
+		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.15);
+		color: map-get($value, 'bg');
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			color: $light-color;
+			background-color: map-get($value, 'bg');
+		}
+	}
+	.btn_outline-#{$colorClass} {
+		@extend .btn_outline;
+		border-color: map-get($value, 'bg');
+		color: map-get($value, 'bg');
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			color: $light-color;
+			background-color: map-get($value, 'hover');
+			border-color: map-get($value, 'hover');
+		}
+	}
+	.btn_hover-#{$colorClass} {
+		&.show,
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			border-color: map-get($value, 'bg');
+			background-color: map-get($value, 'bg');
+			color: $light-color;
+		}
+		&:focus {
+			@include shadow(0 0 0 0.25rem rgba(map-get($value, 'hover'), $alpha: 0.25));
+		}
+	}
+	.btn_hover-color-#{$colorClass} {
+		&.show,
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			color: map-get($value, 'bg');
+		}
+	}
+	.btn_link-#{$colorClass} {
+		@extend .btn_link;
+		color: map-get($value, 'bg');
+		&.show,
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			color: $primary-color--accent;
+		}
+	}
+	.btn_link-hover-#{$colorClass} {
+		&.show,
+		&.active,
+		&:focus,
+		&:active,
+		&:hover {
+			color: map-get($value, 'bg');
+		}
+	}
+}
+.btn_hover-light.active,
+.btn_hover-light:focus,
+.btn_hover-light:active,
+.btn_hover-light:hover,
+.btn_transparent,
+.btn_light {
+	color: $primary-color--highlight;
+}
+
+.btn_transparent.active,
+.btn_transparent:focus,
+.btn_transparent:active,
+.btn_transparent:hover {
+	background-color: rgba($color: $primary-color--highlight, $alpha: 0.1);
+	color: $primary-color--highlight;
+}

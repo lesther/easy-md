@@ -1,0 +1,12 @@
+//////////////////////////////
+// pagination
+.pagination {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 5px;
+    @include corner(50px);
+    background-color: $lighter-color;
+    color: $primary-color;
+    gap: 1px;
+}
