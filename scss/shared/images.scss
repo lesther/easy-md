@@ -1,2 +1,83 @@
 /////////////////////////////
 // images
+$profile: var(--profile);
+$profile-font: var(--profile-font);
+
+.profile_group {
+	position: relative;
+}
+.profile {
+	--profile: 37px;
+	--profile-font: 1rem;
+	@include width-height($profile, $profile);
+	@include corner(100%);
+	text-align: center;
+	font-weight: 900;
+	text-transform: uppercase;
+	display: block;
+	font-size: 0;
+	border: 0 solid transparent;
+	@include background(cover, center, no-repeat);
+	&::first-letter {
+		font-size: $profile-font;
+		line-height: $profile;
+	}
+}
+.profile *{
+	display: inline-block;
+	&::first-letter {
+		font-size: $profile-font;
+		line-height: $profile;
+	}
+}
+
+//sizes
+.profile_sm {
+	--profile: 25px;
+	--profile-font: 0.8rem;
+}
+.profile_md {
+	--profile: 48px;
+	--profile-font: 1.3rem;
+}
+.profile_lg {
+	--profile: 55px;
+	--profile-font: 1.5rem;
+}
+
+.profile_outline {
+	border-width: 2px;
+    @include box-sizing (content-box);
+}
+.profile_outline-sm {
+	border-width: 1px;
+}
+.profile[style*="background-image"],
+.profile[style*="background-image"]:hover,
+.profile[style*="background-image"]:first-letter {
+	background-color: $light-color;
+	color: transparent;
+	font-size: 0;
+}
+
+@each $colorClass, $value in $mixClass-palette {
+	.profile_#{$colorClass} {
+		@extend .profile;
+		background-color: map-get($value, 'bg');
+		color: map-get($value, 'color');
+		border-color: map-get($value, 'border');
+		&:hover {
+			color: map-get($value, 'color');
+		}
+	}
+	.profile_shadow-#{$colorClass} {
+		@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.2));
+	}
+}
+
+@each $colorClass, $value in $colorClass-palette {
+	.profile_outline-#{$colorClass} {
+		@extend .profile_outline;
+		border-color: $value;
+	}
+}

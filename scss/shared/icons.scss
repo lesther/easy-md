@@ -20,3 +20,42 @@
     @extend .text_xl-1;
     line-height: 1;
 }
+
+//icon group
+.icon_group {
+    position: relative;
+    display: block;
+}
+.icon_hover {
+    @include transition(0.3s);
+    @include position(absolute, 0, null, 0, null, 100%, null);
+    visibility: hidden;
+    @include opacity(0);
+}
+.icon_group-hover:hover .icon_group,
+.active .icon_group,
+.icon_group.active,
+.icon_group:hover {
+    .icon_hover {
+        visibility: visible;
+        @include opacity(100);
+    }
+    .icon {
+        visibility: hidden;
+        @include opacity(0);
+    }
+}
+//btn
+.icon_group-btn {
+    @extend .btn_circle-md;
+    @include width-height(40px, 40px);
+    padding: 7px;
+    background-color: transparent;
+}
+.icon_group-hover:hover .icon_group-btn,
+.icon_group-btn:hover {
+    background-color: $light-color;
+}
+.active .icon_group-btn {
+    background-color: $primary-color--accent;
+}

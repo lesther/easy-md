@@ -116,6 +116,14 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
 }
 
 //////////////////////////////
+// box sizing
+@mixin box-sizing($sizingValue) {
+	-webkit-box-sizing: $sizingValue;
+	-moz-box-sizing: $sizingValue;
+	box-sizing: $sizingValue;
+}
+
+//////////////////////////////
 // shadow
 @mixin shadow($shadowValue) {
 	-webkit-box-shadow: $shadowValue;

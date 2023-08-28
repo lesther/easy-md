@@ -11,17 +11,17 @@ select, input {
 	color: $text-color;
 	@extend .truncate-text;
 	@include form_reset;
-	@include background(25px, calc(100% - 15px) 50%, no-repeat);
+	@include background(25px, 5px center, no-repeat);
 	@include corner(5px);
 	@include transition(0.3s);
-    @include placeholder($text-color, 1, 500);
+    @include placeholder($placeholder-color, 1, 500);
 	&:active,
 	&:focus,
 	&:focus-visible{
 		outline: none !important;
 	}
     &:focus:not(.disabled):not(.invalid):not([invalid]) {
-        @include placeholder($text-color, 1, 500);
+        @include placeholder($placeholder-color, 1, 500);
         background-color: $light-color;
         border-color: rgba($color: $primary-color--accent, $alpha: 1);
         @include shadow(0 0 0 0.25rem rgba($color: $primary-color--accent, $alpha: 0.15))
@@ -75,6 +75,7 @@ textarea.text_field {
 	border-color: $gray-border-color;
 }
 
+
 //corner
 .text_field-corner-none {
     @include corner(0);
@@ -103,7 +104,7 @@ textarea.text_field {
 .text_field-sm-1 {
 	@extend .text_field;
     padding: 8px 10px;
-    @extend .text_md;
+    @extend .text_sm;
 }
 .text_field-md {
 	@extend .text_field;
@@ -356,7 +357,7 @@ textarea.text_field {
 		visibility: visible;
 	}
 	.multiple-select_wrap {
-		@include placeholder($text-color, 1, 500);
+		@include placeholder($placeholder-color, 1, 500);
         background-color: $light-color;
         border-color: rgba($color: $primary-color--accent, $alpha: 1);
         @include shadow(0 0 0 0.25rem rgba($color: $primary-color--accent, $alpha: 0.15))
@@ -386,7 +387,7 @@ textarea.text_field {
 }
 //search
 .text_field-search {
-	padding-right: 50px;
+	padding-left: 40px;
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjRweCIgZmlsbD0iI2JkYmRiZCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xNS41IDE0aC0uNzlsLS4yOC0uMjdDMTUuNDEgMTIuNTkgMTYgMTEuMTEgMTYgOS41IDE2IDUuOTEgMTMuMDkgMyA5LjUgM1MzIDUuOTEgMyA5LjUgNS45MSAxNiA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==');
 }
 .text_field-search:active,
@@ -717,7 +718,7 @@ input.form_check[disabled],
 		border-color: rgba($color: map-get($value, 'bg'), $alpha: 0.7);
 		background-color: initial;
 		
-		&:focus:not(.disabled) {
+		&:focus:not(.disabled):not([invalid]) {
 			background-color: $light-color;
 			border-color: rgba($color: map-get($value, 'bg'), $alpha: 1);
 			@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.15))
@@ -742,9 +743,7 @@ input.form_check[disabled],
 		}
 	}
 }
-.text_field-outline.bg_light {
-	background-color: $light-color;
-}
+
 @each $colorClass, $value in $colorClass-palette {
 	.circle_status-#{$colorClass} {
 		@extend .circle_status;
@@ -752,7 +751,10 @@ input.form_check[disabled],
 	}
 }
 
-
+//light
+.text_field-light {
+	background-color: $light-color;
+}
 
 //badget
 [data-badget] {

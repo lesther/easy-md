@@ -164,6 +164,19 @@
 	margin: 5px;
 	line-height: 1;
 }
+.text_split:before {
+	content: "";
+	display: block;
+	max-width: 50px;
+	height: 3px;
+	@include corner(10px);
+	background-color: $lighter-color;
+	margin-bottom: 20px;
+}
+.text_split-center:before {
+	margin-right: auto;
+	margin-left: auto;
+}
 
 /////////////////////////////
 //format color
@@ -171,6 +184,10 @@
 	.text_#{$colorClass} {
 		@extend .text;
 		color: $value;
+	}
+	.text_split-#{$colorClass}:before {
+		background-color: $value;
+		@extend .text_split;
 	}
 }
 

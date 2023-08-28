@@ -144,95 +144,13 @@
 		font-weight: 900;
 	}
 }
-//to do - refactor
-//themes
-.title_letter-group {
-	position: relative;
-}
-
-$title_letter: var(--title_letter);
-$title_letter-font: var(--title_letter-font);
-
-.title_letter {
-	--title_letter: 37px;
-	--title_letter-font: 1rem;
-
-	@include width-height($title_letter, $title_letter);
-	@include corner(100%);
-	text-align: center;
-	font-weight: 900;
-	text-transform: uppercase;
-	display: block;
-	font-size: 0;
-	border: 0 solid transparent;
-	@include background(cover, center, no-repeat);
-	&::first-letter {
-		font-size: $title_letter-font;
-		line-height: $title_letter;
-	}
-}
-.title_letter *{
-	display: inline-block;
-	&::first-letter {
-		font-size: $title_letter-font;
-		line-height: $title_letter;
-	}
-}
-
-.title_letter-sm {
-	--title_letter: 25px;
-	--title_letter-font: 0.8rem;
-}
-.title_letter-md {
-	--title_letter: 48px;
-	--title_letter-font: 1.3rem;
-}
-.title_letter-lg {
-	--title_letter: 55px;
-	--title_letter-font: 1.5rem;
-}
-
-.title_letter-outline {
-	border-width: 2px;
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-}
-.title_letter-outline-sm {
-	border-width: 1px;
-}
-.title_letter[style*="background-image"],
-.title_letter[style*="background-image"]:hover,
-.title_letter[style*="background-image"]:first-letter {
-	background-color: $light-color;
-	color: transparent;
-	font-size: 0;
-}
 
 /////////////////////////////
 //colors
 //format
-@each $colorClass, $value in $mixClass-palette {
-	.title_letter-#{$colorClass} {
-		@extend .title_letter;
-		background-color: map-get($value, 'bg');
-		color: map-get($value, 'color');
-		border-color: map-get($value, 'border');
-		&:hover {
-			color: map-get($value, 'color');
-		}
-	}
-	.title_letter-shadow-#{$colorClass} {
-		@include shadow(0 0 0 0.25rem rgba($color: map-get($value, 'bg'), $alpha: 0.2));
-	}
-}
 @each $colorClass, $value in $colorClass-palette {
 	.title_#{$colorClass} {
 		@extend .title;
 		color: $value;
-	}
-	.title_letter-outline-#{$colorClass} {
-		@extend .title_letter-outline;
-		border-color: $value;
 	}
 }

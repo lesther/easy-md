@@ -5,12 +5,13 @@ $light-color: #fff;
 //fonts
 $dark-color: #525252;
 $darkness-color: #002132;
-$text-color: #003049;
+$text-color: #003970;
 $black-color: #000;
 $dark-color--accent: #49657D;
-$gray-color: #BDBDBD;
+$gray-color: #6B6B6B;
 $gray-color--accent: #9D9D9D;
 $gray-text-color: #9D9D9D;
+$gray-icon-color: #C7C7C7;
 //background
 $lighter-color: #F2F2F2;
 $lighter-color--primary: #ECF8F7;
@@ -18,21 +19,22 @@ $lighter-color--dark: #F2F4F6;
 $lighter-color--dark-2: #E6EAED;
 
 //default
-$danger-color: #DB2D4E;
+$danger-color: #DE4400;
 $danger-color--accent: #ad1a35;
 $warning-color: #ffd900;
 $warning-color--accent: #ff9900;
 $success-color: #6AC653;
 $success-color--accent: #3ea824;
-$primary-color: #095D89;
+$primary-color: #003970;
 $primary-color--dark: #003049;
-$primary-color--accent: #009FBD;
-$primary-color--highlight: #44B1AE;
-$secondary-color: #FCBF49;
-$secondary-color--accent: #EF2E4F;
+$primary-color--accent: #80DCAF;
+$primary-color--highlight: #5A81FA;
+$secondary-color: #FFA702;
+$secondary-color--accent: #FFBE0F;
 $secondary-color--light: #f4d49d;
 //forms
 $disabled-color: #bdbdbd;
+$placeholder-color: #A5A5A5;
 $gray-border-color: #bdbdbd;
 $split-color: rgba(0, 0, 0, 0.2);
 //status
@@ -79,18 +81,6 @@ $colorClass-palette: (
 	"lighter-dark-2": $lighter-color--dark-2,
 	"gray-label": $gray-text-color,
 
-	//status
-	"open": $status-open,
-	"assigned": $status-assigned,
-	"unassigned": $status-unassigned,
-	"done": $status-done,
-	"accepted": $status-accepted,
-	"declined": $status-declined,
-	"under-review": $status-under-review,
-	"review-in-process": $status-review-in-process,
-	"secondary-review": $status-secondary-review,
-	"deficiency": $status-deficiency,
-	"not-applicable": $status-not-applicable
 ) !default;
 
 $mixClass-palette: (
@@ -116,24 +106,24 @@ $mixClass-palette: (
 ) !default;
 
 $buttons-palette: (
-	"transparent": ( bg: transparent, hover: $primary-color--highlight ),
-	"light": ( bg: $light-color, hover: $primary-color ),
-	"lighter": ( bg: $lighter-color, hover: $primary-color ),
-	"dark": ( bg: $dark-color, hover: $primary-color ),
-	"dark-accent": ( bg: $dark-color--accent, hover: $primary-color ),
-	"darkness": ( bg: $darkness-color, hover: $secondary-color ),
-	"gray": ( bg: $gray-color, hover: $primary-color--highlight ),
-	"gray-label": ( bg: $gray-text-color, hover: $primary-color--highlight ),
-	"gray-accent": ( bg: $gray-color--accent, hover: $primary-color--highlight ),
-	"primary": ( bg: $primary-color, hover: $primary-color--accent ),
-	"primary-dark": ( bg: $primary-color--dark, hover: $primary-color--accent ),
-	"primary-accent": ( bg: $primary-color--accent, hover: $primary-color--dark ),
-	"primary-highlight": ( bg: $primary-color--highlight, hover: $primary-color--accent ),
-	"secondary": ( bg: $secondary-color, hover: $secondary-color--accent ),
-	"secondary-accent": ( bg: $secondary-color--accent, hover: $primary-color--dark ),
-	"success": ( bg: $success-color, hover: $success-color--accent ),
-	"danger": ( bg: $danger-color, hover: $danger-color--accent ),
-	"warning": ( bg: $warning-color, hover: $warning-color--accent ),
+	"transparent": ( bg: transparent, color: $light-color, hover: $primary-color--highlight ),
+	"light": ( bg: $light-color, color: $primary-color, hover: $primary-color ),
+	"lighter": ( bg: $lighter-color, color: $primary-color, hover: $primary-color ),
+	"dark": ( bg: $dark-color, color: $light-color, hover: $primary-color ),
+	"dark-accent": ( bg: $dark-color--accent, color: $light-color, hover: $primary-color ),
+	"darkness": ( bg: $darkness-color, color: $light-color, hover: $secondary-color ),
+	"gray": ( bg: $gray-color, color: $light-color, hover: $primary-color--highlight ),
+	"gray-label": ( bg: $gray-text-color, color: $light-color, hover: $primary-color--highlight ),
+	"gray-accent": ( bg: $gray-color--accent, color: $light-color, hover: $primary-color--highlight ),
+	"primary": ( bg: $primary-color, color: $light-color, hover: $primary-color--accent ),
+	"primary-dark": ( bg: $primary-color--dark, color: $light-color, hover: $primary-color--accent ),
+	"primary-accent": ( bg: $primary-color--accent, color:  $primary-color, hover: $primary-color--dark ),
+	"primary-highlight": ( bg: $primary-color--highlight, color: $light-color, hover: $primary-color--accent ),
+	"secondary": ( bg: $secondary-color, color: $light-color, hover: $secondary-color--accent ),
+	"secondary-accent": ( bg: $secondary-color--accent, color: $light-color, hover: $primary-color--dark ),
+	"success": ( bg: $success-color, color: $light-color, hover: $success-color--accent ),
+	"danger": ( bg: $danger-color, color: $light-color, hover: $danger-color--accent ),
+	"warning": ( bg: $warning-color, color: $light-color, hover: $warning-color--accent ),
 ) !default;
 
 $chartPie-palette: (

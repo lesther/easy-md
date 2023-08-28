@@ -5,51 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zivmed</title>
+    <title>Easy MD</title>
 
     <link rel="stylesheet" href="../css/output.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.min.css">
 </head>
 
 <body>
-    <section class="section section_spacing-none group group_inline group_spacing-none section_full_height group_content-center">
-        <div class="section  h-width-100 h-max-width-md--sm h-max-width-lg--lg">
-            <div class="group group_content-center h-height-100">
+    <section class="section section_spacing-none group group_inline group_spacing-none section_full_height group_content-center h-overflow-hidden">
+        <div class="section section_pad-bottom_xs h-max-width-md--sm h-max-width-lg--lg ">
+            <div class="group group_content-center h-height-100 h-inner-spacing-top-xxl">
                 <form action="" class="group group_content-center h-height-100">
-                    <h2 class="title_sm">
-                        Sign in to <span class="text_highlight-soft-primary-highlight">Zivmed</span>
+                    <a href="">
+                        <img src="../images/logo_easy-md.svg" alt="logo-easy-md" width="150">
+                    </a>
+                    <h2 class="title_sm h-spacing-top-lg">
+                        Bienvenido
                     </h2>
-                    <p class="text_gray">
-                        Please enter your login and password
+                    <p>
+                        Por favor ingresa tus credeciales para continuar
                     </p>
-                    <div class="group group_spacing-xxs">
-                        <label for="" class="text_sm text_weight-bold">
-                            Email
-                        </label>
-                        <input type="email" class="text_field-primary-accent text_field-block" placeholder="Email" autocomplete="email" required="required" invalid>
-                        <span role="alert" class="text_danger text_sm">These credentials do not match our records.</span>
+                    <div class="group group_spacing-xs">
+                        <div class="group group_spacing-xxs">
+                            <input type="email" class="text_field-outline-primary text_field-oval text_field-block" placeholder="Email" autocomplete="email" required="required" invalid>
+                            <span role="alert" class="text_danger text_sm">These credentials do not match our records.</span>
+                        </div>
+                        <div class="group group_spacing-xxs">
+                            <input type="password" class="text_field-outline-primary text_field-oval text_field-block" placeholder="Password" autocomplete="email" required="required">
+                        </div>
+                        <p class="text_align-right text_sm">
+                            <a href="" class="btn_link-primary h-text-underline">
+                                Olvido su contraseña?
+                            </a>
+                        </p>
                     </div>
-                    <div class="group group_spacing-xxs">
-                        <label for="" class="text_sm text_weight-bold">
-                            Password
-                        </label>
-                        <input type="password" class="text_field-primary-accent text_field-block" placeholder="Password" autocomplete="email" required="required">
-                    </div>
-                    <button type="submit" class="btn_block btn_primary-accent h-width-auto text_weight-bold h-max-width-xs--md">
-                        Sing In
+                    
+                    <button type="submit" class="btn_link-primary">
+                        <span class="btn_circle btn_primary-accent">
+                            <span class="material-icons">
+                                east
+                            </span>
+                        </span>
+                        <span class="btn_link-primary">
+                            Login
+                        </span>
                     </button>
                 </form>
-                <div class="h-spacing-top-md">
-                    <p class="text text_align-center text_sm">
-                        Powered by ImplementHIT v1.14.0
-                        <a href="" class="btn_circle-md btn_secondary material-icons h-spacing-horizontal-md h-spacing-right-auto--md">
-                            pest_control
-                        </a>
+                <div class="h-spacing-top-md footer_login">
+                    <p class="text text_align-center text_sm text_split-primary-accent text_split-center">
+                        Powered by wokspace 2023
                     </p>
                 </div>
             </div>
         </div>
-        <section class="section section_primary h-hide h-show--md h-width-100 section_login"></section>
+        <section class="section section_primary h-hide h-show--md section_login flex_fill"></section>
     </section>
     
     <!-- scripts -->

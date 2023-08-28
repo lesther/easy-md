@@ -5,3 +5,23 @@
 .section_login {
     background-image: url('../images/medical-meeting.jpg');
 }
+
+.footer_login {
+    padding-top: 20px;
+    position: relative;
+    color: $light-color;
+}
+.footer_login:before {
+    content: "";
+    @include position(absolute, -20px, null, 50%, null, 400px, 400px);
+    background-color: $primary-color;
+    @include corner(100%);
+    @include transform(translateX(-50%));
+    z-index: -1;
+    @include sm {
+        @include width-height(600px, 600px);
+    }
+    @include md {
+        @include width-height(500px, 500px);
+    }
+}
