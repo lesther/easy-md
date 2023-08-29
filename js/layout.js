@@ -1,7 +1,7 @@
 //Menu Toggle Script
 $(".menu-toggle").click(function (e) {
     e.preventDefault();
-    $("#wrapper").toggleClass("menu_active");
+    $("#body_wrapper").toggleClass("menu_active");
 });
 
 //general filter
@@ -9,16 +9,16 @@ $(".menu-toggle").click(function (e) {
 $(document).ready(function() {
   $(".filter-toggle").click(function(e) {
     e.preventDefault();
-    $("#wrapper").toggleClass("panel_filter--active panel_active");
+    $("#body_wrapper").toggleClass("panel_filter--active panel_active");
   });
 
   $(".panel_close").click(function(e) {
     e.preventDefault();
 
-    $("#wrapper").removeClass();
+    $("#body_wrapper").removeClass();
   });
 });
-
+ 
 
 //richtext
 //to do
@@ -83,7 +83,7 @@ tabs.forEach(tab => {
 
 
 //drag scroll
-const scrollableElements = document.querySelectorAll('.tab_head, .scrollable, .group_nowrap-scroll, .table-responsive, .panel__wrap-right, .panel__wrap-left');
+const scrollableElements = document.querySelectorAll('.tab_head, .scrollable, .group_nowrap-scroll,  .group_nowrap-scroll--lg, .table-responsive, .panel__wrap-right, .panel__wrap-left');
 
 scrollableElements.forEach(function(element) {
   let startX, startY, startScrollLeft, startScrollTop;
@@ -100,8 +100,8 @@ scrollableElements.forEach(function(element) {
     document.addEventListener('mousemove', handleMouseMove);
 
     document.addEventListener('mouseup', function() {
-      element.style.cursor = 'auto';
-      element.style.userSelect = 'auto';
+      element.style.cursor = 'grab';
+      element.style.userSelect = 'grab';
       document.removeEventListener('mousemove', handleMouseMove);
     });
 

@@ -18,6 +18,15 @@
     gap: 20px;
 }
 
+.group_nowrap-scroll {
+    @extend .group;
+    @extend .group_inline;
+    white-space: nowrap;
+    overflow-x: auto;
+    //scroll
+    @include scroll(null, 0px);
+}
+
 @mixin group-modifiers($size: "") {
     .group_inline#{$size} {
         @include inline;
@@ -25,6 +34,15 @@
 
     .group_stack#{$size} {
         @include stack;
+    }
+
+    //scroll
+    .group_nowrap-scroll#{$size} {
+        white-space: nowrap;
+        overflow-x: auto;
+        //scroll
+        @include scroll(null, 0px);
+        cursor: grab;
     }
 
     //content align
@@ -190,13 +208,4 @@
 
 @include xl {
 	@include group-modifiers("--xl");
-}
-
-.group_nowrap-scroll {
-    @extend .group;
-    @extend .group_inline;
-    white-space: nowrap;
-    overflow-x: auto;
-    //scroll
-    @include scroll(null, 0px);
 }

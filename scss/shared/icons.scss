@@ -33,6 +33,7 @@
     @include opacity(0);
 }
 .icon_group-hover:hover .icon_group,
+.icon_group-btn:hover .icon_group,
 .active .icon_group,
 .icon_group.active,
 .icon_group:hover {
@@ -47,10 +48,17 @@
 }
 //btn
 .icon_group-btn {
-    @extend .btn_circle-md;
-    @include width-height(40px, 40px);
-    padding: 7px;
+    @include width-height(auto, auto);
+    padding: 4px;
     background-color: transparent;
+    @include corner(10px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
+}
+.icon_group-btn--circle {
+    @include corner(100%);
+    padding: 7px;
 }
 .icon_group-hover:hover .icon_group-btn,
 .icon_group-btn:hover {

@@ -1,13 +1,25 @@
+// menu/panel
+.panel_menu {
+    max-width: 300px;
+    background: $light-color;
+    @include lg {
+        background-color: transparent;
+        max-width: none;
+    }
+}
 //////////////////////////////
 // nav
 .btn_nav-link {
     @extend .group;
     @extend .group_inline;
-    @extend .text_sm;
     @extend .group_spacing-xxs;
     @extend .group_align-center;
     @extend .flex_width-auto;
+    font-size: 14px;
     color: $gray-color;
+    @include lg {
+        font-size: 12px;
+    }
 }
 .btn_nav-img {
     @extend .btn_circle-md;

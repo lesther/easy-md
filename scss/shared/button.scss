@@ -193,16 +193,11 @@
 .btn_fixed-bottom-left {
 	@include position(fixed, null, 30px, 25px, null,  null, null);
 	z-index: 2;
-	@include md {
-		left: calc(55px + #{$sidebar-width});
-	}
+
 }
 .btn_fixed-left {
 	@include position(fixed, null, null, 25px, null,  null, null);
 	z-index: 2;
-	@include md {
-		left: calc(55px + #{$sidebar-width});
-	}
 }
 .btn_fixed-right {
 	@include position(fixed, null, null, null, 25px,  null, null);

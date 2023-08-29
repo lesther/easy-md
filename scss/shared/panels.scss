@@ -88,24 +88,6 @@
         @include opacity(100);
     }
 }
-.panel_filter-advanced--active .panel_filter-advanced,
-.panel_ticket--active .panel_ticket,
-.panel_note--active .panel_note,
-.panel_coder--active .panel_coder,
-.panel_diagnosis--active .panel_diagnosis,
-.panel_diagnosis-add--active .panel_diagnosis-add,
-.panel_procedure-add--active .panel_procedure-add,
-.panel_query-add--active .panel_query-add,
-.panel_query-view--active .panel_query-view,
-.panel_query-status--active .panel_query-status,
-.panel_drg--active .panel_drg,
-.panel_timeline--active .panel_timeline,
-.panel_timeline-filter--active .panel_timeline-filter,
-.panel_code-information--active .panel_code-information,
-.panel_rebuttal--active .panel_rebuttal,
-.panel_rejected--active .panel_rejected,
-.panel_add-facility--active .panel_add-facility,
-.panel_download-report--active .panel_download-report,
 .panel_filter--active .panel_filter {
     display: flex;
 }
