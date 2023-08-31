@@ -7,7 +7,6 @@
   padding: 0;
   &:not(.nav__container) {
     position: relative;
-    z-index: 1;
   }
 	@include md {
 		max-width: $max-width-container-page;
