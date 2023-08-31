@@ -484,6 +484,9 @@
 // spacing
 @mixin h-width-height-atr($size: "") {
 	// min-width
+	.h-min-width-auto#{$size} {
+		min-width: auto;
+	}
 	.h-min-width-xxs#{$size} {
 		min-width: 100px;
 	}
