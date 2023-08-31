@@ -25,3 +25,66 @@
         @include width-height(500px, 500px);
     }
 }
+
+//graphics
+/* .graphic_metric-line {
+    height: 10px;
+    @include bg-gradient(left, #38DE9C, 1, 33%, #25C686, 1, 33%);
+    @include corner(30px);
+    position: relative;
+}
+.graphic_metric-value {
+    border: 1px solid $gray-border-color;
+    background-color: $light-color;
+    @include position(absolute, 0, 0, 0, null, 25px, 25px);
+    margin: auto;
+    @include corner(100%);
+} */
+
+.graphic_metric-line:before {
+    content: "";
+    @include position(absolute, 0, null, null, 0, 33%, 100%);
+    background-color: $secondary-color;
+    @include corner(0, 30px, 30px, 0);
+    z-index: 1;
+}
+.graphic_metric-line {
+    display: block;
+    width: 100%;
+    @include form_reset;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+.graphic_metric-line::-webkit-slider-thumb  {
+    @include form_reset;
+}
+.graphic_metric-line:focus {
+    outline: none;
+}
+.graphic_metric-line::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+.graphic_metric-line {
+    @include rangeThumb {
+        border: 1px solid $gray-border-color;
+        height: 20px;
+        width: 20px;
+        @include corner(100%);
+        background-color: $light-color;
+        cursor: pointer;
+        margin-top: -5px;
+        z-index: 2;
+        position: relative;
+    }
+    @include rangeTrack {
+        @include bg-gradient(left, #38DE9C, 1, 33%, #25C686, 1, 33%);
+        @include corner(30px);
+        height: 10px;
+    }
+}

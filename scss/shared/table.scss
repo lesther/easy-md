@@ -13,7 +13,6 @@ table {
 th,
 td {
     vertical-align: top;
-    padding: 12px 15px;
     border: 1px solid transparent;
     border-bottom: 0px;
     border-top: 0px;
@@ -22,14 +21,29 @@ td {
         white-space: nowrap;
     }
 }
+//header
+th {
+    padding: 20px 15px;
+    @extend .text_xs;
+}
+thead tr {
+    border: transparent;
+}
+td {
+    padding: 10px 15px;
+    color: $gray-color;
+    @extend .text_sm;
+}
 
 //table color
 :root {
-    --odd-row: #{hexToRGB($primary-color--dark)};
+    //--odd-row: #{hexToRGB($primary-color--dark)};
+    --odd-row: transparent;
 }
+th,
 td {
-    border-left-color: $light-color;
-    border-right-color: $light-color;
+    border-left-color: transparent;
+    border-right-color: transparent;
 }
 tr td:last-child,
 tr td:first-child {
@@ -39,7 +53,8 @@ tr td:last-child {
     border-right-color: transparent;
 }
 tr {
-    background-color: $light-color;
+    background-color: transparent;
+    border-bottom: 1px solid $gray-border-color;
 }
 thead ~ tbody tr:nth-of-type(even) {
     background-color: rgba($color: var(--odd-row), $alpha: 0.05);
@@ -51,53 +66,8 @@ tr:nth-of-type(odd) {
     background-color: rgba($color: var(--odd-row), $alpha: 0.05);
 }
 
-//rows inside rows
-thead tr,
-thead tr:first-of-type,
-thead tr:nth-of-type(even),
-thead tr:nth-of-type(odd) {
-    @extend .row_soft-primary-highlight;
-}
-thead ~ tbody tr tr:nth-of-type(even),
-tr tr:nth-of-type(odd),
-tr tr,
-td td {
-    background-color: initial;
-    overflow: initial;
-}
-tfoot tr,
-tfoot tr:first-of-type,
-tfoot tr:nth-of-type(even),
-tfoot tr:nth-of-type(odd) {
-    @extend .row_soft-primary-highlight;
-}
-tfoot td {
-    color: $primary-color;
-    border-top: 1px solid $primary-color--highlight;
-    border-bottom: 1px solid $primary-color--highlight;
-}
-tfoot td:first-of-type {
-    border-left: 1px solid $primary-color--highlight;
-}
-tfoot td:last-of-type {
-    border-right: 1px solid $primary-color--highlight;
-}
-
-
-
-td td {
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-table table tr:first-of-type td {
-    padding-top: 12px;
-}
-table table tr:last-of-type td {
-    padding-bottom: 12px;
-}
-
 //overflow
-.table-responsive {
+.table_responsive {
     overflow: auto;
     @include scroll;
 }
@@ -110,38 +80,6 @@ table table tr:last-of-type td {
     tr:nth-of-type(odd) {
         background-color: var(--odd-row);
     }
-}
-
-//notification
-.row_notification {
-    position: relative;
-}
-.row_notification:after {
-    content: "\e7f7";
-    @include position(absolute, 5px, null, null, 10px, 20px, 20px);
-    @include material-icons;
-    font-size: 20px;
-    @include transition(0.3s);
-    color: $primary-color--accent;
-}
-.row_notification:hover:after {
-    color: $secondary-color;
-}
-
-//rows
-@each $colorClass, $value in $mixClass-palette {
-    .row_soft-#{$colorClass}:nth-of-type(even),
-    .row_soft-#{$colorClass}:nth-of-type(odd),
-	.row_soft-#{$colorClass} {
-        background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
-		color: map-get($value, 'bg');
-	}
-    .row_#{$colorClass}:nth-of-type(even),
-    .row_#{$colorClass}:nth-of-type(odd),
-    .row_#{$colorClass} {
-		background-color: map-get($value, 'bg');
-		color: map-get($value, 'color');
-	}
 }
 
 //table fixed

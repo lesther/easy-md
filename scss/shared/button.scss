@@ -41,13 +41,13 @@
 .btn_xs {
 	@extend .btn;
 	@extend .text_xs;
-	padding: 5px;
+	padding: 5px 10px;
 	line-height: 1;
 }
 .btn_sm {
 	@extend .btn;
 	@extend .text_sm;
-	padding: 6px;
+	padding: 6px 10px;
 	line-height: 1;
 }
 .btn_md {

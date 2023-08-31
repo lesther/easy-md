@@ -83,7 +83,7 @@ tabs.forEach(tab => {
 
 
 //drag scroll
-const scrollableElements = document.querySelectorAll('.tab_head, .scrollable, .group_nowrap-scroll,  .group_nowrap-scroll--lg, .table-responsive, .panel__wrap-right, .panel__wrap-left');
+const scrollableElements = document.querySelectorAll('.tab_head, .scrollable, .group_nowrap-scroll,  .group_nowrap-scroll--lg, .table_responsive, .panel__wrap-right, .panel__wrap-left');
 
 scrollableElements.forEach(function(element) {
   let startX, startY, startScrollLeft, startScrollTop;

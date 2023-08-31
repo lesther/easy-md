@@ -180,17 +180,6 @@
 
 /////////////////////////////
 //format color
-@each $colorClass, $value in $colorClass-palette {
-	.text_#{$colorClass} {
-		@extend .text;
-		color: $value;
-	}
-	.text_split-#{$colorClass}:before {
-		background-color: $value;
-		@extend .text_split;
-	}
-}
-
 @each $colorClass, $value in $mixClass-palette {
 	.text_highlight-#{$colorClass} {
 		@extend .text_highlight;
@@ -201,5 +190,20 @@
 		@extend .text_highlight;
 		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.1);
 		color: map-get($value, 'bg');
+	}
+	.text_highlight-medium-#{$colorClass} {
+		@extend .text_highlight;
+		background-color: rgba($color: map-get($value, 'bg'), $alpha: 0.3);
+		color: map-get($value, 'bg');
+	}
+}
+@each $colorClass, $value in $colorClass-palette {
+	.text_#{$colorClass} {
+		@extend .text;
+		color: $value;
+	}
+	.text_split-#{$colorClass}:before {
+		background-color: $value;
+		@extend .text_split;
 	}
 }

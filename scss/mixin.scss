@@ -232,6 +232,23 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
     -moz-appearance: none;
     appearance: none;
 }
+//range
+@mixin rangeThumb {
+	&::-webkit-slider-thumb {
+		@content;
+	}
+	&::-moz-range-thumb {
+		@content;
+	}
+}
+@mixin rangeTrack {
+	&::-webkit-slider-runnable-track {
+		@content;
+	}
+	&::-moz-range-track {
+		@content;
+	}
+}
 
 // truncate
 @mixin truncate {
