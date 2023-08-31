@@ -463,7 +463,7 @@
 		&:focus,
 		&:active,
 		&:hover {
-			color: $primary-color--accent;
+			color: $primary-color--highlight;
 		}
 	}
 	.btn_link-hover-#{$colorClass} {
