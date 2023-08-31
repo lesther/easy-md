@@ -425,11 +425,11 @@ input.form_check,
 	position: relative;
 	flex: 0 0 auto;
 	&:focus {
-		@include shadow(0 0 0 0.25rem rgba($color: $primary-color--accent, $alpha: 0.25));
+		@include shadow(0 0 0 0.25rem rgba($color: $primary-color, $alpha: 0.25));
 	}
 	&:checked {
-		background-color: $primary-color--accent;
-		border-color: $primary-color--accent;
+		background-color: $primary-color;
+		border-color: $primary-color;
 	}
 	&:not([disabled]){
 		cursor: pointer;
@@ -442,13 +442,13 @@ input.form_check:before,
 	@include transform(scale(0));
 	margin: auto;
 }
-input.form_check input:checked:before,
+input.form_check:checked:before,
 .form_check input:checked:before {
 	@include transform(scale(1));
 }
 
 //checkbox
-input.form_check input[type="checkbox"]:before,
+input.form_check[type="checkbox"]:before,
 .form_check input[type="checkbox"]:before {
 	@include position(absolute, 0, 0, 0, 0, 12px, 12px);
 	@include background(100% auto, center center, no-repeat);
@@ -456,11 +456,11 @@ input.form_check input[type="checkbox"]:before,
 }
 
 //radio
-input.form_check input[type="radio"],
+input.form_check[type="radio"],
 .form_check input[type="radio"] {
 	@include corner(100%);
 }
-input.form_check input[type="radio"]:before,
+input.form_check[type="radio"]:before,
 .form_check input[type="radio"]:before {
 	background-color: $light-color;
 	@include position(absolute, 0, 0, 0, 0, 8px, 8px);
