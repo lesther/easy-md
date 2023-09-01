@@ -376,6 +376,7 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
 //scroll
 .scrollable {
     overflow: auto;
+	@include scroll(vertical, 0px);
 }
 
 //panel

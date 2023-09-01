@@ -50,6 +50,12 @@
 	padding: 6px 10px;
 	line-height: 1;
 }
+.btn_sm-1 {
+	@extend .btn;
+	@extend .text_sm;
+	padding: 8px 10px;
+	line-height: 1;
+}
 .btn_md {
 	@extend .btn;
 	padding: 10px 20px;
