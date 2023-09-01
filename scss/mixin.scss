@@ -351,16 +351,16 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
 			background-color: rgba($color: $lighter-color, $alpha: 0);
 		}
 		&::-webkit-scrollbar-thumb {
-			background-color: rgba($color: $gray-color, $alpha: 0);
+			background-color: rgba($color: $disabled-color, $alpha: 0);
 			outline: 0;
 			@include corner(30px);
 		}
 		&:hover::-webkit-scrollbar-thumb {
-			background-color: rgba($color: $gray-color, $alpha: 1);
+			background-color: rgba($color: $disabled-color, $alpha: 1);
 		}
-		&:hover::-webkit-scrollbar-track {
+		/* &:hover::-webkit-scrollbar-track {
 			background-color: rgba($color: $lighter-color, $alpha: 1);
-		}
+		} */
 		@if $scrollPosition == vertical {
 			&::-webkit-scrollbar {
 				width: $scrollSize;
@@ -376,7 +376,7 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
 //scroll
 .scrollable {
     overflow: auto;
-	@include scroll(vertical, 0px);
+	@include scroll(vertical);
 }
 
 //panel

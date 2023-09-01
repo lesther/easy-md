@@ -600,6 +600,9 @@
 	}
 
 	// max-height
+	.h-max-height-xs-1#{$size} {
+		max-height: 170px;
+	}
 	.h-max-height-sm#{$size} {
 		max-height: 200px;
 	}

@@ -53,7 +53,7 @@ body.loading {
 .loading_color:before {
     border: 2px solid $primary-color;
     border-right-color: $success-color--accent;
-    border-bottom-color: $status-review-in-process;
+    border-bottom-color: $danger-color;
     animation: spinner .6s linear infinite;
     -webkit-animation: spinner .6s linear infinite;
     animation: spinner .6s linear infinite;

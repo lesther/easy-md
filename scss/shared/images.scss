@@ -30,6 +30,11 @@ $profile-font: var(--profile-font);
 		line-height: $profile;
 	}
 }
+.profile img {
+	@include corner(100%);
+	width: 100%;
+	overflow: hidden;
+}
 
 //sizes
 .profile_sm {

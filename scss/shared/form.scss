@@ -640,12 +640,6 @@ input.form_check[disabled],
 		background-color: $warning-color--accent;
 	}
 }
-.switch-btn_content-review {
-	@extend .switch-btn_content;
-	&:before {
-		background-color: $status-under-review;
-	}
-}
 
 //btn check
 .form_check-btn {

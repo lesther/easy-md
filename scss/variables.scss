@@ -19,7 +19,7 @@ $lighter-color--dark: #F2F4F6;
 $lighter-color--dark-2: #E6EAED;
 
 //default
-$danger-color: #DE4400;
+$danger-color: #EF2E4F;
 $danger-color--accent: #ad1a35;
 $warning-color: #ffd900;
 $warning-color--accent: #ff9900;
@@ -28,21 +28,17 @@ $success-color--accent: #3ea824;
 $primary-color: #003970;
 $primary-color--dark: #003049;
 $primary-color--accent: #80EEC2;
-$primary-color--highlight: #5A81FA;
+$primary-color--highlight: #3682F9;
 $secondary-color: #FFA702;
-$secondary-color--accent: #FFBE0F;
+$secondary-color--accent: #F4C539;
 $secondary-color--light: #f4d49d;
+$focus-color: #00C8BD;
 //forms
 $disabled-color: #bdbdbd;
 $placeholder-color: #A5A5A5;
 $gray-border-color: #D0D0D0;
 $split-color: rgba(0, 0, 0, 0.2);
 //status
-$status-open: #6AC653;
-$status-assigned: #009FBD;
-$status-unassigned: #F77F00;
-$status-done: #BDBDBD;
-$status-accepted: #00C8BD;
 $status-declined: #D21312;
 $status-under-review: #FF6D60;
 $status-review-in-process: #ED1D8B;
@@ -125,18 +121,3 @@ $buttons-palette: (
 	"danger": ( bg: $danger-color, color: $light-color, hover: $danger-color--accent ),
 	"warning": ( bg: $warning-color, color: $light-color, hover: $warning-color--accent ),
 ) !default;
-
-$chartPie-palette: (
-	"light": ( start-color: $light-color, end-color: $light-color, fill-color: rgba($color: $light-color, $alpha: 0.1) ),
-	"dark": ( start-color: $gray-color, end-color: $dark-color, fill-color: rgba($color: $light-color, $alpha: 0.1) ),
-	"gray": ( start-color: $gray-color, end-color: $lighter-color, fill-color: $lighter-color ),
-	"primary": ( start-color: $primary-color, end-color: $primary-color--accent, fill-color: $lighter-color ),
-	"primary-accent": ( start-color: $primary-color--accent, end-color: $primary-color, fill-color: $lighter-color ),
-	"secondary": ( start-color: $secondary-color, end-color:  $secondary-color--accent, fill-color: $lighter-color ),
-	"secondary-accent": ( start-color: $secondary-color--accent, end-color:$secondary-color, fill-color: $lighter-color ),
-	"success": ( start-color: $success-color, end-color: $success-color--accent, fill-color: $lighter-color ),
-	"danger": ( start-color: $danger-color, end-color: $danger-color--accent, fill-color: $lighter-color ),
-	"warning": ( start-color: $warning-color, end-color: $warning-color--accent, fill-color: $lighter-color ),
-	"lighter": ( start-color: $lighter-color, end-color: $gray-color, fill-color: rgba($color: $light-color, $alpha: 0.1) )
-) !default;
-

@@ -124,19 +124,19 @@
 
 //hover
 .panel__wrap-right .panel_resizable-handle:hover:before {
-    border-left: 6px solid rgba($status-accepted, $alpha: 0.3);
+    border-left: 6px solid rgba($focus-color, $alpha: 0.3);
 }
 .panel__wrap-left .panel_resizable-handle:hover:before {
-    border-right: 6px solid rgba($status-accepted, $alpha: 0.3);
+    border-right: 6px solid rgba($focus-color, $alpha: 0.3);
 }
 
 //active
 .panel__wrap-right .panel_resizable-handle:active:before {
-    border-left: 12px solid rgba($status-accepted, $alpha: 0.3);
+    border-left: 12px solid rgba($focus-color, $alpha: 0.3);
 }
 .panel__wrap-left .panel_resizable-handle:active:before {
-    border-right: 12px solid rgba($status-accepted, $alpha: 0.3);
+    border-right: 12px solid rgba($focus-color, $alpha: 0.3);
 }
 .panel_resizable[style*="ew-resize"] {
-    border-color: $status-accepted;
+    border-color: $focus-color;
 }
