@@ -58,8 +58,8 @@
 .graphic_metric-line {
     @include rangeThumb {
         border: 1px solid $gray-border-color;
-        height: 20px;
-        width: 20px;
+        height: 15px;
+        width: 15px;
         @include corner(100%);
         background-color: $light-color;
         cursor: pointer;
@@ -70,6 +70,51 @@
     @include rangeTrack {
         @include bg-gradient(left, #38DE9C, 1, 33%, #25C686, 1, 33%);
         @include corner(30px);
-        height: 10px;
+        height: 5px;
     }
+}
+
+//slider nav
+.slider_nav {
+    @include material-icons;
+    background-color: $primary-color;
+    color: $light-color;
+    @include corner(100%);
+    border: 1px solid transparent;
+    @include position(absolute, 0, 0, null, null, 20px, 20px);
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    line-height: 17px;
+    font-size: 17px;
+    @include transition(0.3s);
+    &:hover {
+        background-color: $primary-color--accent;
+        color: $primary-color;
+    }
+}
+.slider_nav-next {
+    @extend .slider_nav;
+    right: 0px;
+}
+.slider_nav-prev {
+    @extend .slider_nav;
+    left: 0px;
+}
+.slider_nav--light {
+    border-color: $primary-color--accent;
+    background-color: transparent;
+    color: $primary-color--accent;
+}
+//slider
+.specialist_nav-next,
+.specialist_nav-prev {
+    top: 60px;
+    bottom: auto;
+}
+.farma_nav-next {
+    right: -10px;
+}
+.farma_nav-prev {
+    left: -10px;
 }

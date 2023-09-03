@@ -131,6 +131,12 @@
 	height: 30px;
 	@extend .text_default;
 }
+.btn_circle-sm-1 {
+	@extend .btn_circle;
+	width: 35px;
+	height: 35px;
+	@extend .text_lg;
+}
 .btn_circle-md {
 	@extend .btn_circle;
 	width: 40px;
@@ -190,14 +196,14 @@
 
 // fixed
 .btn_fixed-bottom-right {
-	@include position(fixed, null, 30px, null, 25px, null, null);
+	@include position(fixed, null, 50px, null, 25px, null, null);
 	z-index: 2;
 	@include md {
 		right: 55px;
 	}
 }
 .btn_fixed-bottom-left {
-	@include position(fixed, null, 30px, 25px, null,  null, null);
+	@include position(fixed, null, 50px, 25px, null,  null, null);
 	z-index: 2;
 
 }

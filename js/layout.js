@@ -5,7 +5,6 @@ $(".menu-toggle").click(function (e) {
 });
 
 //general filter
-//search filter
 $(document).ready(function() {
   $(".panel-toggle").click(function(e) {
     e.preventDefault();

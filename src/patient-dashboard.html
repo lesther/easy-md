@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy MD</title>
 
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/main.min.css">
 </head>
@@ -185,17 +188,19 @@
             <div class="group group_spacing-xl">
                 <div class="group group_inline--sm group_wrap--sm">
                     <div class="box_lighter flex_fill h-min-width-sm-2--sm h-min-width-auto--lg group group_spacing-xs">
-                        <div class="group group_inline group_content-between group_wrap">
-                            <p class="text_sm text_weight-bold flex_width-auto">
-                                23 Junio 2023
-                            </p>
-                            <div>
-                                <a href="" class="btn_sm btn_primary btn_rounded-oval flex_width-auto">
-                                    Actualizar
-                                </a>
+                        <div>
+                            <div class="group group_inline group_content-between group_wrap">
+                                <p class="text_sm text_weight-bold flex_width-auto">
+                                    23 Junio 2023
+                                </p>
+                                <div>
+                                    <a href="" class="btn_sm btn_primary btn_rounded-oval flex_width-auto">
+                                        Actualizar
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="group group_spacing-sm">
+                        <div class="group group_spacing-sm h-spacing-vertical-auto">
                             <div>
                                 <div class="group group_inline group_content-between">
                                     <p class="text_primary text_sm text_spacing-xs">
@@ -254,10 +259,82 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box_lighter box_sm flex_fill h-min-width-sm-2--sm h-min-width-auto--lg group group_spacing-xs">
+                    <div class="box_lighter box_sm flex_fill h-min-width-sm-2--sm h-min-width-auto--lg group group_spacing-xs h-overflow-hidden">
                         <a href="" class="btn_link-primary text_weight-bold">
                             Medicamentos
                         </a>
+                        <div class="h-position-relative box_light box_sm">
+                            <div class="swiper farma_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-overflow-hidden">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/vick-vaporub.jpeg" alt="vick-vaporub" width="100" class="h-display-inline">
+                                            </a>
+                                            <p class="text text_spacing-none text_sm text_weight-bold h-text-uppercase">
+                                                <a href="" class="btn_link-primary truncate-text h-display-block">
+                                                    VICK VAPORUB
+                                                </a>
+                                            </p>
+                                            <p class="text_sm text_spacing-none text_gray">
+                                                C$ 107.17
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-overflow-hidden">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/ensure-advance.jpeg" alt="ensure-advance" width="100" class="h-display-inline">
+                                            </a>
+                                            <p class="text text_spacing-none text_sm text_weight-bold h-text-uppercase">
+                                                <a href="" class="btn_link-primary truncate-text h-display-block">
+                                                    ENSURE ADVANCE VAINILLA
+                                                </a>
+                                            </p>
+                                            <p class="text_sm text_spacing-none text_gray">
+                                                C$ 1,540.99
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-overflow-hidden">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/dolartrin.jpeg" alt="dolartrin" width="100" class="h-display-inline">
+                                            </a>
+                                            <p class="text text_spacing-none text_sm text_weight-bold h-text-uppercase">
+                                                <a href="" class="btn_link-primary truncate-text h-display-block">
+                                                    DOLARTRIN FORTE
+                                                </a>
+                                            </p>
+                                            <p class="text_sm text_spacing-none text_gray">
+                                                C$ 85.00
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-overflow-hidden">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/dolartrin.jpeg" alt="dolartrin" width="100" class="h-display-inline">
+                                            </a>
+                                            <p class="text text_spacing-none text_sm text_weight-bold h-text-uppercase">
+                                                <a href="" class="btn_link-primary truncate-text h-display-block">
+                                                    Cebion Naranja 500mg
+                                                </a>
+                                            </p>
+                                            <p class="text_sm text_spacing-none text_gray">
+                                                C$ 6.39
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider_nav-next farma_nav-next">
+                                chevron_right
+                            </div>
+                            <div class="slider_nav-prev farma_nav-prev">
+                                chevron_left
+                            </div>
+                        </div>
                         <div class="h-spacing-top-auto">
                             <a href="" class="btn_primary-accent btn_sm-1 btn_rounded-sm btn_block text_weight-bold">
                                 Ver medicamentos
@@ -320,10 +397,220 @@
                             </a>
                         </div>
                     </div>
-                    <div class="box_primary box_sm flex_fill h-min-width-sm-2--sm h-min-width-auto--lg">
+                    <div class="box_primary box_sm flex_fill h-min-width-sm-2--sm h-min-width-auto--lg h-overflow-hidden group group_spacing-xs">
                         <a href="" class="btn_link-light text_weight-bold">
                             Especialistas
                         </a>
+                        <div class="h-position-relative">
+                            <div class="swiper specialist_slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/heart_icon.png" alt="heart-icon" width="90" class="h-display-inline h-spacing-bottom-sm">
+                                            </a>
+                                            <a href="" class="text_sm text_weight-bold text_primary-accent btn_block text_spacing-sm">
+                                                Psicología
+                                            </a>
+                                            <p class="text_align-center text_sm">
+                                                Consultas psicológicas ilimitadas por videollamada o chat desde tu celular.  
+                                            </p>
+                                        </div>
+                                        <div class="group_inline group h-spacing-top-md group_spacing-none">
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=38">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=39">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=40">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=41">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=42">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=43">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/brocoli_icon.png" alt="brocoli-icon" width="90" class="h-display-inline h-spacing-bottom-sm">
+                                            </a>
+                                            <a href="" class="text_sm text_weight-bold text_primary-accent btn_block text_spacing-sm">
+                                                Nutrición
+                                            </a>
+                                            <p class="text_align-center text_sm">
+                                                Consultas con especialistas en nutrición. ¡Lleva un plan alimenticio personalizado!
+                                            </p>
+                                        </div>
+                                        <div class="group_inline group h-spacing-top-md group_spacing-none">
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=44">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=45">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=46">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=47">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=48">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=49">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/tooth_icon.png" alt="tooth-icon" width="90" class="h-display-inline h-spacing-bottom-sm">
+                                            </a>
+                                            <a href="" class="text_sm text_weight-bold text_primary-accent btn_block text_spacing-sm">
+                                                Odontología
+                                            </a>
+                                            <p class="text_align-center text_sm">
+                                                Descuentos exclusivos en tratamientos dentales. ¡Cuidamos de tu sonrisa!
+                                            </p>
+                                        </div>
+                                        <div class="group_inline group h-spacing-top-md group_spacing-none">
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=50">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=51">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=52">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=53">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=54">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=55">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/lotus_icon.png" alt="lotus-icon" width="90" class="h-display-inline h-spacing-bottom-sm">
+                                            </a>
+                                            <a href="" class="text_sm text_weight-bold text_primary-accent btn_block text_spacing-sm">
+                                                Wellness
+                                            </a>
+                                            <p class="text_align-center text_sm">
+                                                Descuentos en spas, tiendas naturistas, yoga, productos fit, cuidados de la piel y más.
+                                            </p>
+                                        </div>
+                                        <div class="group_inline group h-spacing-top-md group_spacing-none">
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=56">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=57">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=58">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=59">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=60">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=61">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/physiotherapy_icons.png" alt="physiotherapy-icon" width="90" class="h-display-inline h-spacing-bottom-sm">
+                                            </a>
+                                            <a href="" class="text_sm text_weight-bold text_primary-accent btn_block text_spacing-sm">
+                                                Fisioterapia
+                                            </a>
+                                            <p class="text_align-center text_sm">
+                                                Descuentos y beneficios en fisioterapia y tratamientos a domicilio.
+                                            </p>
+                                        </div>
+                                        <div class="group_inline group h-spacing-top-md group_spacing-none">
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=62">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=63">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=64">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=65">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=66">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=67">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="text_align-center">
+                                            <a href="">
+                                                <img src="../images/chemistry_icon.png" alt="chemistry-icon" width="90" class="h-display-inline h-spacing-bottom-sm">
+                                            </a>
+                                            <a href="" class="text_sm text_weight-bold text_primary-accent btn_block text_spacing-sm">
+                                                Laboratorio
+                                            </a>
+                                            <p class="text_align-center text_sm">
+                                                Descuentos diarios y laboratorio a domicilio. ¡No más filas!
+                                            </p>
+                                        </div>
+                                        <div class="group_inline group h-spacing-top-md group_spacing-none">
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=68">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=69">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=70">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=3">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=2">
+                                            </span>
+                                            <span class="profile_secondary profile_sm profile_outline-sm profile_outline-light h-spacing-offset-right-xs">
+                                                <img src="https://i.pravatar.cc/50?img=1">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider_nav-next slider_nav--light specialist_nav-prev">
+                                chevron_right
+                            </div>
+                            <div class="slider_nav-prev slider_nav--light specialist_nav-next">
+                                chevron_left
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="group group_spacing-sm">
@@ -331,7 +618,7 @@
                         <h2 class="title_xs title_primary title_spacing-none">
                             Consultas Recientes
                         </h2>
-                        <a href="" class="btn_primary-accent btn_sm">
+                        <a href="" class="btn_primary-accent btn_sm text_weight-bold">
                             <span class="material-icons icon_sm">
                                 add
                             </span>
@@ -495,9 +782,41 @@
         </p>
     </footer>
 
+    <div class="btn_fixed-bottom-right">
+        <div class="group group_spacing-xxs">
+            <a href="" class="btn_circle-sm-1 btn_primary-highlight material-icons">
+                call
+            </a>
+            <a href="" class="btn_circle-sm-1 btn_primary-accent material-icons">
+                add_comment
+            </a>
+        </div>
+    </div>
+
     <!-- panels -->
     
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/layout.js"></script>
+
+    <script>
+        var swiper = new Swiper(".specialist_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".specialist_nav-prev",
+                prevEl: ".specialist_nav-next",
+            },
+        });
+        var swiper = new Swiper(".farma_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".farma_nav-next",
+                prevEl: ".farma_nav-prev",
+            },
+        });
+    </script>
+
 </body>

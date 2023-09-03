@@ -1,5 +1,12 @@
 /////////////////////////////
 // images
+img[height] {
+	width: auto;
+	max-width: none;
+	max-height: 100%;
+}
+
+//profile
 $profile: var(--profile);
 $profile-font: var(--profile-font);
 
