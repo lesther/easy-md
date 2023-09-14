@@ -30,7 +30,8 @@
     margin: auto;
 }
 .tab_btn--active {
-    color: $primary-color--accent;
+    background-color: rgba($color: $primary-color--accent, $alpha: 0.1);
+    color: $primary-color;
     font-weight: bold;
 }
 .tab_btn--active:before {

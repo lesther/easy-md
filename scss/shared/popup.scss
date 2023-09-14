@@ -1,0 +1,47 @@
+/////////////////////////////
+// popup
+.popup {
+	@include position(fixed, 0, null, 0, null, 100%, 100%);
+	padding: 25px;
+	z-index: 99;
+	@include opacity(0);
+	visibility: hidden;
+	overflow: auto;
+	@include transition(0.3s);
+	display: flex;
+}
+.popup__wrap {
+	display: flex;
+	justify-self: center;
+	align-self: center;
+	max-width: 500px;
+	margin: auto;
+	@include opacity(0);
+	visibility: hidden;
+	z-index: 99;
+	@extend .box;
+	@include transition(0.3s);
+	width: 100%;
+}
+
+.popup_overlay {
+	@extend .panel_overlay;
+}
+
+.popup_active {
+	.popup,
+	.popup__wrap {
+        @include opacity(100);
+		visibility: visible;
+    }
+    .popup__wrap + [class*="popup_overlay"]:before {
+        visibility: visible;
+        @include opacity(100);
+    }
+}
+
+@each $colorClass, $value in $colorClass-palette {
+    .popup__wrap-#{$colorClass} {
+		background-color: $value;
+	}
+}

@@ -35,24 +35,12 @@
     }
 }
 
-//vertical space
-/* .panel_side-container:before,
-.panel_side-container:after {
-    content: "";
-    background-color: inherit;
-}
-.panel_side-container:after {
-    @include position(absolute, 100%, null, 0, null, 100%, 20px);
-}
-.panel_side-container:before {
-    @include position(fixed, null, 100%, 0, null, 100%, 20px);
-} */
-
 
 /////////////////////////////
 
 //views
 //active
+.popup_active,
 .panel_active {
     overflow: hidden;
 }
@@ -67,16 +55,10 @@
 }
 
 //close
+.popup_close,
 .panel_close {
     @include position(absolute, 20px, null, null, 20px, null, null);
 }
-
-//headline
-.panel_headline {
-    padding-right: 40px;
-    @extend .group_flex-initial;
-}
-
 
 //general panel
 .panel_active {
@@ -88,10 +70,25 @@
         @include opacity(100);
     }
 }
-.panel_filter--active .panel_filter {
+.popup_active {
+    .popup_side {
+        @include transform(translateX(0));
+    }
+    .popup_side + [class*="popup_overlay"]:before {
+        visibility: visible;
+        @include opacity(100);
+    }
+}
+// panel list
+.panel_new-chat--active .panel_new-chat,
+.panel_notification--active .panel_notification {
     display: flex;
 }
 
+// popup
+.popup_chat--active .popup_chat {
+    display: flex;
+}
 // format
 @each $colorClass, $value in $colorClass-palette {
     .panel__wrap-#{$colorClass} {
