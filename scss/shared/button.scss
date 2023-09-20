@@ -205,17 +205,29 @@
 .btn_fixed-bottom-left {
 	@include position(fixed, null, 50px, 25px, null,  null, null);
 	z-index: 2;
+	@include md {
+		left: 55px;
+	}
 
 }
 .btn_fixed-left {
-	@include position(fixed, null, null, 25px, null,  null, null);
+	@include position(fixed, 90px, null, 25px, null,  null, null);
 	z-index: 2;
+	@include md {
+		left: 55px;
+	}
+	@include lg {
+		top: 150px;
+	}
 }
 .btn_fixed-right {
-	@include position(fixed, null, null, null, 25px,  null, null);
+	@include position(fixed, 90px, null, null, 25px,  null, null);
 	z-index: 2;
 	@include md {
 		right: 55px;
+	}
+	@include lg {
+		top: 150px;
 	}
 }
 //group
@@ -491,9 +503,7 @@
 .btn_hover-light.active,
 .btn_hover-light:focus,
 .btn_hover-light:active,
-.btn_hover-light:hover,
-.btn_transparent,
-.btn_light {
+.btn_hover-light:hover {
 	color: $primary-color--highlight;
 }
 

@@ -23,7 +23,6 @@
 	@include transition(0.3s);
 	width: 100%;
 }
-
 .popup_overlay {
 	@extend .panel_overlay;
 }

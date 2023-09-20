@@ -606,7 +606,7 @@ input.form_check[disabled],
 
 //switch word
 .switch-btn {
-	@include corner(10rem);
+	@include corner(5px);
 	border-width: 1px;
 	overflow: hidden;
 	position: relative;
@@ -684,6 +684,12 @@ input.form_check[disabled],
 	@extend .switch-btn_content;
 	&:before {
 		background-color: $warning-color--accent;
+	}
+}
+.switch-btn_content-highlight {
+	@extend .switch-btn_content;
+	&:before {
+		background-color: $primary-color--highlight;
 	}
 }
 
