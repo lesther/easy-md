@@ -640,7 +640,7 @@
                         <h2 class="title_xs title_primary title_spacing-none">
                             Consultas Recientes
                         </h2>
-                        <a href="" class="btn_primary-accent btn_sm text_weight-bold new_chat-toggle">
+                        <a href="" class="btn_primary-accent btn_sm text_weight-bold">
                             <span class="material-icons icon_sm">
                                 add
                             </span>
@@ -949,7 +949,7 @@
                    </div>
 
                    <div class="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight">
+                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight profile_detail-toggle">
                             <div class="group group_spacing-xs">
                                 <div class="group group_inline group_spacing-xs group_align-center">
                                     <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
@@ -979,7 +979,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight">
+                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight profile_detail-toggle">
                             <div class="group group_spacing-xs">
                                 <div class="group group_inline group_spacing-xs group_align-center">
                                     <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
@@ -1009,7 +1009,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight">
+                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight profile_detail-toggle">
                             <div class="group group_spacing-xs">
                                 <div class="group group_inline group_spacing-xs group_align-center">
                                     <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
@@ -1039,7 +1039,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight">
+                        <a href="" class="btn_light btn_outline btn_hover-primary-highlight profile_detail-toggle">
                             <div class="group group_spacing-xs">
                                 <div class="group group_inline group_spacing-xs group_align-center">
                                     <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
@@ -1121,481 +1121,133 @@
             </div>
 
             <!-- consulta inmediata -->
-            <div class="panel_side-container panel_new-chat">
-                <form class="group flex_grow-1">
+            <div class="panel_side-container panel_profile-detail">
+                <div class="group flex_grow-1">
                     <!-- top -->
                     <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
                         <span class="btn_circle-sm btn_primary-accent material-icons">
-                            add
+                            content_paste
                         </span>
-                        Consulta inmediata
+                        Detalle de consulta
                     </label>
 
+                    <div class="divider"></div>
+
                     <!-- body -->
-                    <div class="tab">
-                        <div class="tab_head">
-                            <div class="tab_head-container">
-                                <button type="button" class="tab_btn tab_btn--active" data-id="panel_general">
-                                    Medicina General
-                                </button>
-                                <button type="button" class="tab_btn" data-id="panel_psychology">
-                                    Psicología
-                                </button>
-                            </div>
+                    <div class="">
+                        <div class="group group_inline group_content-end group_spacing-xs group_wrap">
+                            <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs">
+                                <span class="material-icons">
+                                    add_call
+                                </span>
+                            </a>
+                            <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs">
+                                <span class="material-icons">
+                                    video_call
+                                </span>
+                            </a>
+                            <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs">
+                                <span class="material-symbols-outlined ">
+                                    info
+                                </span>
+                            </a>
                         </div>
-                        <div class="tab_content tab_content--active" id="panel_general">
-                            <!-- form -->
-                            <div class="group">
-                                <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Síntomas del paciente
-                                    </label>
-                                    <div class="multiple-select">
-                                        <div class="multiple-select_wrap">
-                                            <div class="multiple-select_selection">
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text 3</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Container text large</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                            </div>
-                                            <div class="multiple-select_input">
-                                                <input type="text" placeholder=" Síntomas del paciente" class="multiple-select_toggle">
-                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
-                                            </div>
-                                            <div class="multiple-select_content">
-                                                <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
-                                                <div class="multiple-select_content-options scrollable">
-                                                    <label class="form_check-btn_block">
-                                                        <input type="checkbox">
-                                                        Option full width
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 2
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 3
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 4
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 5
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 6
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 7
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 8
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 9
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 10
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 11
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-        
-                                <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Condiciones médicas
-                                    </label>
-                                    <div class="multiple-select">
-                                        <div class="multiple-select_wrap">
-                                            <div class="multiple-select_selection">
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text 3</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Container text large</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                            </div>
-                                            <div class="multiple-select_input">
-                                                <input type="text" placeholder=" Condiciones médicas" class="multiple-select_toggle">
-                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
-                                            </div>
-                                            <div class="multiple-select_content">
-                                                <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
-                                                <div class="multiple-select_content-options scrollable">
-                                                    <label class="form_check-btn_block">
-                                                        <input type="checkbox">
-                                                        Option full width
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 2
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 3
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 4
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 5
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 6
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 7
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 8
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 9
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 10
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 11
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-        
-                                <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Alergias a medicamentos
-                                    </label>
-                                    <div class="multiple-select">
-                                        <div class="multiple-select_wrap">
-                                            <div class="multiple-select_input-select">
-                                                <input type="text" placeholder=" Alergias a medicamentos" class="multiple-select_toggle">
-                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
-                                            </div>
-                                            <div class="multiple-select_content">
-                                                <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
-                                                <div class="multiple-select_content-options scrollable">
-                                                    <label class="form_check-btn_block">
-                                                        <input type="checkbox">
-                                                        Option full width
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 2
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 3
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 4
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 5
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 6
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 7
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 8
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 9
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 10
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 11
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-        
-                                <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Razón de la consulta
-                                    </label>
-                                    <textarea class="text_field-outline text_field text_field-block" placeholder="Razon de la consulta"></textarea>
+                        <div class="group group_spacing-xs group_align-center">
+                            <a href="" class="profile_success profile_xxl flex_width-auto">
+                                <img src="https://i.pravatar.cc/150?img=37">
+                                Marcela Miranda
+                            </a>
+                            <div class="group group_spacing-none group_align-center h-spacing-bottom-sm">
+                                <a href="" class="btn_link-primary text_weight-bold text_md text_align-center text_spacing-none">
+                                    Dr. Marcela Miranda
+                                </a>
+                                <label class="text_gray text_align-center">
+                                    Médico General
+                                </label>
+                                <div class="group group_spacing-none group_inline text_secondary group_align-center group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star_border
+                                    </span>
+                                    <span class="text_highlight-soft-gray text_xs">
+                                        4.5
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab_content" id="panel_psychology">
-                            <!-- form -->
-                            <div class="group">
-                                <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Síntomas del paciente
-                                    </label>
-                                    <div class="multiple-select">
-                                        <div class="multiple-select_wrap">
-                                            <div class="multiple-select_selection">
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text 3</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Container text large</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                            </div>
-                                            <div class="multiple-select_input">
-                                                <input type="text" placeholder=" Síntomas del paciente" class="multiple-select_toggle">
-                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
-                                            </div>
-                                            <div class="multiple-select_content">
-                                                <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
-                                                <div class="multiple-select_content-options scrollable">
-                                                    <label class="form_check-btn_block">
-                                                        <input type="checkbox">
-                                                        Option full width
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 2
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 3
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 4
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 5
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 6
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 7
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 8
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 9
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 10
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 11
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+                        <div class="box box_xs-1 box_lighter">
+                            <label class="btn_link-primary text_weight-bold text">
+                                Detalle de la consulta
+                            </label>
+                            <div class="box box_sm box_light group group_spacing-sm">
+                                <div class="group group_inline group_wrap group_content-between group_align-center">
+                                    <label>19.07.2023</label>
+                                    <span class="text_highlight-medium-primary-accent text_xs text_primary text_spacing-none">
+                                        10:30 AM
+                                    </span>
                                 </div>
-        
+                                <div class="divider"></div>
                                 <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Condiciones médicas
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Duracion
                                     </label>
-                                    <div class="multiple-select">
-                                        <div class="multiple-select_wrap">
-                                            <div class="multiple-select_selection">
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Content text 3</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                                <div class="btn_tag-container">
-                                                    <a href="" class="btn_tag">Container text large</a>
-                                                    <a href="" class="btn_tag-close"></a>
-                                                </div>
-                                            </div>
-                                            <div class="multiple-select_input">
-                                                <input type="text" placeholder=" Condiciones médicas" class="multiple-select_toggle">
-                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
-                                            </div>
-                                            <div class="multiple-select_content">
-                                                <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
-                                                <div class="multiple-select_content-options scrollable">
-                                                    <label class="form_check-btn_block">
-                                                        <input type="checkbox">
-                                                        Option full width
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 2
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 3
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 4
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 5
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 6
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 7
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 8
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 9
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 10
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 11
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+                                    <p class="text_black">
+                                        10 minutos
+                                    </p>
                                 </div>
-        
                                 <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Alergias a medicamentos
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Notas
                                     </label>
-                                    <div class="multiple-select">
-                                        <div class="multiple-select_wrap">
-                                            <div class="multiple-select_input-select">
-                                                <input type="text" placeholder=" Alergias a medicamentos" class="multiple-select_toggle">
-                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
-                                            </div>
-                                            <div class="multiple-select_content">
-                                                <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
-                                                <div class="multiple-select_content-options scrollable">
-                                                    <label class="form_check-btn_block">
-                                                        <input type="checkbox">
-                                                        Option full width
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 2
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 3
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 4
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 5
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 6
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 7
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 8
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 9
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 10
-                                                    </label>
-                                                    <label class="form_check-btn">
-                                                        <input type="checkbox">
-                                                        Option 11
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
+                                    <p class="text_black">
+                                        El paciente consultó con queja de síntomas respiratorios, incluyendo tos, dificultad para respirar, fiebre leve y dolor en el pecho. No hay antecedentes conocidos de contacto con casos positivos de COVID-19. Se recomienda realizar una prueba de COVID-19 para descartar la infección viral.
+                                    </p>
                                 </div>
-        
                                 <div>
-                                    <label for="" class="text_gray text_spacing-sm">
-                                        Razón de la consulta
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Tratamiento Recomendado:
                                     </label>
-                                    <textarea class="text_field-outline text_field text_field-block" placeholder="Razon de la consulta"></textarea>
+                                    <ol class="h-spacing-bottom-sm">
+                                        <li class="text_black">
+                                            Prueba de COVID-19 para descartar la infección viral.
+                                        </li>
+                                        <li class="text_black">
+                                            Medicamentos para el alivio de la fiebre y el dolor según sea necesario.
+                                        </li>
+                                        <li class="text_black">
+                                            Uso continuo de inhalador si está disponible.
+                                        </li>
+                                    </ol>
+                                    <a href="" class="btn_outline-primary btn_sm text_spacing-none">
+                                        <span class="material-icons icon_sm">
+                                            file_download
+                                        </span>
+                                        Descargar receta
+                                    </a>
+                                </div>
+                                <div>
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Siguiente Cita:
+                                    </label>
+                                    <p>
+                                        <a href="" class="btn_outline-gray btn_sm text_spacing-none">
+                                            <span class="material-icons icon_sm">
+                                                    event_available
+                                            </span>
+                                            Agendar cita
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1603,21 +1255,12 @@
 
                     <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
                         <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
-                            <a href="" class="btn btn_primary text_weight-bold btn_block">
-                                <span class="material-icons">
-                                    video_call
-                                    </span>
-                                Video llamada
-                            </a>
                             <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block">
-                                <span class="material-icons">
-                                    add_comment
-                                </span>
-                                Chat
+                                Ver conversacion
                             </a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
         <div class="panel_overlay-transparent panel_close"></div>
@@ -1907,7 +1550,7 @@
                                 <span class="material-icons">
                                     add_comment
                                 </span>
-                                Iniciar Mensaje
+                                Ver conversacion
                             </a>
                         </div>
                     </form>

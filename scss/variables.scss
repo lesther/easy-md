@@ -109,6 +109,7 @@ $buttons-palette: (
 	"dark-accent": ( bg: $dark-color--accent, color: $light-color, hover: $primary-color ),
 	"darkness": ( bg: $darkness-color, color: $light-color, hover: $secondary-color ),
 	"gray": ( bg: $gray-color, color: $light-color, hover: $primary-color--highlight ),
+	"gray-soft": ( bg: $gray-icon-color, color: $light-color, hover: $primary-color--highlight ),
 	"gray-label": ( bg: $gray-text-color, color: $light-color, hover: $primary-color--highlight ),
 	"gray-accent": ( bg: $gray-color--accent, color: $light-color, hover: $primary-color--highlight ),
 	"primary": ( bg: $primary-color, color: $light-color, hover: $primary-color--highlight ),

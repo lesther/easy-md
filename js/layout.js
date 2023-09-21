@@ -16,9 +16,9 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_notification--active panel_active");
   });
  
-  $(".new_chat-toggle").click(function(e) {
+  $(".profile_detail-toggle").click(function(e) {
     e.preventDefault();
-    $("#body_wrapper").toggleClass("panel_new-chat--active panel_active");
+    $("#body_wrapper").toggleClass("panel_profile-detail--active panel_active");
   });
 
   $(".popup_chat-toggle").click(function(e) {
