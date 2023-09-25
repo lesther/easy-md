@@ -46,6 +46,10 @@ textarea.text_field {
     @include placeholder($text-color, 0.4, 500);
 	@include opacity(100);
 }
+.text_field[readonly],
+.text_field[disabled] {
+	pointer-events: none
+}
 
 //material
 .text_field-material {
@@ -463,6 +467,7 @@ textarea.text_field {
 
 input.form_check,
 .form_check input {
+	background: $light-color;
 	@include transition(0.3s);
 	@include width-height(20px, 20px);
 	border: 2px solid $gray-border-color;

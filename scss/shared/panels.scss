@@ -80,15 +80,12 @@
     }
 }
 // panel list
+.panel_profile-menu--active .panel_profile-menu,
 .panel_profile-detail--active .panel_profile-detail,
 .panel_notification--active .panel_notification {
     display: flex;
 }
 
-// popup
-.popup_chat--active .popup_chat {
-    display: flex;
-}
 // format
 @each $colorClass, $value in $colorClass-palette {
     .panel__wrap-#{$colorClass} {

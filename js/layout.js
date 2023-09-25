@@ -21,19 +21,39 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_profile-detail--active panel_active");
   });
 
-  $(".popup_chat-toggle").click(function(e) {
+  $(".profile_menu-toggle").click(function(e) {
     e.preventDefault();
-    $("#body_wrapper").toggleClass("popup_chat--active popup_active");
+    $("#body_wrapper").toggleClass("panel_profile-menu--active panel_active");
+  });
+
+  $(".popup_personal-info-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_personal-info--active popup_active");
+  });
+
+  $(".popup_general-info-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_general-info--active popup_active");
+  });
+
+  $(".popup_password-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_password--active popup_active");
+  });
+
+  $(".popup_new-consultation-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_new-consultation--active popup_active");
   });
 
   // close
-  $(".panel_close").click(function(e) {
+  $(".panel_close, .panel_cancel").click(function(e) {
     e.preventDefault();
 
     $("#body_wrapper").removeClass();
   });
 
-  $(".popup_close").click(function(e) {
+  $(".popup_close, .popup_cancel").click(function(e) {
     e.preventDefault();
 
     $("#body_wrapper").removeClass();

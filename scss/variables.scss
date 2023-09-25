@@ -19,7 +19,7 @@ $lighter-color--dark: #F2F4F6;
 $lighter-color--dark-2: #E6EAED;
 
 //default
-$danger-color: #EF2E4F;
+$danger-color: #f13756;
 $danger-color--accent: #ad1a35;
 $warning-color: #ffd900;
 $warning-color--accent: #ff9900;
@@ -55,6 +55,7 @@ $spacing-menu-default: 300px;
 $colorClass-palette: (
 	"light": $light-color,
 	"dark": $dark-color,
+	"darkness": $darkness-color,
 	"gray": $gray-color,
 	"gray-accent": $gray-color,	
 	"secondary": $secondary-color,
