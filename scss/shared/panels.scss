@@ -80,6 +80,7 @@
     }
 }
 // panel list
+.panel_plan--active .panel_plan,
 .panel_profile-menu--active .panel_profile-menu,
 .panel_profile-detail--active .panel_profile-detail,
 .panel_notification--active .panel_notification {
@@ -133,4 +134,12 @@
 }
 .panel_resizable[style*="ew-resize"] {
     border-color: $focus-color;
+}
+
+//sticky
+.panel {
+	.h-sticky-bottom {
+		padding-bottom: 10px;
+		bottom: -10px;
+	}
 }

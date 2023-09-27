@@ -17,6 +17,9 @@
 .h-text-uppercase {
 	text-transform: uppercase;
 }
+.h-cursor-pointer {
+	cursor: pointer;
+}
 
 // line-height
 .h-line-height-sm-1 {
@@ -486,6 +489,9 @@
 	// min-width
 	.h-min-width-auto#{$size} {
 		min-width: auto;
+	}
+	.h-min-width-0#{$size} {
+		min-width: 0;
 	}
 	.h-min-width-xxs#{$size} {
 		min-width: 100px;

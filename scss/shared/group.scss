@@ -16,6 +16,7 @@
     flex: initial;
     @include stack;
     gap: 20px;
+    min-width: 0;
 }
 
 .group_nowrap-scroll {

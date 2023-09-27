@@ -157,6 +157,11 @@
 		border-color: $primary-color;
 	}
 }
+.btn_outline-dashed {
+	@extend .btn_outline;
+	border-style: dashed;
+	border-width: 2px;
+}
 
 //link
 .btn_link {

@@ -6,6 +6,7 @@ $(".menu-toggle").click(function (e) {
 
 //general filter
 $(document).ready(function() {
+  //panel
   $(".panel-toggle").click(function(e) {
     e.preventDefault();
     $("#body_wrapper").toggleClass("panel--active panel_active");
@@ -14,6 +15,11 @@ $(document).ready(function() {
   $(".notification-toggle").click(function(e) {
     e.preventDefault();
     $("#body_wrapper").toggleClass("panel_notification--active panel_active");
+  });
+
+  $(".plan-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_plan--active panel_active");
   });
  
   $(".profile_detail-toggle").click(function(e) {
@@ -26,6 +32,7 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_profile-menu--active panel_active");
   });
 
+  //popup
   $(".popup_personal-info-toggle").click(function(e) {
     e.preventDefault();
     $("#body_wrapper").toggleClass("popup_personal-info--active popup_active");
@@ -44,6 +51,16 @@ $(document).ready(function() {
   $(".popup_new-consultation-toggle").click(function(e) {
     e.preventDefault();
     $("#body_wrapper").toggleClass("popup_new-consultation--active popup_active");
+  });
+
+  $(".popup_new-affiliate-remove-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_new-affiliate-remove--active popup_active");
+  });
+
+  $(".popup_new-affiliate-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_new-affiliate--active popup_active");
   });
 
   // close

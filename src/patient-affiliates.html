@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy MD</title>
+
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body id="body_wrapper">
+    <header class="section section_primary section_pad-minimal">
+        <div class="wrap-container">
+            <div class="group group_inline group_align-center group_spacing-xl--sm">
+                <a href="">
+                    <img src="../images/logo_easy-md--light.svg" alt="logo-easy-md" width="100">
+                </a>
+                <div class="group group_inline group_initial group_align-center flex_fill group_content-between">
+                    <input type="text" class="text_field-light text_field-sm-1 text_field-search h-hide h-show--sm" placeholder="Search">
+                    <div class="group group_inline flex_fill group_align-center group_content-end group_spacing-xs group_spacing-sm--sm">
+                        <p class="text_spacing-none text_light h-hide h-show--md truncate-text h-max-width-xs">
+                            Bienvenido Lesther Morales
+                        </p>
+                        <div class="btn-dropdown">
+                            <a href="" class="profile_secondary btn-dropdown_toggle">
+                                Lesther morales
+                            </a>
+                            <div class="btn-dropdown_content btn-dropdown_content-wrapper">
+                                <div class="btn-dropdown_content-options scrollable">
+                                    <div class="group group_spacing-xxs">
+                                        <a href="" class="btn_transparent btn_rounded-none btn_sm text_gray text_spacing-none">
+                                            <span class="material-icons">
+                                                account_circle
+                                            </span>
+                                            Mi perfil
+                                        </a>
+                                        <div class="divider">
+                                        </div>
+                                        <a class="btn_transparent btn_rounded-none btn_sm text_gray text_spacing-none">
+                                            <span class="material-icons">
+                                                logout
+                                            </span>
+                                            Cerrar sesion
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="notification-toggle">
+                            <div class="icon_group">
+                                <img src="../images/bell_accent.svg" alt="notification-icon-light" class="icon_hover" width="20">
+                                <img src="../images/bell_light.svg" alt="notification-icon" class="icon" width="20">
+                            </div>
+                        </a>
+                        <a href="" class="icon_group-btn panel_overlay panel_overlay--menu menu-toggle h-hide--lg">
+                            <div class="icon_group">
+                                <img src="../images/sidebar_primary.svg" alt="sidebar-icon-light" class="icon_hover" width="20">
+                                <img src="../images/sidebar_light.svg" alt="sidebar-icon" class="icon" width="20">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="section_lighter section_pad-none panel panel--lg">
+        <div class="wrap-container h-z2">
+            <div class="panel__wrap-left panel_reset--lg panel_menu">
+                <div class="group group_spacing-sm group_inline--lg flex_grow-1 group_nowrap-scroll--lg h-inner-spacing-md">
+                    <div class="h-hide--lg">
+                        <div class="group group_inline group_align-center group_content-end group_spacing-xs group_spacing-sm--sm">
+                            <a href="" class="profile_secondary profile_lg flex_width-auto">
+                                Lesther morales
+                            </a>
+                            <div class="flex_fill h-overflow-hidden">
+                                <p class="text_spacing-none text_weight-bold h-overflow-hidden">
+                                    <a href="" class="btn_link-primary btn_link-hover-secondary h-text-underline truncate-text h-display-block">
+                                        Lesther Morales
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" class="text_field text_field-sm-1 text_field-search h-hide--lg text_field-block" placeholder="Search">
+                    <div class="divider h-spacing-vertical-md h-hide--lg"></div>
+                    <a href="" class="btn_nav-link active icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/activity_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/activity_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Dashboard
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/folder_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/folder_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Consultas
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/calendar_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/calendar_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Citas
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/dossier_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/dossier_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Recetas
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/medical_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/medical_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Doctores
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/pill_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/pill_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Farmacia
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/beaker_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/beaker_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Laboratorio
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/bill_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/bill_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Facturacion
+                        </span>
+                    </a>
+                    <a href="" class="btn_nav-link icon_group-hover">
+                        <div class="icon_group-btn icon_group-btn--circle">
+                            <div class="icon_group">
+                                <img src="../images/card_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
+                                <img src="../images/card_gray.svg" alt="dashboard-icon" class="icon" width="24">
+                            </div>
+                        </div>
+                        <span>
+                            Suscripciones
+                        </span>
+                    </a>
+                    <a href="" class="btn_sm btn_block h-spacing-top-auto h-hide--lg">
+                        <span class="material-icons">
+                            exit_to_app
+                        </span>
+                        <span>
+                            Cerrar sesion
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section section_pad-xs">
+        <div class="wrap-container">
+            <!-- breadcrumb -->
+            <div class="h-hide--md">
+                <a href="" class="btn_primary btn_hover-primary-highlight profile_menu-toggle">
+                    <span class="material-icons">
+                        diversity_1
+                    </span>
+                    Beneficiarios
+                    <span class="material-icons">
+                        more_vert
+                    </span>
+                </a>
+                <div class="divider h-spacing-vertical-lg">
+                </div>
+            </div>
+            <h1 class="title_primary title_xs title_spacing-none h-hide h-show--md">
+                Beneficiarios
+            </h1>
+            <!-- body -->
+            <div class="group group_inline--md h-spacing-top-xl--md group_spacing-lg--md h-spacing-bottom-xxl">
+                <div class="flex_fill h-max-width-sm-1--md h-hide h-show--md">
+                    <div class="box box_highlight-primary-highlight h-height-100">
+                        <div class="group group_spacing-xs">
+                            <a href="" class="btn_light btn_hover-primary">
+                                <span class="material-icons">
+                                    manage_accounts
+                                </span>
+                                Perfil
+                            </a>
+                            <a href="" class="btn_light btn_hover-primary">
+                                <span class="material-symbols-outlined">
+                                    vital_signs
+                                </span>
+                                Medidas
+                            </a>
+                            <a href="" class="btn_light btn_hover-primary active">
+                                <span class="material-icons">
+                                    diversity_1
+                                </span>
+                                Beneficiarios
+                            </a>
+                            <a href="" class="btn_light btn_hover-primary">
+                                <span class="material-icons">
+                                    credit_card
+                                </span>
+                                Informacion de pagos
+                            </a>
+                            <a href="" class="btn_light btn_hover-primary">
+                                <span class="material-icons">
+                                    account_circle
+                                </span>
+                                Cuenta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" flex_fill group group_spacing">
+                    <div class="box box_highlight-primary-highlight group group_spacing-xs">
+                        <div>
+                            <h3 class="title title_xs title_spacing-xs">
+                                Solis Development Group S.A
+                            </h3>
+                            <p class="text_sm text_spacing-none">
+                                Compania de desarrollo
+                            </p>
+                        </div>
+                        <div class="divider"></div>
+                        <p class="text text_weight-bold">
+                            Plan Empresarial Familiar con Signos Vitales
+                        </p>
+                        <div class="group group_inline group_wrap group_content-between group_align-center">
+                            <p class="text_highlight-light text_sm text_primary h-spacing-none">
+                                Quedan 198 días al plan
+                            </p>
+                            <a href="" class="btn_primary-accent btn_sm text_weight-bold plan-toggle">
+                                <span class="material-icons icon_sm">
+                                    verified
+                                </span>
+                                Ver plan
+                            </a>
+                        </div>
+                    </div>
+                    <div class="divider">
+                    </div>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+                        <div class="btn_light btn_outline btn_hover-primary-highlight h-min-width-0">
+                            <div class="group group_spacing-xs">
+                                <div class="group group_inline group_spacing-xs group_align-center ">
+                                    <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
+                                        <img src="https://i.pravatar.cc/150?img=38">
+                                        Jim Preston
+                                    </span>
+                                    <div class="group group_inline group_spacing-xs group_align-center">
+                                        <div class="flex_fill">
+                                            <div class="group group_spacing-xs">
+                                                <div class="group group_spacing-none">
+                                                    <div class="text_weight-bold text_md">
+                                                        Jim Preston
+                                                    </div>
+                                                    <div class="text_sm text_spacing-none truncate-text">
+                                                        lesthermorales3187@gmail.com
+                                                    </div>
+                                                </div>
+                                                <div class="text_sm text_spacing-none">
+                                                    Colaborador
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="btn_circle-xs btn_primary-accent popup_new-affiliate-remove-toggle">
+                                            <div href="" class="material-icons icon_sm">
+                                                delete
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_light btn_outline btn_hover-primary-highlight h-min-width-0">
+                            <div class="group group_spacing-xs">
+                                <div class="group group_inline group_spacing-xs group_align-center ">
+                                    <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
+                                        <img src="https://i.pravatar.cc/150?img=38">
+                                        Jim Preston
+                                    </span>
+                                    <div class="group group_inline group_spacing-xs group_align-center">
+                                        <div class="flex_fill">
+                                            <div class="group group_spacing-xs">
+                                                <div class="group group_spacing-none">
+                                                    <div class="text_weight-bold text_md">
+                                                        Jim Preston
+                                                    </div>
+                                                    <div class="text_sm text_spacing-none truncate-text">
+                                                        lesthermorales3187@gmail.com
+                                                    </div>
+                                                </div>
+                                                <div class="text_sm text_spacing-none">
+                                                    Colaborador
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="btn_circle-xs btn_primary-accent popup_new-affiliate-remove-toggle">
+                                            <div href="" class="material-icons icon_sm">
+                                                delete
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_light btn_outline btn_hover-primary-highlight h-min-width-0">
+                            <div class="group group_spacing-xs">
+                                <div class="group group_inline group_spacing-xs group_align-center ">
+                                    <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
+                                        <img src="https://i.pravatar.cc/150?img=38">
+                                        Jim Preston
+                                    </span>
+                                    <div class="group group_inline group_spacing-xs group_align-center">
+                                        <div class="flex_fill">
+                                            <div class="group group_spacing-xs">
+                                                <div class="group group_spacing-none">
+                                                    <div class="text_weight-bold text_md">
+                                                        Jim Preston
+                                                    </div>
+                                                    <div class="text_sm text_spacing-none truncate-text">
+                                                        lesthermorales3187@gmail.com
+                                                    </div>
+                                                </div>
+                                                <div class="text_sm text_spacing-none">
+                                                    Colaborador
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="btn_circle-xs btn_primary-accent popup_new-affiliate-remove-toggle">
+                                            <div href="" class="material-icons icon_sm">
+                                                delete
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn_light btn_outline-dashed btn_hover-primary-highlight h-inner-spacing-md group_content-center popup_new-affiliate-toggle">
+                            <span class="material-icons">
+                                add
+                            </span>
+                            Agregar nuevo Beneficiario
+                        </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="section_lighter section_pad-xxs">
+        <p class="text_gray text_spacing-none text_xs text_align-center">
+            EasyMD LLC EasyMD App © 2023
+        </p>
+    </footer>
+
+    <div class="btn_fixed-right">
+        <div class="group group_spacing-xxs">
+            <a href="" class="btn_circle-md btn_primary-accent material-icons popup_chat-toggle">
+                add_comment
+            </a>
+            <a href="" class="btn_circle-md btn_primary-highlight material-icons">
+                call
+            </a>
+        </div>
+    </div>
+
+    <!-- panels -->
+    <div class="panel">
+        <div class="panel_side panel__wrap-light panel__wrap-right panel_border panel_resizable">
+            <!-- handler -->
+            <div class="panel_resizable-handle"></div>
+            <!-- close -->
+            <a href="" class="material-icons btn_link-gray panel_close">
+                close
+            </a>
+
+            <!-- panel -->
+            <div class="panel_side-container panel_notification">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_lg text_weight-bold btn_hover-none">
+                        <span class="btn_circle-sm btn_soft-primary-accent">
+                            <img src="../images/bell_accent.svg" alt="notification-icon" width="20">
+                        </span>
+                        Notification
+                    </label>
+
+                    <div class="divider">
+                    </div>
+                    <!-- body -->
+                    <div class="group group_spacing-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- consulta inmediata -->
+            <div class="panel_side-container panel_profile-detail">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                        <span class="btn_circle-sm btn_primary-accent material-icons">
+                            content_paste
+                        </span>
+                        Detalle de consulta
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <!-- body -->
+                    <div class="">
+                        <div class="group group_inline group_content-end group_spacing-xs group_wrap">
+                            <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs">
+                                <span class="material-icons">
+                                    add_call
+                                </span>
+                            </a>
+                            <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs">
+                                <span class="material-icons">
+                                    video_call
+                                </span>
+                            </a>
+                            <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs">
+                                <span class="material-symbols-outlined ">
+                                    info
+                                </span>
+                            </a>
+                        </div>
+                        <div class="group group_spacing-xs group_align-center">
+                            <a href="" class="profile_success profile_xxl flex_width-auto">
+                                <img src="https://i.pravatar.cc/150?img=37">
+                                Marcela Miranda
+                            </a>
+                            <div class="group group_spacing-none group_align-center h-spacing-bottom-sm">
+                                <a href="" class="btn_link-primary text_weight-bold text_md text_align-center text_spacing-none">
+                                    Dr. Marcela Miranda
+                                </a>
+                                <label class="text_gray text_align-center">
+                                    Médico General
+                                </label>
+                                <div class="group group_spacing-none group_inline text_secondary group_align-center group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star
+                                    </span>
+                                    <span class="material-icons icon_sm">
+                                        star_border
+                                    </span>
+                                    <span class="text_highlight-soft-gray text_xs">
+                                        4.5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box_xs-1 box_lighter">
+                            <label class="btn_link-primary text_weight-bold text">
+                                Detalle de la consulta
+                            </label>
+                            <div class="box box_sm box_light group group_spacing-sm">
+                                <div class="group group_inline group_wrap group_content-between group_align-center">
+                                    <label>19.07.2023</label>
+                                    <span class="text_highlight-medium-primary-accent text_xs text_primary text_spacing-none">
+                                        10:30 AM
+                                    </span>
+                                </div>
+                                <div class="divider"></div>
+                                <div>
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Duracion
+                                    </label>
+                                    <p class="text_black">
+                                        10 minutos
+                                    </p>
+                                </div>
+                                <div>
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Notas
+                                    </label>
+                                    <p class="text_black">
+                                        El paciente consultó con queja de síntomas respiratorios, incluyendo tos, dificultad para respirar, fiebre leve y dolor en el pecho. No hay antecedentes conocidos de contacto con casos positivos de COVID-19. Se recomienda realizar una prueba de COVID-19 para descartar la infección viral.
+                                    </p>
+                                </div>
+                                <div>
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Tratamiento Recomendado:
+                                    </label>
+                                    <ol class="h-spacing-bottom-sm">
+                                        <li class="text_black">
+                                            Prueba de COVID-19 para descartar la infección viral.
+                                        </li>
+                                        <li class="text_black">
+                                            Medicamentos para el alivio de la fiebre y el dolor según sea necesario.
+                                        </li>
+                                        <li class="text_black">
+                                            Uso continuo de inhalador si está disponible.
+                                        </li>
+                                    </ol>
+                                    <a href="" class="btn_outline-primary btn_sm text_spacing-none">
+                                        <span class="material-icons icon_sm">
+                                            file_download
+                                        </span>
+                                        Descargar receta
+                                    </a>
+                                </div>
+                                <div>
+                                    <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                        Siguiente Cita:
+                                    </label>
+                                    <p>
+                                        <a href="" class="btn_outline-gray btn_sm text_spacing-none">
+                                            <span class="material-icons icon_sm">
+                                                    event_available
+                                            </span>
+                                            Agendar cita
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
+                        <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
+                            <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block">
+                                Ver conversacion
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- menu profile -->
+            <div class="panel_side-container panel_profile-menu">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_md text_spacing-none btn_hover-none h-spacing-right-xl">
+                        <span class="btn_circle-sm btn_primary-accent material-icons">
+                            person
+                        </span>
+                        Select your option
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <!-- body -->
+                    <div class="group group_spacing-xs">
+                        <a href="" class="btn_light btn_hover-primary">
+                            <span class="material-icons">
+                                manage_accounts
+                            </span>
+                            Perfil
+                        </a>
+                        <a href="" class="btn_light btn_hover-primary">
+                            <span class="material-symbols-outlined">
+                                vital_signs
+                            </span>
+                            Medidas
+                        </a>
+                        <a href="" class="btn_light btn_hover-primary active">
+                            <span class="material-icons">
+                                diversity_1
+                            </span>
+                            Beneficiarios
+                        </a>
+                        <a href="" class="btn_light btn_hover-primary">
+                            <span class="material-icons">
+                                credit_card
+                            </span>
+                            Informacion de pagos
+                        </a>
+                        <a href="" class="btn_light btn_hover-primary">
+                            <span class="material-icons">
+                                account_circle
+                            </span>
+                            Cuenta
+                        </a>
+                    </div>
+
+                    <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
+                        <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
+                            <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block panel_cancel">
+                                Close
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- plan -->
+            <div class="panel_side-container panel_plan">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_md text_spacing-none btn_hover-none h-spacing-right-xl">
+                        <span class="btn_circle-sm btn_primary-accent material-icons">
+                            verified
+                        </span>
+                        Plan
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <!-- body -->
+                    <div class="group group_spacing-sm">
+                        <div class="group group_inline">
+                            <div class="flex_fill">
+                                <h3 class="title title_xs title_spacing-xs">
+                                    Solis Development Group S.A
+                                </h3>
+                                <p class="text_sm text_spacing-none">
+                                    Compania de desarrollo
+                                </p>
+                            </div>
+                            <div class="flex_width-auto">
+                                <a href="" class="btn_circle-sm btn_transparent text_danger">
+                                    <div href="" class="material-icons icon_sm">
+                                        delete
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div>
+                            <p class="text text_weight-bold text_spacing-xs">
+                                Plan Empresarial Familiar con Signos Vitales
+                            </p>
+                            <p class="text_sm text_gray text_spacing-xl">
+                                Plan Administrado por Compañia
+                            </p>
+                            <p class="text_highlight-soft-primary-highlight">
+                                Beneficios de plan
+                            </p>
+                            <ul class="bullet-list bullet-list--check h-spacing-top-lg">
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Consulta Medica General 24/7</p>
+                                    <p class="text_gray-label">
+                                        Ilimitadas
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Psicologia</p>
+                                    <p class="text_gray-label">
+                                        Consultas ilimitadas con Psicología de 7 am a 4 pm
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Descuentos en Examenes de laboratorio a domicilio</p>
+                                    <p class="text_gray-label">
+                                        Descuentos en Examenes de laboratorio a domicilio
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Descuentos en medicamentos</p>
+                                    <p class="text_gray-label">
+                                        Descuentos en Farmacias
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Descuentos en Ópticas</p>
+                                    <p class="text_gray-label">
+                                        Descuentos con Clínicas Ópticas
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Descuentos en Clinicas Odontologicas</p>
+                                    <p class="text_gray-label">
+                                        Descuentos con Clínicas Dentales
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Descuentos en Clinicas de fisioterapia</p>
+                                    <p class="text_gray-label">
+                                        Descuentos en Clinicas de fisioterapia
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Descuentos con Especialistas</p>
+                                    <p class="text_gray-label">
+                                        Ginecología, Medicina interna, Pediatría, Traumatología, Ortopedia y muchas mas por venir.
+                                    </p>
+                                </li>
+
+                                <li class="bullet-list__item">
+                                    <p class="text_weight-bold text_spacing-none">Signos Vitales</p>
+                                    <p class="text_gray-label">
+                                        ¡Monitorear tus signos vitales nunca ha sido tan fácil!
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box box_danger box_sm">
+                            <p class="text_weight-bold text_sm text_spacing-none">
+                                Quedan 198 días al plan
+                            </p>
+                            <p class="text_sm">
+                                Fecha de expiración: 12/04/202
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
+                        <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
+                            <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block panel_cancel">
+                                Actualizar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel_overlay-transparent panel_close"></div>
+    </div>
+
+    <!-- popup -->
+    <div class="popup">
+        <div class="popup__wrap popup__wrap-light">
+            <div class="group group_spacing-sm">
+                <!-- close -->
+                <a href="" class="material-icons btn_link-gray popup_close">
+                    close
+                </a>
+                <!-- personal information -->
+                <div class="popup_container popup_personal-info">
+                    <div class="group">
+                        <!-- top -->
+                        <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                            <span class="btn_circle-sm btn_primary-accent material-icons">
+                                manage_accounts
+                            </span>
+                            Informacion personal
+                        </label>
+        
+                        <!-- body -->
+                        <form class="h-spacing-top-sm">
+                            <div class="group group_spacing-sm">
+                                <div>
+                                </div>
+                                <div class="group group_inline--sm group_spacing-sm">
+                                    <div>
+                                        <label for="" class="text_gray text_spacing-sm text_sm">
+                                            Email
+                                        </label>
+                                        <input type="email" placeholder="your@email.com..." class="text_field text_field-block text_field-outline-primary-highlight" value="lesthermorales3187@gmail.com">
+                                    </div>
+                                    <div>
+                                        <label for="" class="text_gray text_spacing-sm text_sm">
+                                            Telefono
+                                        </label>
+                                        <input type="number" placeholder="xxxxxxxx" class="text_field text_field-block text_field-outline-primary-highlight" value="81883110">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="group group_spacing-xs group_inline--sm h-spacing-top-xxl">
+                                <a href="" class="btn btn_outline-primary group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        cancel
+                                    </span>
+                                    Cancelar
+                                </a>
+                                <a href="" class="btn btn_primary-accent btn_hover-primary-highlight group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        save
+                                    </span>
+                                    Guardar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- general information -->
+                <div class="popup_container popup_general-info">
+                    <div class="group">
+                        <!-- top -->
+                        <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                            <span class="btn_circle-sm btn_primary-accent material-icons">
+                                manage_accounts
+                            </span>
+                            Datos Generales
+                        </label>
+        
+                        <!-- body -->
+                        <form class="h-spacing-top-sm">
+                            <div class="group group_spacing-sm">
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Genero
+                                    </label>
+                                    <div>
+                                        <div class="switch-btn">
+                                            <label class="switch-btn_wrap">
+                                                <input type="radio" name="switch-btn" class="switch-btn_input" checked="">
+                                                <span class="switch-btn_content-highlight">
+                                                    <span class="material-icons btn_light btn_circle-xs">
+                                                        male
+                                                    </span>
+                                                    Masculino
+                                                </span>
+                                            </label>
+                                            <label class="switch-btn_wrap">
+                                                <input type="radio" name="switch-btn" class="switch-btn_input">
+                                                <span class="switch-btn_content-highlight">
+                                                    <span class="material-icons btn_light btn_circle-xs">
+                                                        female
+                                                    </span>
+                                                    Femenino
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group group_inline--sm group_spacing-sm">
+                                    <div class="flex_fill">
+                                        <label for="" class="text_gray text_spacing-sm text_sm">
+                                            Pais
+                                        </label>
+                                        <div class="multiple-select">
+                                            <div class="multiple-select_wrap">
+                                                <div class="multiple-select_input-select">
+                                                    <input type="text" placeholder="Selecciona tu pais" class="multiple-select_toggle" value="Nicaragua">
+                                                    <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
+                                                </div>
+                                                <div class="multiple-select_content">
+                                                    <input type="text" placeholder="Busca tu pais" class="multiple-select_input-inner">
+                                                    <div class="multiple-select_content-options scrollable">
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country" checked>
+                                                            Nicaragua
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 3
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 4
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 5
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 6
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 7
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 8
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 9
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 10
+                                                        </label>
+                                                        <label class="form_check-btn">
+                                                            <input type="radio" name="country">
+                                                            Option 11
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="flex_fill">
+                                        <label for="" class="text_gray text_spacing-sm text_sm">
+                                            Fecha de nacimiento
+                                        </label>
+                                        <input type="date" placeholder="dd/mm/yy" class="text_field-date text_field-block text_field-outline" value="81883110">
+                                    </div>
+                                </div>
+                                <div class="group group_spacing-none">
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Direccion
+                                    </label>
+                                    <textarea rows="3" placeholder="Escribe tu direccion" class="text_field-block text_field text_field-outline">Carretera Veracruz, Residencial el cortez, casa G7</textarea>
+                                </div>
+                            </div>
+    
+                            <div class="group group_spacing-xs group_inline--sm h-spacing-top-xxl">
+                                <a href="" class="btn btn_outline-primary group_content-center popup_cancel">
+                                    <span class="material-icons icon_sm">
+                                        cancel
+                                    </span>
+                                    Cancelar
+                                </a>
+                                <a href="" class="btn btn_primary-accent btn_hover-primary-highlight group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        save
+                                    </span>
+                                    Guardar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- security -->
+                <div class="popup_container popup_password">
+                    <div class="group">
+                        <!-- top -->
+                        <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                            <span class="btn_circle-sm btn_primary-accent material-icons">
+                                security
+                            </span>
+                            Seguridad
+                        </label>
+        
+                        <!-- body -->
+                        <form class="h-spacing-top-sm">
+                            <div class="group group_spacing-sm">
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Contraseña Nueva
+                                    </label>
+                                    <div class="text_field-wrap">
+                                        <input type="password" class="text_field-light text_field-outline-primary-highlight text_field-block" value="1234567">
+                                        <a href="" class="text_field-icon material-icons btn_circle-xs btn_transparent">
+                                            <span class=" text_primary-highlight text_spacing-none">
+                                                visibility
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Confirmar Contraseña
+                                    </label>
+                                    <div class="text_field-wrap">
+                                        <input type="password" class="text_field-light text_field-outline-primary-highlight text_field-block" value="1234567">
+                                        <a href="" class="text_field-icon material-icons btn_circle-xs btn_transparent">
+                                            <span class=" text_primary-highlight text_spacing-none">
+                                                visibility
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div>
+                                    <label class="form_check">
+                                        <input type="checkbox" checked="">
+                                        <span>
+                                            Autentificacion en 2 pasos
+                                            <small class="h-display-block text_gray">
+                                                Activar para obtener una OTP segura en su correo electrónico y número de teléfono para iniciar sesión en la cuenta.
+                                            </small>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div class="group group_spacing-xs group_inline--sm h-spacing-top-xxl">
+                                <a href="" class="btn btn_outline-primary group_content-center popup_cancel">
+                                    <span class="material-icons icon_sm">
+                                        cancel
+                                    </span>
+                                    Cancelar
+                                </a>
+                                <a href="" class="btn btn_primary-accent btn_hover-primary-highlight group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        save
+                                    </span>
+                                    Guardar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- affiliate -->
+                <div class="popup_container popup_new-affiliate">
+                    <div class="group">
+                        <!-- top -->
+                        <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                            <span class="btn_circle-sm btn_primary-accent material-icons">
+                                person_add
+                            </span>
+                            Agregar Beneficiario
+                        </label>
+        
+                        <!-- body -->
+                        <form class="h-spacing-top-sm">
+                            <div class="group group_spacing-sm">
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Nombre completo
+                                    </label>
+                                    <input type="text" class="text_field-light text_field-outline-primary-highlight text_field-block" placeholder="Escriba el nombre...">
+                                </div>
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Email
+                                    </label>
+                                    <input type="email" class="text_field-light text_field-outline-primary-highlight text_field-block" placeholder="Escriba su email...">
+                                </div>
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm text_sm">
+                                        Relacion o parentezco
+                                    </label>
+                                    <div>
+                                        <div class="switch-btn">
+                                            <label class="switch-btn_wrap">
+                                                <input type="radio" name="switch-btn" class="switch-btn_input" checked="">
+                                                <span class="switch-btn_content-success">
+                                                    <span class="material-icons">
+                                                        family_restroom
+                                                    </span>
+                                                    Familiar
+                                                </span>
+                                            </label>
+                                            <label class="switch-btn_wrap">
+                                                <input type="radio" name="switch-btn" class="switch-btn_input">
+                                                <span class="switch-btn_content-highlight">
+                                                    <span class="material-icons">
+                                                        boy
+                                                    </span>
+                                                    Colaborador
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+    
+                            <div class="group group_spacing-xs group_inline--sm h-spacing-top-xxl">
+                                <a href="" class="btn btn_outline-primary group_content-center popup_cancel">
+                                    <span class="material-icons icon_sm">
+                                        cancel
+                                    </span>
+                                    Cancelar
+                                </a>
+                                <a href="" class="btn btn_primary-accent btn_hover-primary-highlight group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        add
+                                    </span>
+                                    Agregar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- alert remove -->
+                <div class="popup_container popup_new-affiliate-remove">
+                    <div class="group">
+                        <!-- top -->
+                        <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                            <span class="btn_circle-sm btn_primary-accent material-icons">
+                                delete
+                            </span>
+                            Alerta
+                        </label>
+        
+                        <!-- body -->
+                        <form class="h-spacing-top-sm">
+                            <div class="group group_spacing-sm">
+                                <p class="text_spacing-none">
+                                    Estas seguro que desea eliminar el usuario: 
+                                </p>
+                                <div class="btn_light btn_outline-primary-highlight btn_hover-none">
+                                    <div class="group group_spacing-xxs">
+                                        <div class="group group_inline group_spacing-xs group_align-center ">
+                                            <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
+                                                <img src="https://i.pravatar.cc/150?img=38">
+                                                Jim Preston
+                                            </span>
+                                            <div class="group group_spacing-xs">
+                                                <div class="group group_spacing-none">
+                                                    <div class="text_weight-bold text_md text_spacing-none text_primary">
+                                                        Jim Preston
+                                                    </div>
+                                                    <div class="text_sm text_spacing-none truncate-text text_gray">
+                                                        lesthermorales3187@gmail.com
+                                                    </div>
+                                                </div>
+                                                <div class="h-spacing-bottom-sm">
+                                                    <span class="text_highlight-medium-primary-accent text_xs text_primary">
+                                                        Colaborador
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="text_gray text_sm text_style-italic">
+                                    Fecha de agregado: 19 Julio 2023
+                                </p>
+                            </div>
+    
+                            <div class="group group_spacing-xs group_inline--sm h-spacing-top-xxl">
+                                <a href="" class="btn btn_outline-primary group_content-center popup_cancel">
+                                    <span class="material-icons icon_sm">
+                                        cancel
+                                    </span>
+                                    Cancelar
+                                </a>
+                                <a href="" class="btn btn_danger group_content-center">
+                                    <span class="material-icons icon_sm">
+                                        delete
+                                    </span>
+                                    Eliminar
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_overlay popup_close"></div>
+    </div>
+    
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script src="../js/layout.js"></script>
+
+    <script>
+        var swiper = new Swiper(".specialist_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".specialist_nav-prev",
+                prevEl: ".specialist_nav-next",
+            },
+        });
+        var swiper = new Swiper(".farma_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".farma_nav-next",
+                prevEl: ".farma_nav-prev",
+            },
+        });
+    </script>
+
+</body>
