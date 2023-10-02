@@ -53,6 +53,15 @@
         @include opacity(100);
     }
 }
+.panel_section-active {
+    .panel_section {
+        @include transform(translateX(0));
+    }
+    .panel_overlay--section:before {
+        visibility: visible;
+        @include opacity(100);
+    }
+}
 
 //close
 .popup_close,
@@ -70,16 +79,10 @@
         @include opacity(100);
     }
 }
-.popup_active {
-    .popup_side {
-        @include transform(translateX(0));
-    }
-    .popup_side + [class*="popup_overlay"]:before {
-        visibility: visible;
-        @include opacity(100);
-    }
-}
+
 // panel list
+.panel_section--active .panel_section,
+.panel_doctor-filter--active .panel_doctor-filter,
 .panel_plan--active .panel_plan,
 .panel_profile-menu--active .panel_profile-menu,
 .panel_profile-detail--active .panel_profile-detail,

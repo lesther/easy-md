@@ -7,9 +7,9 @@ $(".menu-toggle").click(function (e) {
 //general filter
 $(document).ready(function() {
   //panel
-  $(".panel-toggle").click(function(e) {
+  $(".panel_section-toggle").click(function(e) {
     e.preventDefault();
-    $("#body_wrapper").toggleClass("panel--active panel_active");
+    $("#body_wrapper").toggleClass("panel_section--active panel_section-active");
   });
 
   $(".notification-toggle").click(function(e) {
@@ -30,6 +30,11 @@ $(document).ready(function() {
   $(".profile_menu-toggle").click(function(e) {
     e.preventDefault();
     $("#body_wrapper").toggleClass("panel_profile-menu--active panel_active");
+  });
+
+  $(".doctor_filter-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_doctor-filter--active panel_active");
   });
 
   //popup

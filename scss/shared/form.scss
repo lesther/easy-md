@@ -654,6 +654,9 @@ input.form_check[disabled],
 	@include transform(scale(1.5));
 	@include transition(0.2s);
 }
+.switch-btn_wrap {
+	z-index: 1;
+}
 .switch-btn .switch-btn_wrap:first-child .switch-btn_content:before {
 	right: 0;
 	left: auto;
@@ -827,4 +830,35 @@ input.form_check[disabled],
 	&:before {
 		background-color: $danger-color;
 	}
+}
+
+//stars
+.group_stars {
+	@extend .group;
+	@extend .group_inline;
+	@extend .group_spacing-none;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+.group_stars-input {
+	@include position(absolute, 0, null, 0, null, 0px, 0px);
+	z-index: -1;
+	visibility: hidden;
+}
+.group_stars-label {
+	color: $disabled-color;
+}
+.group_stars-label:before {
+	content: "star";
+	@include material-icons;
+	cursor: pointer;
+	@include transition(0.3s);
+}
+.group_stars-input:checked ~ .group_stars-label,
+.group_stars-label:hover ~ .group_stars-label {
+	color: rgba($color: $secondary-color, $alpha: 0.5);
+}
+.group_stars-input:checked + .group_stars-label,
+.group_stars-label:hover {
+	color: $secondary-color;
 }
