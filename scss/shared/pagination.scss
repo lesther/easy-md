@@ -2,11 +2,65 @@
 // pagination
 .pagination {
     display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 5px;
-    @include corner(50px);
-    background-color: $lighter-color;
+    @extend .group_inline;
+    @extend .group_spacing-minimal;
+    @extend .h-corner-xs;
+    background-color: rgba($color: $primary-color--highlight, $alpha: 0.3);
+    border: 1px solid rgba($color: $primary-color--highlight, $alpha: 0.3);
+    overflow: hidden;
+}
+.pagination_item {
+    line-height: 1;
+    font-size: 14px;
+    background-color: $light-color;
+    position: relative;
+    padding: 8px;
+    color:  $primary-color;
+    @include sm {
+        padding: 8px 15px;
+    }
+}
+.pagination_item.active,
+a.pagination_item:hover {
+    background-color: $primary-color--highlight;
+    color: $light-color;
+    font-weight: bold;
+}
+.pagination_item:last-of-type,
+.pagination_item:first-of-type {
+    width: 34px;
+}
+.pagination_item .material-icons {
+    @include position(absolute, 0, 0, 0, 0, 16px, 16px);
+    margin: auto;
+}
+
+//dark
+.pagination--dark {
+    border: 1px solid rgba($color: $primary-color, $alpha: 0.5);
+    background-color:  rgba($color: $primary-color, $alpha: 0.8 );
+}
+.pagination--dark .pagination_item {
+    background-color: $primary-color;
+    color: $light-color;
+}
+.pagination--dark .pagination_item.active,
+.pagination--dark a.pagination_item:hover {
+    background-color: $primary-color--accent;
     color: $primary-color;
-    gap: 1px;
+}
+
+//primary
+.pagination--primary {
+    border: 1px solid rgba($color: $primary-color--highlight, $alpha: 0.5);
+    background-color:  rgba($color: $primary-color--highlight, $alpha: 0.8 );
+}
+.pagination--primary .pagination_item {
+    background-color: $primary-color--highlight;
+    color: $light-color;
+}
+.pagination--primary .pagination_item.active,
+.pagination--primary a.pagination_item:hover {
+    background-color: $primary-color--accent;
+    color: $primary-color;
 }
