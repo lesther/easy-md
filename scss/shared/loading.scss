@@ -51,9 +51,9 @@ body.loading {
 }
 //duotone
 .loading_color:before {
-    border: 2px solid $primary-color;
+    border: 2px solid $primary-color--highlight;
     border-right-color: $success-color--accent;
-    border-bottom-color: $danger-color;
+    border-bottom-color: $secondary-color;
     animation: spinner .6s linear infinite;
     -webkit-animation: spinner .6s linear infinite;
     animation: spinner .6s linear infinite;
@@ -141,7 +141,7 @@ body.loading {
 }
 }
 
-//preloader
+//preloader page
 .preloader_wrap {
     @include position(fixed, 0, null, 0, null, 100%, 100%);
     background-color: rgba($color: $light-color, $alpha: 0.95);
