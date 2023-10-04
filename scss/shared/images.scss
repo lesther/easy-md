@@ -41,6 +41,8 @@ $profile-font: var(--profile-font);
 	@include corner(100%);
 	width: 100%;
 	overflow: hidden;
+	height: 100%;
+    object-fit: cover;
 }
 
 //sizes
