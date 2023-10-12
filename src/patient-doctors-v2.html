@@ -15,6 +15,16 @@
 </head>
 
 <body id="body_wrapper">
+    <!-- loading page -->
+    <div class="preloader">
+        <div class="preloader_wrap">
+            <div id="lottie"></div>
+            <p class="loading_dots text_primary">
+                Loading
+            </p>
+        </div>
+    </div>
+
     <header class="section section_primary section_pad-minimal">
         <div class="wrap-container">
             <div class="group group_inline group_align-center group_spacing-xl--sm">
@@ -1507,6 +1517,11 @@
     </div>
     
     <!-- scripts -->
+
+    <!-- preloader -->
+    <script src="../js/pre_min.js" defer></script>
+    <script src="../js/pre_loading.js" defer></script>
+
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
