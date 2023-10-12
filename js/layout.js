@@ -223,3 +223,42 @@ document.addEventListener('click', (event) => {
     }
   }
 });
+
+
+//preloader
+const preloader = document.querySelector('.preloader');
+const preloaderWrap = document.querySelector('.preloader_wrap');
+
+setTimeout(() => {
+    fadeOut(preloaderWrap, 500, () => {
+        preloader.innerHTML = '';
+        fadeOut(preloader, 500, () => {
+            preloader.classList.add('hidden');
+        });
+    });
+}, 2000);
+
+function fadeOut(element, duration, callback) {
+    const startOpacity = parseFloat(getComputedStyle(element).opacity);
+    let startTime = null;
+
+    function animate(timestamp) {
+        if (!startTime) {
+            startTime = timestamp;
+        }
+
+        const progress = timestamp - startTime;
+        const opacity = Math.max(startOpacity - (progress / duration), 0);
+
+        element.style.opacity = opacity;
+
+        if (progress < duration) {
+            requestAnimationFrame(animate);
+        } else {
+            if (typeof callback === 'function') {
+                callback();
+            }
+        }
+    }
+    requestAnimationFrame(animate);
+}
