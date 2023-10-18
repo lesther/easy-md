@@ -163,6 +163,15 @@ textarea.text_field {
 	background-color: rgba($color:  $primary-color--accent, $alpha: 0.1);
 }
 
+//button inside
+.text_field-wrap {
+	position: relative
+}
+.text_field-btn {
+	@include position(absolute, 0, 0, auto, 10px, null, null);
+	margin: auto;
+}
+
 
 //select
 .text_field-select {
@@ -212,7 +221,7 @@ textarea.text_field {
 	}
 }
 
-//search-icon
+//icon
 .multiple-select_arrow {
 	@include position(absolute, 0, null, null, 0, 40px, 100%);
 }

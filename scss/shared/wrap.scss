@@ -98,17 +98,27 @@
 }
 
 // videos
-.wrap-video {
+.wrap-media {
   position: relative;
   padding-bottom: 75%;
   height: 0;
   width: 100%;
 }
-.wrap-video iframe {
+.wrap-media .media,
+.wrap-media iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   @include position(absolute, 0, null, 0 null, 100%, 100%);
+}
+
+.media_button-bottom {
+  @include position(absolute, null, 10px, null, 10px, null, null);
+  z-index: 1;
+}
+.media_button-top {
+  z-index: 1;
+  @include position(absolute, 10px, null, null, 10px, null, null);
 }

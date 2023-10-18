@@ -1,0 +1,43 @@
+.messages_body {
+    @extend .group;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    padding: 20px;
+}
+%messages_item {
+    @extend .group;
+    @extend .group_spacing-xs;
+    padding: 15px 20px;
+    width: 90%;
+    scroll-snap-align: start;
+}
+.messages_item-me {
+    @extend %messages_item;
+    background-color: rgba($color: $primary-color--accent, $alpha: 0.3);
+    @include corner(15px, 0, 15px, 15px);
+    text-align: right;
+    align-self: flex-end;
+}
+.messages_item-me + .messages_item-me {
+    @include corner(15px);
+    margin-bottom: 0;
+}
+.messages_item-you {
+    @extend %messages_item;
+    background-color: rgba($color: $lighter-color, $alpha: 0.6);
+    @include corner(0, 15px, 15px, 15px);
+}
+.messages_item-you + .messages_item-you {
+    @include corner(15px);
+    margin-bottom: 0;
+}
+
+.message_input {
+    border-top: 1px solid $gray-border-color;
+    padding: 20px;
+}
+
+.message_header {
+    border-bottom: 1px solid $gray-border-color;
+    padding: 20px;
+}

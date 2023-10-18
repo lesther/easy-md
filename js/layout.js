@@ -37,6 +37,11 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_doctor-filter--active panel_active");
   });
 
+  $(".chat-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_chat--active panel_active");
+  });
+
   //popup
   $(".popup_personal-info-toggle").click(function(e) {
     e.preventDefault();
@@ -262,3 +267,33 @@ function fadeOut(element, duration, callback) {
     }
     requestAnimationFrame(animate);
 }
+
+
+//scroll_reverse
+const containers = document.querySelectorAll('.scroll_reverse');
+containers.forEach(container => {
+    container.scrollTop = container.scrollHeight - container.clientHeight;
+});
+
+
+//camera
+class VideoCall {
+  constructor() {
+      this.videoElement = document.querySelector('.video_call');
+      this.init();
+  }
+
+  init() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then((stream) => {
+        this.videoElement.srcObject = stream;
+    })
+    .catch((error) => {
+        console.error('Error al acceder a la cámara: ', error);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  new VideoCall();
+});

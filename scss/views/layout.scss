@@ -118,3 +118,10 @@
 .farma_nav-prev {
     left: -10px;
 }
+
+//chat
+.panel_chat-absolute {
+    @include lg {
+        @include position(absolute, 0, null, 0, null, null, 100%);
+    }
+}
