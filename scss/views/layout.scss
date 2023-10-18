@@ -121,9 +121,11 @@
 
 //chat
 .panel_chat-absolute {
-    max-width: 700px;
+    max-width: none;
     width: 100%;
+
     @include md {
+        max-width: 700px;
     }
     @include xl {
         @include position(absolute, 0, null, 0, null, null, 100%);
