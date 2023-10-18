@@ -480,6 +480,6 @@ $sizes: "", "--sm", "--md", "--lg", "--xl";
 }
 %collapsible_body-content {
 	overflow: auto;
+	@include scroll(vertical, 0px);
     height: 100%;
-	@include scroll(vertical);
 }

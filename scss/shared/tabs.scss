@@ -46,3 +46,18 @@
 .tab_content--active {
     display: block;
 }
+
+.tab_head-container--icons {
+    padding-top: 4px;
+    padding-bottom: 15px;
+    .tab_btn--active {
+        background-color: $primary-color--accent;
+        color: $primary-color;
+    }
+    .tab_btn:before {
+        bottom: -17px;
+    }
+}
+.tab_head-container--icons .material-icons{
+    pointer-events: none;
+}

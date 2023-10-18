@@ -218,26 +218,31 @@
             </h1>
             <!-- body -->
             <div class="group h-spacing-top-xl box_outline box_pad-none">
-                <div class="group group_inline group_spacing-none">
+                <div class="group group_inline--lg group_spacing-none">
                     <div class="flex_fill">
                         <div class=" box box_pad-none h-overflow-hidden">
                             <div class="wrap-media bg_primary ">
                                 <div class="media">
                                     <video class="video_call media" autoplay></video>
                                     <div class="media_button-bottom">
-                                        <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block">
+                                        <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block diagnostic-toggle">
                                             Diagnostico
                                         </a>
                                     </div>
                                     <div class="media_button-top group group_spacing-xs flex_width-auto">
-                                        <a href="" class="btn_secondary btn_hover-primary-highlight h-inner-spacing-xs media_buttons-top">
+                                        <a href="" class="btn_secondary h-inner-spacing-xs media_buttons-top">
                                             <span class="material-icons ">
                                                 event
                                             </span>
                                         </a>
-                                        <a href="" class="btn_light btn_hover-primary-highlight h-inner-spacing-xs media_buttons-top">
+                                        <a href="" class="btn_light btn_hover-primary-highlight h-inner-spacing-xs media_buttons-top detail-toggle">
                                             <span class="material-symbols-outlined ">
                                                 info
+                                            </span>
+                                        </a>
+                                        <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs media_buttons-top panel_section-toggle h-hide--lg">
+                                            <span class="material-icons ">
+                                                chat
                                             </span>
                                         </a>
                                     </div>
@@ -246,24 +251,24 @@
                         </div>
                     </div>
                     <div class="h-max-width-md--lg h-width-100 h-position-relative">
-                        <div class="panel__wrap-right panel_reset--lg panel_chat panel_chat-absolute">
+                        <div class="panel__wrap-right panel_reset--lg  panel__wrap-light panel_section panel_chat-absolute">
                             <div class="message_header">
                                 <div class="group group_inline group_spacing-xs group_align-center">
-                                    <span class="profile_lg profile_secondary profile_outline-light flex_width-auto">
+                                    <span class="profile_lg profile_secondary profile_outline-light flex_width-auto detail-toggle">
                                         <img src="https://i.pravatar.cc/150?img=38">
                                         Maria Lopez
                                     </span>
                                     <div class="group group_inline group_spacing-xs group_align-center">
                                         <div class="flex_fill group group_spacing-none">
-                                            <div class="text_weight-bold text_md">
-                                                Dr. Maria Lopez
-                                            </div>
+                                            <a href="" class="text_weight-bold text_md btn_link-primary detail-toggle">
+                                                Maria Lopez
+                                            </a>
                                             <div class="text_sm text_gray-label text_spacing-none">
                                                 marialopez@gmail.com
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs">
+                                    <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs detail-toggle">
                                         <span class="material-symbols-outlined ">
                                             info
                                         </span>
@@ -343,7 +348,7 @@
                                 </div>
     
                             </div>
-                            <div class="group group_inline group_spacing-sm group_align-center message_input">
+                            <div class="group group_inline group_spacing-xs group_align-center message_input">
                                 <div class="flex_fill text_field-wrap">
                                     <input type="text" class="text_field-block text_field-outline" placeholder="Mensaje...">
                                     <a href="" class="btn_circle-sm btn_link-gray-soft btn_hover-primary-highlight text_field-btn material-icons">
@@ -351,10 +356,9 @@
                                             send
                                         </span>
                                     </a>
-    
                                 </div>
                                 <div>
-                                    <div class="group group_inline group_spacing-xs">
+                                    <div class="group group_inline group_spacing-xxs">
                                         <a href="" class="btn_link-gray-soft">
                                             <span class="material-icons">
                                                 attach_file
@@ -748,6 +752,414 @@
                         <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
                             <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block panel_cancel">
                                 Actualizar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- details -->
+            <div class="panel_side-container panel_detail">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_md text_spacing-none btn_hover-none h-spacing-right-xl">
+                        <span class="btn_circle-sm btn_primary-accent material-icons">
+                            person
+                        </span>
+                        Detalles del paciente
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <!-- body -->
+                    <div class="tab">
+                        <div class="tab_head">
+                            <div class="tab_head-container tab_head-container--icons">
+                                <div class="group group_inline group_spacing-xs">
+                                    <button class="btn_link-gray-soft h-inner-spacing-xs btn_hover-primary-highlight tab_btn tab_btn--active" data-id="patient_information">
+                                        <span class="material-icons ">
+                                            accessibility_new
+                                        </span>
+                                    </button>
+                                    <button class="btn_link-gray-soft h-inner-spacing-xs btn_hover-primary-highlight tab_btn" data-id="patient_history">
+                                        <span class="material-icons ">
+                                            history
+                                        </span>
+                                    </button>
+                                    <button class="btn_link-gray-soft h-inner-spacing-xs btn_hover-primary-highlight tab_btn" data-id="patient_reason">
+                                        <span class="material-icons ">
+                                            sick
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content tab_content--active" id="patient_information">
+                            <div class="group group_spacing-xs group_align-center">
+                                <a href="" class="profile_success profile_xxl flex_width-auto">
+                                    <img src="https://i.pravatar.cc/300?img=38">
+                                    Marcela Miranda
+                                </a>
+                                <div class="group group_spacing-none group_align-center h-spacing-bottom-sm">
+                                    <a href="" class="btn_link-primary text_weight-bold text_md text_align-center text_spacing-none">
+                                        Marcela Miranda
+                                    </a>
+                                    <label class="text_gray text_align-center">
+                                        +505 7706 2554
+                                    </label>
+                                    <label class="text_gray text_align-center">
+                                        marialopez@gmail.com
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="group group_spacing-sm">
+                                <div class="group group_spacing-xs">
+                                    <label class="text_spacing-none text_gray-label group group_inline">
+                                        <span class="material-icons">
+                                            cake
+                                        </span>
+                                        36 años
+                                    </label>
+                                    <label class="text_spacing-none text_gray-label group group_inline">
+                                        <span class="material-icons">
+                                            female
+                                        </span>
+                                        Mujer
+                                    </label>
+                                    <label class="text_spacing-none text_gray-label group group_inline">
+                                        <span class="material-icons">
+                                            straighten
+                                        </span>
+                                        165 cm
+                                    </label>
+                                    <label class="text_spacing-none text_gray-label group group_inline">
+                                        <span class="material-icons">
+                                            monitor_weight
+                                        </span>
+                                        138 lb
+                                    </label>
+                                    <div class="group group_inline group_content-between group_align-center">
+                                        <span class="text_spacing-none text_gray-label group group_inline flex_fill text_style-italic text_sm">
+                                            Ultima actualización 15.09.2023
+                                        </span>
+                                        <div class="flex_width-auto">
+                                            <a href="" class="btn_primary btn_rounded-oval btn_sm btn">
+                                                <span class="material-icons icon_sm">
+                                                    border_color
+                                                </span>
+                                                Actualizar
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider">
+                                </div>
+                                <div class="box box_highlight-primary-highlight group group_spacing-xs">
+                                    <div>
+                                        <h3 class="title title_xs title_spacing-xs">
+                                            Solis Development Group S.A
+                                        </h3>
+                                        <p class="text_sm text_spacing-none">
+                                            Compania de desarrollo
+                                        </p>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <p class="text text_weight-bold">
+                                        Plan Empresarial Familiar con Signos Vitales
+                                    </p>
+                                    <div class="group group_inline group_wrap group_content-between group_align-center">
+                                        <p class="text_highlight-light text_sm text_primary h-spacing-none">
+                                            Quedan 198 días al plan
+                                        </p>
+                                        <a href="" class="btn_primary-accent btn_sm text_weight-bold plan-toggle">
+                                            <span class="material-icons icon_sm">
+                                                verified
+                                            </span>
+                                            Ver plan
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content" id="patient_history">
+                            <div class="group group_spacing-sm">
+                                <div class="box box_highlight-primary-highlight box_sm">
+                                    <div class="accordion">
+                                        <div class="flex_fill accordion_header accordion_header-arrow">
+                                            <p class="text_weight-bold">
+                                                Infección respiratoria
+                                            </p>
+                                            <div class="h-spacing-top-xs">
+                                                <span class="text_sm">
+                                                    20.08.2023
+                                                </span>
+                                                <span class="text_highlight-light text_xs text_primary text_spacing-none">
+                                                    10:30 AM
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="accordion_body">
+                                            <div class="accordion_content">
+                                                <div class="box box_sm box_light group group_spacing-sm">
+                                                    <div>
+                                                        <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                                            Duracion
+                                                        </label>
+                                                        <p class="text_black">
+                                                            10 minutos
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                                            Notas
+                                                        </label>
+                                                        <p class="text_black">
+                                                            El paciente consultó con queja de síntomas respiratorios, incluyendo tos, dificultad para respirar, fiebre leve y dolor en el pecho. No hay antecedentes conocidos de contacto con casos positivos de COVID-19. Se recomienda realizar una prueba de COVID-19 para descartar la infección viral.
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                                            Tratamiento Recomendado:
+                                                        </label>
+                                                        <ol class="h-spacing-bottom-sm">
+                                                            <li class="text_black">
+                                                                Prueba de COVID-19 para descartar la infección viral.
+                                                            </li>
+                                                            <li class="text_black">
+                                                                Medicamentos para el alivio de la fiebre y el dolor según sea necesario.
+                                                            </li>
+                                                            <li class="text_black">
+                                                                Uso continuo de inhalador si está disponible.
+                                                            </li>
+                                                        </ol>
+                                                        <a href="" class="btn_outline-primary btn_sm text_spacing-none">
+                                                            <span class="material-icons icon_sm">
+                                                                file_download
+                                                            </span>
+                                                            Descargar receta
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box box_highlight-primary-highlight box_sm">
+                                    <div class="accordion">
+                                        <div class="flex_fill accordion_header accordion_header-arrow">
+                                            <p class="text_weight-bold">
+                                                Infección respiratoria
+                                            </p>
+                                            <div class="h-spacing-top-xs">
+                                                <span class="text_sm">
+                                                    20.08.2023
+                                                </span>
+                                                <span class="text_highlight-light text_xs text_primary text_spacing-none">
+                                                    10:30 AM
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="accordion_body">
+                                            <div class="accordion_content">
+                                                <div class="box box_sm box_light group group_spacing-sm">
+                                                    <div>
+                                                        <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                                            Duracion
+                                                        </label>
+                                                        <p class="text_black">
+                                                            10 minutos
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                                            Notas
+                                                        </label>
+                                                        <p class="text_black">
+                                                            El paciente consultó con queja de síntomas respiratorios, incluyendo tos, dificultad para respirar, fiebre leve y dolor en el pecho. No hay antecedentes conocidos de contacto con casos positivos de COVID-19. Se recomienda realizar una prueba de COVID-19 para descartar la infección viral.
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="box_xs box_highlight-gray text_gray text_spacing-xs text_xs h-text-uppercase">
+                                                            Tratamiento Recomendado:
+                                                        </label>
+                                                        <ol class="h-spacing-bottom-sm">
+                                                            <li class="text_black">
+                                                                Prueba de COVID-19 para descartar la infección viral.
+                                                            </li>
+                                                            <li class="text_black">
+                                                                Medicamentos para el alivio de la fiebre y el dolor según sea necesario.
+                                                            </li>
+                                                            <li class="text_black">
+                                                                Uso continuo de inhalador si está disponible.
+                                                            </li>
+                                                        </ol>
+                                                        <a href="" class="btn_outline-primary btn_sm text_spacing-none">
+                                                            <span class="material-icons icon_sm">
+                                                                file_download
+                                                            </span>
+                                                            Descargar receta
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content" id="patient_reason">
+                            <div class="group group_spacing-sm">
+                                <div class="box box_highlight-primary-highlight group group_spacing-xs">
+                                    <div>
+                                        <label for="" class="box_xs box_light text_gray text_spacing-xs text_xs h-text-uppercase">
+                                            Síntomas reportados
+                                        </label>
+                                    </div>
+                                    <ol class="h-spacing-bottom-sm">
+                                        <li>
+                                            Tos
+                                        </li>
+                                        <li>
+                                            dificultad para respirar
+                                        </li>
+                                        <li>
+                                            fiebre baja
+                                        </li>
+                                        <li>
+                                            dolor en el pecho.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="box box_highlight-primary-highlight group group_spacing-xs">
+                                    <div>
+                                        <label for="" class="box_xs box_light text_gray text_spacing-xs text_xs h-text-uppercase">
+                                            Diagnóstico Provisional
+                                        </label>
+                                        <p>Infección respiratoria aguda.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
+                        <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
+                            <a href="" class="btn btn_secondary text_weight-bold btn_block panel_cancel">
+                                Agendar cita
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel_side-container panel_diagnostic">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none h-spacing-right-xl">
+                        <span class="btn_circle-sm btn_primary-accent material-icons">
+                            assignment
+                        </span>
+                        Diagnostico
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <!-- body -->
+                    <div>
+                        <form class="h-spacing-top-sm">
+                            <div class="group group_spacing-sm">
+                                <div class="group group_spacing-none">
+                                    <label for="" class="text_gray text_spacing-sm">
+                                        Diagnostico y Notas
+                                    </label>
+                                    <textarea rows="10" placeholder="Escribe el diagnostico y notas sobre la cita" class="text_field-block text_field text_field-outline"></textarea>
+                                </div>
+                                <div>
+                                    <label for="" class="text_gray text_spacing-sm">
+                                        Prescripcion medica
+                                    </label>
+                                    <div class="multiple-select">
+                                        <div class="multiple-select_wrap">
+                                            <div class="multiple-select_selection">
+                                                <div class="btn_tag-container">
+                                                    <a href="" class="btn_tag">Content text</a>
+                                                    <a href="" class="btn_tag-close"></a>
+                                                </div>
+                                                <div class="btn_tag-container">
+                                                    <a href="" class="btn_tag">Content text 3</a>
+                                                    <a href="" class="btn_tag-close"></a>
+                                                </div>
+                                                <div class="btn_tag-container">
+                                                    <a href="" class="btn_tag">Container text large</a>
+                                                    <a href="" class="btn_tag-close"></a>
+                                                </div>
+                                            </div>
+                                            <div class="multiple-select_input">
+                                                <input type="text" placeholder=" Prescripcion medica" class="multiple-select_toggle">
+                                                <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
+                                            </div>
+                                            <div class="multiple-select_content">
+                                                <input type="text" placeholder="Selecciona para agregar" class="multiple-select_input-inner">
+                                                <div class="multiple-select_content-options scrollable">
+                                                    <label class="form_check-btn_block">
+                                                        <input type="checkbox">
+                                                        Option full width
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 2
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 3
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 4
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 5
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 6
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 7
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 8
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 9
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 10
+                                                    </label>
+                                                    <label class="form_check-btn">
+                                                        <input type="checkbox">
+                                                        Option 11
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+    
+                        </form>
+                    </div>
+
+                    <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
+                        <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
+                            <a href="" class="btn btn_success text_weight-bold btn_block panel_cancel">
+                                Enviar Diagnositco
                             </a>
                         </div>
                     </div>

@@ -30,7 +30,7 @@ ul {
 	@extend .bullet-list;	
 }
 li {
-	@extend .bullet-list__item-primary-accent;
+	@extend .bullet-list__item-primary-highlight;
 }
 ol {
 	@extend .bullet-list;

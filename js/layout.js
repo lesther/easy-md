@@ -42,6 +42,16 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_chat--active panel_active");
   });
 
+  $(".detail-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_detail--active panel_active");
+  });
+
+  $(".diagnostic-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_diagnostic--active panel_active");
+  });
+
   //popup
   $(".popup_personal-info-toggle").click(function(e) {
     e.preventDefault();
@@ -296,4 +306,22 @@ class VideoCall {
 
 document.addEventListener('DOMContentLoaded', () => {
   new VideoCall();
+});
+
+
+//accordion
+const headers = document.querySelectorAll('.accordion_header');
+
+headers.forEach(header => {
+  header.addEventListener('click', (event) => {
+    const accordion = header.parentElement;
+    if (accordion.classList.contains('accordion')) {
+      header.classList.toggle('accordion_header--active');
+      const body = accordion.querySelector('.accordion_body');
+      if (body) {
+        body.classList.toggle('accordion_body--active');
+      }
+      event.preventDefault();
+    }
+  });
 });
