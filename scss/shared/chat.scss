@@ -10,6 +10,12 @@
     padding: 15px 20px;
     width: 90%;
     scroll-snap-align: start;
+    position: relative;
+    &:hover {
+        .messages_item-option {
+            @include opacity(100);
+        }
+    }
 }
 .messages_item-me {
     @extend %messages_item;
@@ -21,6 +27,7 @@
 .messages_item-me + .messages_item-me {
     @include corner(15px);
     margin-bottom: 0;
+    margin-top: -10px;
 }
 .messages_item-you {
     @extend %messages_item;
@@ -30,6 +37,7 @@
 .messages_item-you + .messages_item-you {
     @include corner(15px);
     margin-bottom: 0;
+    margin-top: -10px;
 }
 
 .message_input {
@@ -40,4 +48,20 @@
 .message_header {
     border-bottom: 1px solid $gray-border-color;
     padding: 20px;
+}
+
+.messages_item-option {
+    @extend .group;
+    @extend .group_spacing-xxs;
+}
+.messages_item-option {
+    @include transition(0.3s);
+    @include opacity(0);
+    @include position(absolute, 0, null, null, null, auto, null);
+}
+.messages_item-me .messages_item-option {
+    right: calc(100% + 10px);
+}
+.messages_item-you .messages_item-option {
+    left: calc(100% + 10px);
 }
