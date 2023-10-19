@@ -286,38 +286,6 @@ containers.forEach(container => {
 });
 
 
-//camera
-class VideoCall {
-  constructor() {
-      this.videoElements = document.querySelectorAll('.video_call-media');
-      this.init();
-  }
-
-  init() {
-      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          this.videoElements.forEach((videoElement, index) => {
-              navigator.mediaDevices.getUserMedia({ video: true })
-              .then((stream) => {
-                  videoElement.srcObject = stream;
-              })
-              .catch((error) => {
-                  console.error(`Error al acceder a la cámara ${index + 1}: `, error);
-              });
-          });
-      } else {
-          console.error('El navegador no admite getUserMedia.');
-      }
-  }
-}
-
-const videoCall = new VideoCall();
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  new VideoCall();
-});
-
-
 //accordion
 const headers = document.querySelectorAll('.accordion_header');
 
@@ -336,7 +304,7 @@ headers.forEach(header => {
 });
 
 
-
+//drag
 const functionContainer = {}
 const draggableItems = document.querySelectorAll('.draggable');
 draggableItems.forEach((draggable,index) => {
@@ -357,7 +325,38 @@ draggableItems.forEach((draggable,index) => {
     draggable.removeEventListener("mousemove", functionContainer[index]);
   });
 
-  draggable.addEventListener('click', function(e) {
+  draggable .addEventListener('click', function(e) {
     e.preventDefault();
   });
+});
+
+//camera
+class CameraStream {
+  constructor(videoElement) {
+      this.videoElement = videoElement;
+      this.initCamera();
+  }
+
+  initCamera() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then((stream) => {
+        this.videoElement.srcObject = stream;
+        this.videoElement.play();
+    })
+    .catch((error) => {
+        console.error('Error al acceder a la cámara: ', error);
+    });
+  }
+}
+
+const videoElements = document.querySelectorAll('.video_call-media');
+
+videoElements.forEach((videoElement) => {
+  new CameraStream(videoElement);
+});
+
+const videoCall = new VideoCall();
+
+document.addEventListener('DOMContentLoaded', () => {
+  new VideoCall();
 });

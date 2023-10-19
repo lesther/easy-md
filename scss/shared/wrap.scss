@@ -130,6 +130,9 @@
   @include position(absolute, 10px, null, 10px, null, 100%, null);
   @include corner(10px);
   overflow: hidden;
+  @include sm {
+    max-width: 200px;
+  }
 }
 .draggable {
   border: 1px solid transparent;
@@ -141,4 +144,42 @@
 .moving {
   border-color: $primary-color--accent;
   @include shadow(0 0 0 0.25rem rgba($color: $primary-color--accent, $alpha: 0.25));
+}
+
+.video_call-control {
+  @include position(absolute, null, 70px, 0, null, null);
+  @extend .group;
+  @extend .group_content-center;
+  @extend .group_align-center;
+  @extend .group_inline;
+  @extend .group_spacing-xs;
+  @include sm {
+    bottom: 30px;
+  }
+}
+.video_call-control_item {
+  z-index: 1;
+  @extend .btn_circle;
+  @extend .btn_light;
+  @include material-icons;
+  @include width-height(45px, 45px);
+  line-height: 45px;
+  &.active,
+  &:not([class*=btn]):hover {
+    color: $light-color;
+    background-color: $primary-color--highlight;
+    @include shadow(0 0 0 0.25rem rgba($color: $primary-color--highlight, $alpha: 0.25));
+  }
+}
+.video_call-control_item.btn_danger {
+  @extend .btn_danger;
+  @extend .btn_circle;
+  @extend .icon_lg;
+  @include width-height(60px, 60px);
+  line-height: 60px;
+  &:hover {
+    background-color: $primary-color--highlight;
+    color: $light-color;
+    @include shadow(0 0 0 0.25rem rgba($color: $primary-color--highlight, $alpha: 0.25));
+  }
 }
