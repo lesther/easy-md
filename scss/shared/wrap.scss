@@ -104,15 +104,41 @@
   height: 0;
   width: 100%;
 }
-.wrap-media .media,
 .wrap-media iframe {
   @include position(absolute, 0, null, 0, null, 100%, 100%);
 }
-.media_button-bottom {
+
+//video call
+.video_call {
+  @extend .wrap-media;
+  min-height: 400px;
+}
+.video_call-media {
+  @include position(absolute, 0, null, 0, null, 100%, 100%);
+}
+.video_call-btn-bottom {
   @include position(absolute, null, 10px, null, 10px, null, null);
   z-index: 1;
 }
-.media_button-top {
+.video_call-btn-top {
   z-index: 1;
   @include position(absolute, 10px, null, null, 10px, null, null);
+}
+//video caption
+.video_call-caption {
+  max-width: 150px;
+  @include position(absolute, 10px, null, 10px, null, 100%, null);
+  @include corner(10px);
+  overflow: hidden;
+}
+.draggable {
+  border: 1px solid transparent;
+  @include transition-mix(box-shadow 0.3s ease);
+}
+.video_call-caption .video_call {
+  min-height: 0;
+}
+.moving {
+  border-color: $primary-color--accent;
+  @include shadow(0 0 0 0.25rem rgba($color: $primary-color--accent, $alpha: 0.25));
 }

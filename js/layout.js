@@ -289,20 +289,29 @@ containers.forEach(container => {
 //camera
 class VideoCall {
   constructor() {
-      this.videoElement = document.querySelector('.video_call');
+      this.videoElements = document.querySelectorAll('.video_call-media');
       this.init();
   }
 
   init() {
-    navigator.mediaDevices.getUserMedia({ video: true })
-    .then((stream) => {
-        this.videoElement.srcObject = stream;
-    })
-    .catch((error) => {
-        console.error('Error al acceder a la cámara: ', error);
-    });
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          this.videoElements.forEach((videoElement, index) => {
+              navigator.mediaDevices.getUserMedia({ video: true })
+              .then((stream) => {
+                  videoElement.srcObject = stream;
+              })
+              .catch((error) => {
+                  console.error(`Error al acceder a la cámara ${index + 1}: `, error);
+              });
+          });
+      } else {
+          console.error('El navegador no admite getUserMedia.');
+      }
   }
 }
+
+const videoCall = new VideoCall();
+
 
 document.addEventListener('DOMContentLoaded', () => {
   new VideoCall();
@@ -323,5 +332,32 @@ headers.forEach(header => {
       }
       event.preventDefault();
     }
+  });
+});
+
+
+
+const functionContainer = {}
+const draggableItems = document.querySelectorAll('.draggable');
+draggableItems.forEach((draggable,index) => {
+  functionContainer[index] = ({ movementX, movementY }) => {
+    let getContainerStyle = window.getComputedStyle(draggable);
+    let leftValue = parseInt(getContainerStyle.left);
+    let topValue = parseInt(getContainerStyle.top);
+    draggable.style.left = `${leftValue + movementX}px`;
+    draggable.style.top = `${topValue + movementY}px`;
+  }
+  draggable.addEventListener('mousedown', function() {
+    draggable.classList.add('moving');
+    draggable.addEventListener("mousemove", functionContainer[index]);
+  });
+
+  draggable.addEventListener('mouseup', function() {
+    draggable.classList.remove('moving');
+    draggable.removeEventListener("mousemove", functionContainer[index]);
+  });
+
+  draggable.addEventListener('click', function(e) {
+    e.preventDefault();
   });
 });
