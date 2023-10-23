@@ -52,6 +52,11 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_diagnostic--active panel_active");
   });
 
+  $(".date-card-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_date-card--active panel_active");
+  });
+
   //popup
   $(".popup_personal-info-toggle").click(function(e) {
     e.preventDefault();
