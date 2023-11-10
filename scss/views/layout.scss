@@ -132,3 +132,24 @@
         background-color: transparent;
     }
 }
+
+//dark mode
+.easy_logo-front,
+.easy_logo-back {
+    @include transition(0.3s);
+}
+.light_mode {
+    .easy_logo-back {
+        fill: transparent;
+    }
+    .easy_logo-front {
+        fill: #fff;
+    }
+}
+.svg_contianer {
+    @include position(absolute, 0, 0, 0, 0);
+    @include opacity(0);
+    visibility: hidden;
+    z-index: -99;
+    overflow: hidden;
+}
