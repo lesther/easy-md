@@ -13,19 +13,14 @@
     <link rel="stylesheet" href="../css/output.css">
     <link rel="stylesheet" href="../css/main.min.css">
 </head>
-<!-- clase light_mode para poner el logo en blanco -->
-<body id="body_wrapper" class="light_mode">
-   
+<body id="body_wrapper">
     <header class="section section_primary section_pad-minimal">
         <div class="wrap-container">
             <div class="group group_inline group_align-center group_spacing-xl--sm">
                 
                 <a href="">
-                    <!-- nota: con una referencia externa "easy_logo-md.svg#easy_logo" solo funciona si esta en un servidor, browser bloquea la referencia por seguridad -->
-                    <!-- por eso el svg al que hace referencia esta abajo del html, de otro modo no se ha probado (xlink:href="easy_logo-md.svg#easy_logo") -->
-                    <svg class=""  width="100" height="42">
-                        <use xlink:href="#easy_logo"/>
-                    </svg>
+                    <!-- para el modo oscuro agregar las clases easy_logo dark:fill-white -->
+                    <img src="../images/logo_easy-md.svg" alt="logo-easy-md" width="100" class="easy_logo dark:fill-white">
                 </a>
                 <div class="group group_inline group_initial group_align-center flex_fill group_content-between">
                     <input type="text" class="text_field-light text_field-sm-1 text_field-search h-hide h-show--sm" placeholder="Search">

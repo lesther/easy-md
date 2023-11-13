@@ -138,12 +138,17 @@
 .easy_logo-back {
     @include transition(0.3s);
 }
-.light_mode {
+/* @include dark_theme {
     .easy_logo-back {
         fill: transparent;
     }
     .easy_logo-front {
-        fill: #fff;
+        fill: inherit;
+    }
+} */
+.easy_logo.dark\:fill-white {
+    @include dark_theme {
+        content:url("../images/logo_easy-md--light.svg");
     }
 }
 .svg_contianer {
