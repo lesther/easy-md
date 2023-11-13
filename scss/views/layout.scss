@@ -146,7 +146,7 @@
         fill: inherit;
     }
 } */
-.easy_logo.dark\:fill-white {
+.dark\:fill-white[src*="logo_easy-md"] {
     @include dark_theme {
         content:url("../images/logo_easy-md--light.svg");
     }
