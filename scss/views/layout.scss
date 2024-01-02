@@ -158,3 +158,42 @@
     z-index: -99;
     overflow: hidden;
 }
+
+//btn consultation
+@include only-mobile {
+    .btn_new-consultation {
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        right: 0;
+        padding: 10px;
+        background-color: $light-color;
+    }
+    .btn_new-consultation--flat {
+        padding: 0;
+    }
+    .btn_new-consultation .btn_circle-md {
+        width: 100%;
+        height: auto;
+        @include corner(5px);
+        padding: 6px 10px;
+        border-bottom-color: $light-color;
+        border-bottom-width: 2px;
+    }
+    .btn_new-consultation--flat .btn_circle-md {
+        @include corner(0);
+        padding: 12px 10px;
+    }
+    .btn_new-consultation--flat .btn_circle-md:hover {
+        background-color: $secondary-color;
+    }
+    .btn_new-consultation .btn_circle-md:after {
+        content: "Consulta inmediata";
+        font-family: $font-family-primary;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    #body_wrapper {
+        padding-top: 50px;
+    }
+}
