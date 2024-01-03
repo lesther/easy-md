@@ -21,11 +21,6 @@ $(document).ready(function() {
     e.preventDefault();
     $("#body_wrapper").toggleClass("panel_plan--active panel_active");
   });
-
-  $(".plan_selection-toggle").click(function(e) {
-    e.preventDefault();
-    $("#body_wrapper").toggleClass("panel_plan-selection--active panel_active");
-  });
  
   $(".profile_detail-toggle").click(function(e) {
     e.preventDefault();
@@ -91,6 +86,11 @@ $(document).ready(function() {
   $(".popup_new-affiliate-toggle").click(function(e) {
     e.preventDefault();
     $("#body_wrapper").toggleClass("popup_new-affiliate--active popup_active");
+  });
+
+  $(".popup_plans-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_plans--active popup_active");
   });
 
   // close
