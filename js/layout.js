@@ -21,6 +21,11 @@ $(document).ready(function() {
     e.preventDefault();
     $("#body_wrapper").toggleClass("panel_plan--active panel_active");
   });
+
+  $(".plan_selection-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("panel_plan-selection--active panel_active");
+  });
  
   $(".profile_detail-toggle").click(function(e) {
     e.preventDefault();

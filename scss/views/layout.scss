@@ -162,7 +162,8 @@
 //btn consultation
 @include only-mobile {
     .btn_new-consultation {
-        top: 0;
+        top: auto;
+        bottom: 0;
         z-index: 1;
         width: 100%;
         right: 0;
@@ -177,8 +178,7 @@
         height: auto;
         @include corner(5px);
         padding: 6px 10px;
-        border-bottom-color: $light-color;
-        border-bottom-width: 2px;
+        position: relative
     }
     .btn_new-consultation--flat .btn_circle-md {
         @include corner(0);
@@ -193,7 +193,19 @@
         font-weight: bold;
         font-size: 15px;
     }
+    .btn_new-consultation .btn_circle-md:before {
+        content: "";
+        @include position(absolute, 0, 0, 0, 0, calc(100% - 10px),  calc(100% - 10px));
+        margin: auto;
+        border: 1px solid $primary-color;
+        @include corner(5px);
+        @include transition(0.3s);
+    }
+    .btn_new-consultation .btn_circle-md:hover:before {
+        background-color: rgba($color: $light-color, $alpha: 0.2);
+        border-color: $light-color;
+    }
     #body_wrapper {
-        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
