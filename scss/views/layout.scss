@@ -210,6 +210,15 @@
     }
 }
 
+//popup plans
 .popup_plans--active .popup__wrap {
     max-width: 800px;
+}
+.box_plans {
+    min-width: 100%;
+    white-space: normal;
+    @include sm {
+        flex: 1;
+        min-width: 0;
+    }
 }

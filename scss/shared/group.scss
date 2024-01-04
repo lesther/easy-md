@@ -27,6 +27,12 @@
     //scroll
     @include scroll(null, 0px);
 }
+.group_wrap-scroll {
+    overflow-x: initial;
+    white-space: wrap;
+    cursor: auto;
+    flex: initial;
+}
 
 @mixin group-modifiers($size: "") {
     .group_inline#{$size} {
@@ -44,6 +50,13 @@
         //scroll
         @include scroll(null, 0px);
         cursor: grab;
+        flex: initial;
+    }
+    .group_wrap-scroll#{$size} {
+        overflow-x: initial;
+        white-space: normal;
+        cursor: auto;
+        flex: initial;
     }
 
     //content align
