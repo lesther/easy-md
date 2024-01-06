@@ -214,6 +214,13 @@
 .popup_plans--active .popup__wrap {
     max-width: 800px;
 }
+.box_plans-container {
+    cursor: auto;
+    @extend .group_nowrap-scroll;
+    @include sm {
+        @include scroll(null, 8px);
+    }
+}
 .box_plans {
     min-width: 100%;
     white-space: normal;
