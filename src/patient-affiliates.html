@@ -821,6 +821,159 @@
                     </div>
                 </div>
             </div>
+
+            <!-- filter search -->
+            <div class="panel_side-container panel_doctor-filter">
+                <div class="group flex_grow-1">
+                    <!-- top -->
+                    <label class="btn_link-primary-dark text_md text_spacing-none btn_hover-none h-spacing-right-xl">
+                        <span class="btn_circle-sm btn_primary-accent material-icons">
+                            tune
+                        </span>
+                        Busqueda avanzada
+                    </label>
+
+                    <div class="divider"></div>
+
+                    <!-- body -->
+                    <div class="group group_spacing-sm">
+                        <div>
+                            <label for="" class="text_gray text_spacing-sm">
+                                Elige una fecha
+                            </label>
+                            <input type="date" class="text_field text_field-outline text_field-block">
+                        </div>
+                        <div class="divider">
+                        </div>
+                        <div>
+                            <label for="" class="text_gray text_spacing-sm">
+                                Idiomas
+                            </label>
+                            <div>
+                                <div class="switch-btn">
+                                    <label class="switch-btn_wrap">
+                                        <input type="radio" name="switch-btn" class="switch-btn_input" checked="">
+                                        <span class="switch-btn_content-success">
+                                            Espanol
+                                        </span>
+                                    </label>
+                                    <label class="switch-btn_wrap">
+                                        <input type="radio" name="switch-btn" class="switch-btn_input">
+                                        <span class="switch-btn_content-highlight">
+                                            Ingles
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider">
+                        </div>
+                        <div>
+                            <label for="" class="text_gray text_spacing-sm">
+                                Selecciona la especialidad
+                            </label>
+                            <div class="multiple-select">
+                                <div class="multiple-select_wrap">
+                                    <div class="multiple-select_selection">
+                                        <div class="btn_tag-container">
+                                            <a href="" class="btn_tag">Content text</a>
+                                            <a href="" class="btn_tag-close"></a>
+                                        </div>
+                                        <div class="btn_tag-container">
+                                            <a href="" class="btn_tag">Content text 3</a>
+                                            <a href="" class="btn_tag-close"></a>
+                                        </div>
+                                        <div class="btn_tag-container">
+                                            <a href="" class="btn_tag">Container text large</a>
+                                            <a href="" class="btn_tag-close"></a>
+                                        </div>
+                                    </div>
+                                    <div class="multiple-select_input">
+                                        <input type="text" placeholder=" Condiciones médicas" class="multiple-select_toggle">
+                                        <a href="" class="multiple-select_toggle multiple-select_arrow"></a>
+                                    </div>
+                                    <div class="multiple-select_content">
+                                        <input type="text" placeholder="Sintomas del paciente" class="multiple-select_input-inner">
+                                        <div class="multiple-select_content-options scrollable">
+                                            <label class="form_check-btn_block">
+                                                <input type="checkbox">
+                                                Option full width
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 2
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 3
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 4
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 5
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 6
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 7
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 8
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 9
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 10
+                                            </label>
+                                            <label class="form_check-btn">
+                                                <input type="checkbox">
+                                                Option 11
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider">
+                        </div>
+                        <div>
+                            <label for="" class="text_gray text_spacing-sm">
+                                Puntuación minima
+                            </label>
+                            <div class="group_stars">
+                                <input type="radio" id="st1" value="5" class="group_stars-input" name="rate"/>
+                                <label for="st1" class="group_stars-label"></label>
+                                <input type="radio" id="st2" value="4" class="group_stars-input" name="rate"/>
+                                <label for="st2" class="group_stars-label"></label>
+                                <input type="radio" id="st3" value="3" class="group_stars-input" name="rate"/>
+                                <label for="st3" class="group_stars-label"></label>
+                                <input type="radio" id="st4" value="2" class="group_stars-input" name="rate"/>
+                                <label for="st4" class="group_stars-label"></label>
+                                <input type="radio" id="st5" value="1" class="group_stars-input" name="rate" checked/>
+                                <label for="st5" class="group_stars-label"></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-inner-spacing-top-md bg_light h-sticky-bottom h-spacing-top-auto">
+                        <div class="group group_spacing-xs group_inline--sm h-spacing-top-lg">
+                            <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block panel_cancel">
+                                Filtrar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="panel_overlay-transparent panel_close"></div>
     </div>
@@ -1280,15 +1433,15 @@
                             </div>
                             <div class="group group_inline box_plans-container">
                                 <div class="box_plans">
-                                    <div class="box box_highlight-primary-highlight box_sm">
+                                    <div class="box box_highlight-primary-highlight box_sm h-height-100">
                                         <p class="text_weight-bold text_md">
                                             Plan Basico
                                         </p>
-                                        <p class="title_primary title_md title_weight-light flex_fill">$ 4.95</p>
+                                        <p class="title_primary title_md title_weight-light">$ 4.95</p>
                                         <p class="text_highlight-light text_sm text_primary h-spacing-none">
                                             Beneficios de plan
                                         </p>
-                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg">
+                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg box_plans-details">
                                             <li class="bullet-list__item">
                                                 <p class="text_weight-bold text_spacing-none">Consulta Medica General 24/7</p>
                                             </li>
@@ -1325,21 +1478,23 @@
                                                 <p class="text_weight-bold text_spacing-none">Signos Vitales</p>
                                             </li>
                                         </ul>
-                                        <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
-                                            Obtener
-                                        </a>
+                                        <div class="h-spacing-top-auto">
+                                            <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
+                                                Obtener
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="box_plans">
-                                    <div class="box box_highlight-primary-highlight box_sm">
+                                    <div class="box box_highlight-primary-highlight box_sm h-height-100">
                                         <p class="text_weight-bold text_md">
                                             Plan Basico
                                         </p>
-                                        <p class="title_primary title_md title_weight-light flex_fill">$ 4.95</p>
+                                        <p class="title_primary title_md title_weight-light">$ 4.95</p>
                                         <p class="text_highlight-light text_sm text_primary h-spacing-none">
                                             Beneficios de plan
                                         </p>
-                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg">
+                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg box_plans-details">
                                             <li class="bullet-list__item">
                                                 <p class="text_weight-bold text_spacing-none">Consulta Medica General 24/7</p>
                                             </li>
@@ -1380,21 +1535,23 @@
                                                 <p class="text_weight-bold text_spacing-none">Signos Vitales</p>
                                             </li>
                                         </ul>
-                                        <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
-                                            Obtener
-                                        </a>
+                                        <div class="h-spacing-top-auto">
+                                            <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
+                                                Obtener
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="box_plans">
-                                    <div class="box box_highlight-primary-highlight box_sm">
+                                    <div class="box box_highlight-primary-highlight box_sm h-height-100">
                                         <p class="text_weight-bold text_md">
                                             Plan Basico
                                         </p>
-                                        <p class="title_primary title_md title_weight-light flex_fill">$ 4.95</p>
+                                        <p class="title_primary title_md title_weight-light">$ 4.95</p>
                                         <p class="text_highlight-light text_sm text_primary h-spacing-none">
                                             Beneficios de plan
                                         </p>
-                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg">
+                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg box_plans-details">
                                             <li class="bullet-list__item">
                                                 <p class="text_weight-bold text_spacing-none">Consulta Medica General 24/7</p>
                                             </li>
@@ -1423,21 +1580,23 @@
                                                 <p class="text_weight-bold text_spacing-none">Signos Vitales</p>
                                             </li>
                                         </ul>
-                                        <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
-                                            Obtener
-                                        </a>
+                                        <div class="h-spacing-top-auto">
+                                            <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
+                                                Obtener
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="box_plans">
-                                    <div class="box box_highlight-primary-highlight box_sm">
+                                    <div class="box box_highlight-primary-highlight box_sm h-height-100">
                                         <p class="text_weight-bold text_md">
                                             Plan Basico
                                         </p>
-                                        <p class="title_primary title_md title_weight-light flex_fill">$ 4.95</p>
+                                        <p class="title_primary title_md title_weight-light">$ 4.95</p>
                                         <p class="text_highlight-light text_sm text_primary h-spacing-none">
                                             Beneficios de plan
                                         </p>
-                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg">
+                                        <ul class="bullet-list bullet-list--check h-spacing-top-lg box_plans-details">
                                             <li class="bullet-list__item">
                                                 <p class="text_weight-bold text_spacing-none">Consulta Medica General 24/7</p>
                                             </li>
@@ -1474,9 +1633,11 @@
                                                 <p class="text_weight-bold text_spacing-none">Signos Vitales</p>
                                             </li>
                                         </ul>
-                                        <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
-                                            Obtener
-                                        </a>
+                                        <div class="h-spacing-top-auto">
+                                            <a href="" class="btn_primary btn_rounded-oval btn_sm btn h-inner-spacing-horizontal-lg">
+                                                Obtener
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

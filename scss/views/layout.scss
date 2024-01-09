@@ -218,7 +218,7 @@
     cursor: auto;
     @extend .group_nowrap-scroll;
     @include sm {
-        @include scroll(null, 8px);
+        @include scroll(null, 6px);
     }
 }
 .box_plans {
@@ -227,4 +227,18 @@
     @include sm {
         min-width: calc(50% - 15px);
     }
+}
+.box_plans-details {
+    max-height: 280px;
+    overflow-y: auto;
+    //scroll
+    @include scroll(null, 0px);
+    @include sm {
+        @include scroll(vertical, 6px);
+    }
+}
+.box_plans > .box {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
