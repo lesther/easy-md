@@ -288,6 +288,31 @@ function fadeOut(element, duration, callback) {
     requestAnimationFrame(animate);
 }
 
+//timer
+$(document).ready(function() {
+  $('.timer').each(function() {
+      let $this = $(this);
+      let minutes = 0;
+      let seconds = 0;
+
+      function updateTimerDisplay() {
+          let minutesStr = minutes < 10 ? '0' + minutes : minutes;
+          let secondsStr = seconds < 10 ? '0' + seconds : seconds;
+          $this.text(`${minutesStr}:${secondsStr}`);
+      }
+
+      setInterval(() => {
+          seconds++;
+          if (seconds === 60) {
+              seconds = 0;
+              minutes++;
+          }
+          updateTimerDisplay();
+      }, 1000);
+  });
+});
+
+
 
 //scroll_reverse
 const containers = document.querySelectorAll('.scroll_reverse');

@@ -15,464 +15,49 @@
 </head>
 
 <body id="body_wrapper">
-    <!-- loading page -->
-    <div class="preloader">
-        <div class="preloader_wrap">
-            <div id="lottie"></div>
-            <p class="loading_dots text_primary">
-                Loading
-            </p>
-        </div>
-    </div>
 
-    <header class="section section_primary section_pad-minimal">
-        <div class="wrap-container">
-            <div class="group group_inline group_align-center group_spacing-xl--sm">
-                <a href="">
-                    <img src="../images/logo_easy-md--light.svg" alt="logo-easy-md" width="100">
+    <!-- body -->
+    <div class="bg_black video_call video_call--fullscreen">
+        <div>
+            <video class="video_call-media" webkit-playsinline="true" playsinline="true"  autoplay></video>
+            <div class="video_call-caption draggable">
+                <div class="video_call bg_secondary">
+                    <video class="video_call-media" autoplay></video>
+                </div>
+            </div>
+            <div class="video_call-control">
+                <a href="" class="video_call-control_item">
+                    mic_off
                 </a>
-                <div class="group group_inline group_initial group_align-center flex_fill group_content-between">
-                    <input type="text" class="text_field-light text_field-sm-1 text_field-search h-hide h-show--sm" placeholder="Search">
-                    <div class="group group_inline flex_fill group_align-center group_content-end group_spacing-xs group_spacing-sm--sm">
-                        <p class="text_spacing-none text_light h-hide h-show--md truncate-text h-max-width-xs">
-                            Bienvenido Lesther Morales
-                        </p>
-                        <div class="btn-dropdown">
-                            <a href="" class="profile_secondary btn-dropdown_toggle">
-                                Lesther morales
-                            </a>
-                            <div class="btn-dropdown_content btn-dropdown_content-wrapper">
-                                <div class="btn-dropdown_content-options scrollable">
-                                    <div class="group group_spacing-xxs">
-                                        <a href="" class="btn_transparent btn_rounded-none btn_sm text_gray text_spacing-none">
-                                            <span class="material-icons">
-                                                account_circle
-                                            </span>
-                                            Mi perfil
-                                        </a>
-                                        <div class="divider">
-                                        </div>
-                                        <a class="btn_transparent btn_rounded-none btn_sm text_gray text_spacing-none">
-                                            <span class="material-icons">
-                                                logout
-                                            </span>
-                                            Cerrar sesion
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="" class="notification-toggle">
-                            <div class="icon_group">
-                                <img src="../images/bell_accent.svg" alt="notification-icon-light" class="icon_hover" width="20">
-                                <img src="../images/bell_light.svg" alt="notification-icon" class="icon" width="20">
-                            </div>
-                        </a>
-                        <a href="" class="icon_group-btn panel_overlay panel_overlay--menu menu-toggle h-hide--lg">
-                            <div class="icon_group">
-                                <img src="../images/sidebar_primary.svg" alt="sidebar-icon-light" class="icon_hover" width="20">
-                                <img src="../images/sidebar_light.svg" alt="sidebar-icon" class="icon" width="20">
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <a href="" class="video_call-control_item btn_danger">
+                    call_end
+                </a>
+               <a href="" class="video_call-control_item">
+                    videocam_off
+               </a>
             </div>
-        </div>
-    </header>
-    <nav class="section_lighter section_pad-none panel panel--lg">
-        <div class="wrap-container h-z2">
-            <div class="panel__wrap-left panel_reset--lg panel_menu">
-                <div class="group group_spacing-sm group_inline--lg flex_grow-1 group_nowrap-scroll--lg h-inner-spacing-md">
-                    <div class="h-hide--lg">
-                        <div class="group group_inline group_align-center group_content-end group_spacing-xs group_spacing-sm--sm">
-                            <a href="" class="profile_secondary profile_lg flex_width-auto">
-                                Lesther morales
-                            </a>
-                            <div class="flex_fill h-overflow-hidden">
-                                <p class="text_spacing-none text_weight-bold h-overflow-hidden">
-                                    <a href="" class="btn_link-primary btn_link-hover-secondary h-text-underline truncate-text h-display-block">
-                                        Lesther Morales
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="text" class="text_field text_field-sm-1 text_field-search h-hide--lg text_field-block" placeholder="Search">
-                    <div class="divider h-spacing-vertical-md h-hide--lg"></div>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/activity_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/activity_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Dashboard
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/folder_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/folder_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Consultas
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/calendar_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/calendar_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Citas
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/dossier_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/dossier_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Recetas
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover active">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/medical_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/medical_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Doctores
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/pill_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/pill_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Farmacia
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/beaker_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/beaker_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Laboratorio
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/bill_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/bill_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Facturacion
-                        </span>
-                    </a>
-                    <a href="" class="btn_nav-link icon_group-hover">
-                        <div class="icon_group-btn icon_group-btn--circle">
-                            <div class="icon_group">
-                                <img src="../images/card_primary.svg" alt="dashboard-icon-light" class="icon_hover" width="24">
-                                <img src="../images/card_gray.svg" alt="dashboard-icon" class="icon" width="24">
-                            </div>
-                        </div>
-                        <span>
-                            Suscripciones
-                        </span>
-                    </a>
-                    <a href="" class="btn_sm btn_block h-spacing-top-auto h-hide--lg">
-                        <span class="material-icons">
-                            exit_to_app
-                        </span>
-                        <span>
-                            Cerrar sesion
-                        </span>
-                    </a>
-                </div>
+            <div class="video_call-btn-bottom">
+                <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block diagnostic-toggle">
+                    Diagnostico
+                </a>
             </div>
-        </div>
-    </nav>
-    <section class="section section_pad-xs">
-        <div class="wrap-container">
-            <!-- breadcrumb -->
-            <h1 class="title_primary title_xs">
-                Video llamada
-            </h1>
-            <!-- body -->
-            <div class="group h-spacing-top-xl box_outline box_pad-none">
-                <div class="group group_inline--xl group_spacing-none">
-                    <div class="flex_fill">
-                        <div class=" box box_pad-none h-overflow-hidden">
-                            <div class="bg_black video_call">
-                                <div>
-                                    <video class="video_call-media" autoplay></video>
-                                    <div class="video_call-caption draggable">
-                                        <div class="video_call bg_secondary">
-                                            <video class="video_call-media" autoplay></video>
-                                        </div>
-                                    </div>
-                                    <div class="video_call-control">
-                                        <a href="" class="video_call-control_item">
-                                            mic_off
-                                        </a>
-                                        <a href="" class="video_call-control_item btn_danger">
-                                            call_end
-                                        </a>
-                                       <a href="" class="video_call-control_item">
-                                            videocam_off
-                                       </a>
-                                    </div>
-                                    <div class="video_call-btn-bottom">
-                                        <a href="" class="btn btn_primary-accent btn_hover-primary-highlight text_weight-bold btn_block diagnostic-toggle">
-                                            Diagnostico
-                                        </a>
-                                    </div>
-                                    <div class="video_call-btn-top group group_spacing-xs flex_width-auto">
-                                        <a href="" class="btn_secondary h-inner-spacing-xs">
-                                            <span class="material-icons ">
-                                                event
-                                            </span>
-                                        </a>
-                                        <a href="" class="btn_light btn_hover-primary-highlight h-inner-spacing-xs detail-toggle">
-                                            <span class="material-symbols-outlined ">
-                                                info
-                                            </span>
-                                        </a>
-                                        <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs panel_section-toggle h-hide--xl  panel_overlay panel_overlay-transparent panel_overlay--section">
-                                            <span class="material-icons ">
-                                                chat
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="h-max-width-md--xl h-width-100 h-position-relative panel">
-                        <div class="panel__wrap-right panel_reset--xl panel__wrap-light panel_section panel_chat-absolute h-inner-spacing-none">
-                            <div class="message_header">
-                                <div class="group group_inline group_spacing-xs group_align-center">
-                                    <span class="profile_lg profile_secondary profile_outline-light flex_width-auto detail-toggle">
-                                        <img src="https://i.pravatar.cc/150?img=38">
-                                        Maria Lopez
-                                    </span>
-                                    <div class="group group_inline group_spacing-xs group_align-center h-spacing-right-xl h-spacing-none--xl">
-                                        <div class="flex_fill group group_spacing-none">
-                                            <a href="" class="text_weight-bold text_md btn_link-primary detail-toggle">
-                                                Maria Lopez
-                                            </a>
-                                            <div class="text_sm text_gray-label text_spacing-none">
-                                                marialopez@gmail.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs detail-toggle h-hide h-show-flex--xl">
-                                        <span class="material-symbols-outlined ">
-                                            info
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="" class="material-icons btn_link-gray panel_close  h-hide--xl">
-                                close
-                            </a>
-                            <div class="messages_body scroll_reverse flex_grow-1 ">
-                                <!-- message -->
-                                <div>
-                                    <div class="group group_inline group_align-center">
-                                        <div class="divider flex_fill"></div>
-                                        <span class="text_highlight-soft-gray text_xs text_spacing-none flex_width-auto">
-                                            18 de Octubre
-                                        </span>
-                                        <div class="divider flex_fill"></div>
-                                    </div>
-                                </div>
-                                <div class="messages_item-me">
-                                    <p class="text_gray">
-                                        El estrés puede tener un impacto significativo en la salud. Podría contribuir tanto a los dolores de cabeza como al cansancio que está experimentando. Es importante que tratemos de abordar ese factor de estrés. Además, me gustaría realizar algunas pruebas para descartar cualquier problema médico subyacente. ¿Le parece bien?
-                                    </p>
-                                    <label class="group group_inline text_sm text_disabled text_spacing-none group_spacing-xs group_align-center group_content-end">
-                                        <span class="text_disabled text_spacing-none">
-                                            06:32 PM
-                                        </span>
-                                        <span class="material-icons text_primary-highlight icon_sm">
-                                            done_all
-                                        </span>
-                                    </label>
-                                    <div class="messages_item-option">
-                                        <a href="" class="btn_link-gray-soft btn_hover-danger h-inner-spacing-xs btn_circle-sm">
-                                            <span class="material-icons icon_sm">
-                                                delete
-                                            </span>
-                                        </a>
-                                        <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs btn_circle-sm">
-                                            <span class="material-icons icon_sm">
-                                                border_color
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="messages_item-you">
-                                    <p class="text_gray">
-                                        Sí, por supuesto. Quiero entender qué está causando estos síntomas.
-                                    </p>
-                                    <label class="group group_inline text_sm text_disabled text_spacing-none group_spacing-xs group_align-center group_content-end">
-                                        <span class="text_disabled text_spacing-none">
-                                            06:32 PM
-                                        </span>
-                                    </label>
-                                </div>
-                                <div>
-                                    <div class="group group_inline group_align-center">
-                                        <div class="divider flex_fill"></div>
-                                        <span class="text_highlight-soft-gray text_xs text_spacing-none flex_width-auto">
-                                            18 de Octubre
-                                        </span>
-                                        <div class="divider flex_fill"></div>
-                                    </div>
-                                </div>
-                                <div class="messages_item-me">
-                                    <p class="text_gray">
-                                        Perfecto. Primero, haré un examen físico para descartar cualquier signo evidente de preocupación. Luego, sugiero realizar análisis de sangre para verificar si hay deficiencias nutricionales o problemas hormonales que puedan estar contribuyendo a sus síntomas. Además, podríamos considerar una evaluación ocular para descartar problemas visuales como una posible causa de los dolores de cabeza.
-                                    </p>
-                                    <label class="group group_inline text_sm text_disabled text_spacing-none group_spacing-xs group_align-center group_content-end">
-                                        <span class="text_disabled text_spacing-none">
-                                            06:32 PM
-                                        </span>
-                                        <span class="material-icons text_primary-highlight icon_sm">
-                                            done_all
-                                        </span>
-                                    </label>
-                                    <div class="messages_item-option">
-                                        <a href="" class="btn_link-gray-soft btn_hover-danger h-inner-spacing-xs btn_circle-sm">
-                                            <span class="material-icons icon_sm">
-                                                delete
-                                            </span>
-                                        </a>
-                                        <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs btn_circle-sm">
-                                            <span class="material-icons icon_sm">
-                                                border_color
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="messages_item-you">
-                                    <p class="text_gray">
-                                        Suena como un buen plan. Estoy dispuesto a hacer lo que sea necesario para sentirme mejor.
-                                    </p>
-                                    <label class="group group_inline text_sm text_disabled text_spacing-none group_spacing-xs group_align-center group_content-end">
-                                        <span class="text_disabled text_spacing-none">
-                                            06:32 PM
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="messages_item-you">
-                                    <p class="text_gray">
-                                        muchas gracias
-                                    </p>
-                                    <label class="group group_inline text_sm text_disabled text_spacing-none group_spacing-xs group_align-center group_content-end">
-                                        <span class="text_disabled text_spacing-none">
-                                            06:32 PM
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="messages_item-me">
-                                    <p class="text_gray">
-                                        Eso es muy positivo. Una vez que tengamos los resultados de las pruebas, podremos tener una imagen más clara de lo que está sucediendo y cómo abordarlo. Mientras tanto, le recomendaría que busque formas de manejar su estrés, como la meditación, el ejercicio regular y asegurarse de descansar lo suficiente.
-                                    </p>
-                                    <label class="group group_inline text_sm text_disabled text_spacing-none group_spacing-xs group_align-center group_content-end">
-                                        <span class="text_disabled text_spacing-none">
-                                            06:32 PM
-                                        </span>
-                                        <span class="material-icons icon_sm">
-                                            done
-                                        </span>
-                                    </label>
-                                    <div class="messages_item-option">
-                                        <a href="" class="btn_link-gray-soft btn_hover-danger h-inner-spacing-xs btn_circle-sm">
-                                            <span class="material-icons icon_sm">
-                                                delete
-                                            </span>
-                                        </a>
-                                        <a href="" class="btn_link-gray-soft btn_hover-primary-highlight h-inner-spacing-xs btn_circle-sm">
-                                            <span class="material-icons icon_sm">
-                                                border_color
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-    
-                            </div>
-                            <div class="message_input">
-                                <div class="group group_inline group_spacing-xs group_align-center">
-                                    <div class="flex_fill text_field-wrap">
-                                        <input type="text" class="text_field-block text_field-outline" placeholder="Mensaje...">
-                                        <a href="" class="btn_circle-sm btn_link-gray-soft btn_hover-primary-highlight text_field-btn material-icons">
-                                            <span class="">
-                                                send
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <div class="group group_inline group_spacing-xxs">
-                                            <a href="" class="btn_link-gray-soft">
-                                                <span class="material-icons">
-                                                    attach_file
-                                                </span>
-                                            </a>
-                                            <a href="" class="btn_link-gray-soft">
-                                                <span class="material-symbols-outlined">
-                                                    photo_camera
-                                                </span>
-                                            </a>
-                                            <a href="" class="btn_link-gray-soft">
-                                                <span class="material-icons">
-                                                    mic
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel_overlay-transparent panel_close"></div>
-                    </div>
-                </div>
+            <div class="video_call-btn-top group group_spacing-xs flex_width-auto">
+                <a href="" class="btn_secondary h-inner-spacing-xs">
+                    <span class="material-icons ">
+                        event
+                    </span>
+                </a>
+                <a href="" class="btn_light btn_hover-primary-highlight h-inner-spacing-xs detail-toggle">
+                    <span class="material-symbols-outlined ">
+                        info
+                    </span>
+                </a>
+                <a href="" class="btn_primary-accent btn_hover-primary-highlight h-inner-spacing-xs panel_section-toggle h-hide--xl  panel_overlay panel_overlay-transparent panel_overlay--section">
+                    <span class="material-icons ">
+                        chat
+                    </span>
+                </a>
             </div>
-        </div>
-    </section>
-    <footer class="section_lighter section_pad-xxs">
-        <p class="text_gray text_spacing-none text_xs text_align-center">
-            EasyMD LLC EasyMD App © 2023
-        </p>
-    </footer>
-
-    <div class="btn_fixed-right">
-        <div class="group group_spacing-xxs">
-            <a href="" class="btn_circle-md btn_primary-accent material-icons popup_chat-toggle">
-                add_comment
-            </a>
-            <a href="" class="btn_circle-md btn_primary-highlight material-icons">
-                call
-            </a>
         </div>
     </div>
 
@@ -1267,6 +852,8 @@
                         <!-- body -->
                         <form class="h-spacing-top-sm">
                             <div class="group group_spacing-sm">
+                                <div>
+                                </div>
                                 <div class="group group_inline--sm group_spacing-sm">
                                     <div>
                                         <label for="" class="text_gray text_spacing-sm text_sm">

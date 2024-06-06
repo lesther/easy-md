@@ -113,6 +113,21 @@
   @extend .wrap-media;
   min-height: 400px;
 }
+.video_call--iframe {
+  height: auto;
+  min-height: 75vh;
+  width: 100%;
+  height: 100%;
+}
+.video_call--fullscreen {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  min-width: 100%;
+  height: 100%;
+}
 .video_call-media {
   @include position(absolute, 0, null, 0, null, 100%, 100%);
 }

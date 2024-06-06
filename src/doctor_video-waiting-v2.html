@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy MD</title>
+
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body id="body_wrapper">
+    <!-- body -->
+    <div class="group h-min-height-md">
+        <!-- v1 -->
+        <!-- <div class="preloader_wrap-section">
+            <div class="profile_hero profile_primary-accent h-spacing-bottom-lg">
+                <img src="../images/doctor_3d.png" alt="doctor-3d">
+            </div>
+            <p class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none">
+                No cierre esta ventana,
+                <br>
+                un medico se pondra en contacto con usted
+                <br>
+                lo mas pronto posible
+            </p>
+            <div class="timer h-spacing-top-lg">00:00</div>
+        </div> -->
+        <!-- v2 -->
+        <div class="preloader_wrap-section">
+            <div class="lottie  h-spacing-bottom-xl"></div>
+            <p class="btn_link-primary-dark text_md text_spacing-none text_weight-bold btn_hover-none">
+                No cierre esta ventana,
+                <br>
+                un medico se pondra en contacto con usted
+                <br>
+                lo mas pronto posible
+            </p>
+            <div class="timer h-spacing-top-lg">00:00</div>
+        </div>
+    </div>
+
+    
+    <!-- scripts -->
+
+    <!-- preloader -->
+    <script src="../js/pre_min.js" defer></script>
+    <script src="../js/pre_loading.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script src="../js/layout.js"></script>
+
+    <script>
+        var swiper = new Swiper(".specialist_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".specialist_nav-prev",
+                prevEl: ".specialist_nav-next",
+            },
+        });
+        var swiper = new Swiper(".farma_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".farma_nav-next",
+                prevEl: ".farma_nav-prev",
+            },
+        });
+    </script>
+
+</body>

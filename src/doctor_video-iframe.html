@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy MD</title>
+
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body id="body_wrapper">
+
+    <section class="section section_pad-xs">
+        <div class="wrap-container">
+            <!-- breadcrumb -->
+            <h1 class="title_primary title_xs">
+                Video llamada
+            </h1>
+            <iframe src="doctor_video-fullscreen.html" title="description" class="video_call--iframe"></iframe>
+        </div>
+    </section>
+
+    <script src="../js/pre_min.js" defer></script>
+    <script src="../js/pre_loading.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <script src="../js/layout.js"></script>
+
+    <script>
+        var swiper = new Swiper(".specialist_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".specialist_nav-prev",
+                prevEl: ".specialist_nav-next",
+            },
+        });
+        var swiper = new Swiper(".farma_slider", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".farma_nav-next",
+                prevEl: ".farma_nav-prev",
+            },
+        });
+    </script>
+
+</body>

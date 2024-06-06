@@ -156,6 +156,12 @@ body.loading {
     text-transform: uppercase;
     color: $primary-color--highlight;
 }
+.preloader_wrap-section {
+    @extend .preloader_wrap;
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+}
 
 //dots
 .loading_dots:after {
@@ -222,4 +228,24 @@ body.loading {
         margin-top: -20px;
         min-height: 45px;
     }
+}
+
+.lottie {
+    width: 130px;
+    height: 130px;
+    ~ p {
+        margin-top: -20px;
+        min-height: 45px;
+    }
+}
+
+//timer
+.timer {
+    min-width: 100px;
+    @extend .text_lg;
+    @extend .text_primary;
+    padding: 10px 20px;
+    @include corner(10px);
+    @include shadow(0 10px 15px -3px #dbdbdb);
+    background-color:  $light-color;
 }
