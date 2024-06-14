@@ -813,3 +813,9 @@
 .h-corner-lg {
     @include corner(30px);
 }
+
+//font
+.font_sora {
+	font-family: $font-family-sora;
+	line-height: 1.2;
+} 

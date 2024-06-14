@@ -14,6 +14,7 @@ $gray-text-color: #9D9D9D;
 $gray-icon-color: #C7C7C7;
 //background
 $lighter-color: #F2F2F2;
+$lighter-color-2: #F2F6F7;
 $lighter-color--primary: #ECF8F7;
 $lighter-color--dark: #F2F4F6;
 $lighter-color--dark-2: #E6EAED;
@@ -73,6 +74,7 @@ $colorClass-palette: (
 	"warning": $warning-color,
 	"warning-accent": $warning-color--accent,
 	"lighter": $lighter-color,
+	"lighter-2": $lighter-color-2,
 	"lighter-primary": $lighter-color--primary,
 	"lighter-dark": $lighter-color--dark,
 	"lighter-dark-2": $lighter-color--dark-2,
@@ -84,6 +86,7 @@ $mixClass-palette: (
 	"black": ( bg: $black-color, color: $light-color ),
 	"light": ( bg: $light-color, color: inherit, input-color: inherit ),
 	"lighter": ( bg: $lighter-color, color: inherit ),
+	"lighter-2": ( bg: $lighter-color-2, color: inherit ),
 	"lighter-dark": ( bg: $lighter-color--dark, color: inherit ),
 	"lighter-primary": ( bg: $lighter-color--primary, color: inherit ),
 	"dark": ( bg: $dark-color, color: $light-color ),

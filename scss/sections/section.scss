@@ -137,6 +137,55 @@
 	}
 }
 
+//section image
+.section_image-generic-1 {
+	background-image: url('../images/bck_generic.jpeg');
+	&:before {
+		content: "";
+		@include position(absolute, 0, null, 0, null, 100%, 100%);
+		display: block;
+		@include bg-gradient(top, $primary-color--highlight, 0, 0%, $primary-color--highlight, 0.6, 100%);
+	}
+	&:after {
+		content: "";
+		@include position(absolute, 0, null, 0, null, 100%, 100%);
+		display: block;
+		@include bg-gradient(top, $light-color, 0, 0%, $light-color, 0, 100%);
+	}
+}
+.section_image-generic-2 {
+	@extend .section_image-generic-1;
+	&:before {
+		@include bg-gradient(top, $light-color, 0, 0%, $light-color, 1, 100%);
+	}
+	&:after {
+		@include bg-gradient(top, $light-color, 1, 0%, $light-color,0, 100%);
+	}
+}
+.section_oval-primary-accent {
+	@include bg-gradient(top, $primary-color--accent, 1, 0%, $primary-color--accent, 0, 100%);
+	margin-top: 100px;
+	position: relative;
+	overflow: initial;
+	@include sm {
+		margin-top: 200px;
+	}
+	&:before {
+		content: "";
+		@include position(absolute, null, calc(100% - 2px), 0, null, 100%, 100px);
+		display: block;
+		background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE2MDAgMjYzIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xLCAuY2xzLTIgewogICAgICAgIGZpbGw6ICM4MGVlYzI7CiAgICAgICAgc3Ryb2tlLXdpZHRoOiAwcHg7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgb3BhY2l0eTogLjI7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTAsMjYyLjl2LTM0LjhjMTguMi0xMi4xLDM3LjQtMjMuOSw1Ny40LTM1LjJDMjU0LjIsODEuNSw1MjEuMiwxOC45LDc5OS41LDE4LjlzNTQ1LjMsNjIuNiw3NDIuMSwxNzRjMjAuNCwxMS41LDM5LjksMjMuNSw1OC40LDM1Ljl2MzQuMUgwWiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTE1NTAuNSwxNzcuM2MtNDkuNi0yOC0xMDQuMi01My40LTE2Mi40LTc1LjQtNTcuNS0yMS43LTExOS00MC4zLTE4Mi45LTU1LjMtNTAuMS0xMS44LTEwMi0yMS40LTE1NC44LTI4LjYtMTQuMy0yLTI4LjctMy44LTQzLjItNS40QzkzOSw0LjksODY5LjEuOSw3OTkuNS45cy0xMzkuNSwzLjktMjA3LjcsMTEuNmMtMTQuNSwxLjYtMjguOSwzLjQtNDMuMiw1LjQtNTIuOCw3LjMtMTA0LjcsMTYuOS0xNTQuOCwyOC42LTYzLjgsMTUtMTI1LjQsMzMuNi0xODIuOSw1NS4zLTU4LjIsMjItMTEyLjgsNDcuMy0xNjIuMyw3NS40LTE2LjcsOS40LTMyLjksMTkuMy00OC41LDI5LjR2MjEuNWMxOC4yLTEyLjEsMzcuNC0yMy45LDU3LjQtMzUuMkMyNTQuMiw4MS41LDUyMS4yLDE4LjksNzk5LjUsMTguOXM1NDUuMyw2Mi42LDc0Mi4xLDE3NGMyMC40LDExLjUsMzkuOSwyMy41LDU4LjQsMzUuOXYtMjEuNWMtMTUuOS0xMC4zLTMyLjUtMjAuNC00OS41LTMwWiIvPgo8L3N2Zz4=');
+		@include background(100% auto, bottom center, no-repeat);
+		@include sm {
+			height: 200px;
+			@include background(120% auto, bottom center, no-repeat);
+		}
+		@include md {
+			@include background(160% auto, top center, no-repeat);
+		}
+	}
+}
+
 
 // Generate font size helpers
 @include section_pad();

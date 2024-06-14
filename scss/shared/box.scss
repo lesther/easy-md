@@ -38,6 +38,9 @@
 .box_rounded-sm {
 	@include corner(10px);
 }
+.box_rounded-sm-1 {
+	@include corner(15px);
+}
 .box_rounded-md {
 	@include corner(20px);
 }

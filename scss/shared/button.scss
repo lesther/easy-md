@@ -143,6 +143,18 @@
 	height: 40px;
 	@extend .text_lg;
 }
+.btn_circle-lg {
+	@extend .btn_circle;
+	width: 60px;
+	height: 60px;
+	@extend .text_lg;
+}
+.btn_circle-hero {
+	@extend .btn_circle;
+	width: 80px;
+	height: 80px;
+	@extend .text_xl;
+}
 
 /////////////////////////////
 //colors

@@ -163,6 +163,10 @@
       flex: auto 1 1;
       max-width: 50%;
     }
+    .flex_grid-half_gap#{$size} {
+        flex: auto 1 1;
+        max-width: calc(50% - 20px);
+      }
     .flex_grid-half_gap-sm#{$size} {
         flex: auto 1 1;
         max-width: calc(50% - 15px);
@@ -170,6 +174,10 @@
     .flex_grid-third#{$size} {
       flex: auto 1 1;
       max-width: 33.33%;
+    }
+    .flex_grid-third_gap#{$size} {
+        flex: auto 1 1;
+        max-width: calc(33.33% - 20px);
     }
     .flex_grid-third_gap-sm#{$size} {
         flex: auto 1 1;

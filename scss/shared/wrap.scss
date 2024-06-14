@@ -5,6 +5,7 @@
 	margin-left: auto;
 	margin-right: auto;
   padding: 0;
+  z-index: 2;
   &:not(.nav__container) {
     position: relative;
   }
@@ -17,6 +18,13 @@
   @extend .wrap-container;
   @include md {
 		max-width: calc(#{$max-width-container-page} - 200px);
+  }
+}
+
+.wrap-container-xxs {
+  @extend .wrap-container;
+  @include md {
+		max-width: calc(#{$max-width-container-page} - 400px);
   }
 }
 
