@@ -30,7 +30,7 @@
                     <div class="group group_inline group_spacing-xs">
                         <a href="" class="btn_sm-1 btn_primary">Crear Cuenta</a>
                         <a href="" class="btn_sm-1 btn_outline-primary">Iniciar Sesión</a>
-                        <a href="" class="btn_sm-1 btn_primary-accent btn_hover-primary-highlight">Descarga la app</a>
+                        <a href="" class="btn_sm-1 btn_primary-accent btn_hover-primary-highlight popup_cart-toggle">Descarga la app</a>
                     </div>
                 </div>
             </div>
@@ -521,6 +521,47 @@
             </div>
         </div>
     </footer>
+
+        <!-- popup -->
+    <div class="popup">
+        <div class="popup__wrap popup__wrap-no-pad popup__wrap-light">
+            <div class="group group_spacing-sm">
+                <!-- close -->
+                <a href="" class="material-icons btn_link-gray popup_close">
+                    close
+                </a>
+                <div class="popup_container popup_cart">
+                    <div class="group group_spacing-none">
+                        <!-- top -->
+                         <div class="popup_header-lighter">
+                             <label class="text_md text_spacing-none text_weight-bold h-spacing-right-xl">
+                                 Tu compra EasyMD
+                             </label>
+                         </div>
+        
+                        <!-- body -->
+                        <form class="h-spacing-top-sm popup_body-wrapper">
+                            <div class="group group_inline group_spacing-none group_nowrap-scroll group_wrap-scroll--md tab_container-lighter">
+                                <button class="tab_btn-oval tab_btn--active">
+                                    Tu información
+                                </button>
+                                <button class="tab_btn-oval">
+                                    Detalles de pago
+                                </button>
+                                <button class="tab_btn-oval">
+                                    Confirma tu compra
+                                </button>
+                                <button class="tab_btn-oval">
+                                    Compra exitosa
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_overlay popup_close"></div>
+    </div>
 
     <!-- preloader -->
     <script src="../js/pre_min.js" defer></script>

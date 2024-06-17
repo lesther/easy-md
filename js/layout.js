@@ -93,6 +93,11 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("popup_plans--active popup_active");
   });
 
+  $(".popup_cart-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_cart--active popup_active");
+  });
+
   // close
   $(".panel_close, .panel_cancel").click(function(e) {
     e.preventDefault();

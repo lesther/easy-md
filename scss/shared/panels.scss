@@ -71,6 +71,7 @@
 .popup_close,
 .panel_close {
     @include position(absolute, 20px, null, null, 20px, null, null);
+    z-index: 1;
 }
 
 //general panel

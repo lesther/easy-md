@@ -23,6 +23,18 @@
 	@include transition(0.3s);
 	width: 100%;
 }
+.popup_body-wrapper {
+	@extend .box;
+}
+.popup__wrap-no-pad {
+	padding: 0;
+}
+.popup_header-lighter {
+	@extend .box_md;
+	@extend .box_lighter;
+	@include corner(null, null, 0, 0);
+	border-bottom: 1px solid $gray-border-color;
+}
 .popup_overlay {
 	@extend .panel_overlay;
 }
@@ -49,6 +61,7 @@
 .popup_container {
 	display: none;
 }
+.popup_cart--active .popup_cart,
 .popup_plans--active .popup_plans,
 .popup_new-affiliate-remove--active .popup_new-affiliate-remove,
 .popup_new-affiliate--active .popup_new-affiliate,

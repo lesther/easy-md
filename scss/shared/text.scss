@@ -45,6 +45,10 @@
 	}
 }
 
+.text_line-through {
+	text-decoration: line-through;
+}
+
 @mixin text-atr($size: "") {
 	//text align
 	.text_align-left#{$size} {

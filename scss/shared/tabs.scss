@@ -37,6 +37,38 @@
 .tab_btn--active:before {
     width: 100%;
 }
+//oval
+.tab_btn-oval {
+    @extend .btn;
+    @include corner(0);
+    @extend .btn_lighter;
+    padding: 5px 15px;
+    @include sm {
+        padding: 5px 20px;
+    }
+    &:first-child {
+        @include corner(10rem, 0, 0, 10rem);
+    }
+    &:last-child {
+        @include corner(0, 10rem, 10rem, 0);
+    }
+    &.tab_btn--active,
+    &:hover {
+        background-color: #29CDF2DF;
+        font-weight: normal;
+        color: $primary-color;
+    }
+    &:active,
+    &:focus {
+        @include shadow(none);
+        background-color: #29CDF2DF;
+        color: $primary-color;
+    }
+}
+.tab_container-lighter {
+    @extend .h-corner-oval;
+    background-color: $lighter-color;
+}
 
 //container
 .tab_content {
