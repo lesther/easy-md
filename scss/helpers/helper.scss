@@ -784,6 +784,9 @@
 .h-z3 {
 	z-index: 3;
 }
+.h-z4 {
+	z-index: 4;
+}
 .h-z-1 {
 	z-index: -1;
 }
@@ -817,5 +820,8 @@
 //font
 .font_sora {
 	font-family: $font-family-sora;
-	line-height: 1.2;
+	line-height: 1.4;
 } 
+.font_poppins {
+	font-family: $font-family-poppins;
+}

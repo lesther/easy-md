@@ -27,9 +27,13 @@ $warning-color--accent: #ff9900;
 $success-color: #6AC653;
 $success-color--accent: #3ea824;
 $primary-color: #003970;
+$primary-color_clic: #03178C;
 $primary-color--dark: #003049;
+$primary-color--dark_clic: #020659;
 $primary-color--accent: #80EEC2;
+$primary-color--accent_clic: #08D3BB;
 $primary-color--highlight: #3682F9;
+$primary-color--highlight_clic: #2980F2;
 $secondary-color: #FFA702;
 $secondary-color--accent: #F4C539;
 $secondary-color--light: #f4d49d;
@@ -65,6 +69,10 @@ $colorClass-palette: (
 	"primary-dark": $primary-color--dark,
 	"primary-accent": $primary-color--accent,
 	"primary-highlight": $primary-color--highlight,
+	"primary_clic": $primary-color_clic,
+	"primary-dark_clic": $primary-color--dark_clic,
+	"primary-accent_clic": $primary-color--accent_clic,
+	"primary-highlight_clic": $primary-color--highlight_clic,
 	"primary-text": $text-color,
 	"success": $success-color,
 	"success-accent": $success-color--accent,
@@ -97,6 +105,10 @@ $mixClass-palette: (
 	"primary-dark": ( bg: $primary-color--dark, color: $light-color ),
 	"primary-accent": ( bg: $primary-color--accent, color: $light-color ),
 	"primary-highlight": ( bg: $primary-color--highlight, color: $light-color ),
+	"primary_clic": ( bg: $primary-color_clic, color: $light-color ),
+	"primary-dark_clic": ( bg: $primary-color--dark_clic, color: $light-color ),
+	"primary-accent_clic": ( bg: $primary-color--accent_clic, color: $light-color ),
+	"primary-highlight_clic": ( bg: $primary-color--highlight_clic, color: $light-color ),
 	"secondary": ( bg: $secondary-color, color: $light-color ),
 	"secondary-accent": ( bg: $secondary-color--accent, color: $light-color ),
 	"success": ( bg: $success-color, color: $light-color ),
@@ -120,6 +132,10 @@ $buttons-palette: (
 	"primary-dark": ( bg: $primary-color--dark, color: $light-color, hover: $primary-color--highlight ),
 	"primary-accent": ( bg: $primary-color--accent, color:  $primary-color, hover: $primary-color--dark ),
 	"primary-highlight": ( bg: $primary-color--highlight, color: $light-color, hover: $primary-color ),
+	"primary_clic": ( bg: $primary-color_clic, color: $light-color, hover: $primary-color--highlight_clic ),
+	"primary-dark_clic": ( bg: $primary-color--dark_clic, color: $light-color, hover: $primary-color--highlight_clic ),
+	"primary-accent_clic": ( bg: $primary-color--accent_clic, color:  $primary-color, hover: $primary-color--dark_clic ),
+	"primary-highlight_clic": ( bg: $primary-color--highlight_clic, color: $light-color, hover: $primary-color_clic ),
 	"secondary": ( bg: $secondary-color, color: $light-color, hover: $secondary-color--accent ),
 	"secondary-accent": ( bg: $secondary-color--accent, color: $light-color, hover: $primary-color--dark ),
 	"success": ( bg: $success-color, color: $light-color, hover: $success-color--accent ),

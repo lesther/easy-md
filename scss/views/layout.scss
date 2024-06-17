@@ -242,3 +242,8 @@
     flex-direction: column;
     align-items: baseline;
 }
+
+//box soft clic
+.box_primary-accent_clic {
+    background-color: rgba($color: $primary-color--accent_clic, $alpha: 0.4);
+}

@@ -162,6 +162,42 @@
 		@include bg-gradient(top, $light-color, 1, 0%, $light-color,0, 100%);
 	}
 }
+.section_image-generic-3 {
+	background-color: $primary-color--highlight_clic;
+	color: $light-color;
+	background-image: url('../images/bck_generic-primary.jpg');
+}
+.section_image-light-1 {
+	background-image: url('../images/bck_generic-light.jpg');
+	&:before {
+		content: "";
+		@include position(absolute, 0, null, 0, null, 100%, 100%);
+		display: block;
+		background-color: rgba($color: $light-color, $alpha: 0.6)
+	}
+}
+.section_image-generic-light-2 {
+	@extend .section_image-generic-1;
+	background-image: url('../images/bck_generic-light.jpg');
+	&:before {
+		@include bg-gradient(top, $light-color, 0, 50%, $light-color, 1, 100%);
+	}
+	&:after {
+		@include bg-gradient(top, $light-color, 1, 30%, $light-color,0, 100%);
+	}
+}
+.section_border-bottom_primary-hihlight {
+	border-bottom: 6px solid $primary-color--highlight;
+}
+.section_border-bottom_primary-hihlight-click {
+	border-bottom: 6px solid $primary-color--highlight_clic;
+}
+.section_shadow {
+	@include shadow(0 0 10px 0 $gray-border-color);
+	z-index: 3;
+	position: relative;
+}
+
 .section_oval-primary-accent {
 	@include bg-gradient(top, $primary-color--accent, 1, 0%, $primary-color--accent, 0, 100%);
 	margin-top: 100px;

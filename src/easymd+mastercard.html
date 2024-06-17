@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/main.min.css">
 </head>
 
-<body id="body_wrapper">
+<body id="body_wrapper" >
     <header class="section section_pad-xxs">
         <div class="wrap-container-sm">
             <div class="group group_inline--sm group_align-center group_spacing-xl--sm">
@@ -285,7 +285,7 @@
 
     <section class="section section_pad-top_none section_pad-bottom_none section_spacing-none--md">
         <div class="h-position-relative">
-            <div class="swiper farma_slider">
+            <div class="swiper slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide h-overflow-hidden">
                         <div class="box box_lighter-2 group group_spacing-xs">
@@ -465,17 +465,17 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="slider_nav-next farma_nav-next">
+            <!-- <div class="slider_nav-next slider_next">
                 chevron_right
             </div>
-            <div class="slider_nav-prev farma_nav-prev">
+            <div class="slider_nav-prev slider_prev">
                 chevron_left
             </div> -->
         </div>
 
     </section>
 
-    <footer class="section section_pad-top_md">
+    <footer class="section section_pad-top_md section_border-bottom_primary-hihlight">
         <div class="wrap-container-sm group group_spacing-lg text_gray">
             <div class="group group_inline--md group_content-between--md group_align-center">
                 <div class="group group_inline group_align-center group_spacing-sm flex_fill group_content-center  group_content-start--md">
@@ -532,13 +532,13 @@
     <script src="../js/layout.js"></script>
 
     <script>
-        var swiper = new Swiper(".farma_slider", {
+        var swiper = new Swiper(".slider", {
             slidesPerView: 1,
             loop: true,
             spaceBetween: 30,
             navigation: {
-                nextEl: ".farma_nav-next",
-                prevEl: ".farma_nav-prev",
+                nextEl: ".slider_next",
+                prevEl: ".slider_prev",
             },
             breakpoints: {
                 640: {

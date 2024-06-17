@@ -42,7 +42,7 @@
   }
 }
 
-.wrap-container__shadow{
+.wrap-container__shadow {
   @include shadow(0 0 10px 0 $gray-border-color);
 }
 
