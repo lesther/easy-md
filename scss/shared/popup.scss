@@ -23,6 +23,10 @@
 	@include transition(0.3s);
 	width: 100%;
 }
+.popup__wrap-lg {
+	@extend .popup__wrap;
+	max-width: 700px;
+}
 .popup_body-wrapper {
 	@extend .box;
 }

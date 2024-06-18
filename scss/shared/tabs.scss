@@ -42,27 +42,68 @@
     @extend .btn;
     @include corner(0);
     @extend .btn_lighter;
+    @extend .flex_fill--md;
+    @extend .group_content-center;
     padding: 5px 15px;
     @include sm {
         padding: 5px 20px;
     }
     &:first-child {
+        @extend .flex_width-auto;
         @include corner(10rem, 0, 0, 10rem);
     }
     &:last-child {
+        @extend .flex_width-auto;
         @include corner(0, 10rem, 10rem, 0);
     }
-    &.tab_btn--active,
-    &:hover {
+    &.tab_btn--active {
         background-color: #29CDF2DF;
         font-weight: normal;
         color: $primary-color;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #29CDF2DF;
+            color: $primary-color;
+        }
+    }
+    &:hover {
+        background-color: $lighter-color;
+        color: $primary-color--highlight_clic;
     }
     &:active,
     &:focus {
         @include shadow(none);
-        background-color: #29CDF2DF;
+        background-color: $lighter-color;
         color: $primary-color;
+    }
+    &:before {
+        content: none;
+    }
+}
+//steps
+.tab_head-container--steps .tab_btn {
+    background-color: #29CDF2DF;
+    color: $primary-color;
+}
+.tab_head-container--steps .tab_btn--active ~ .tab_btn {
+    color: $primary-color;
+    background-color: $lighter-color;
+}
+///container oval
+.tab_btn-oval_container {
+    @extend .group;
+    @extend .group_inline;
+    @extend .group_spacing-none;
+    @extend .group_nowrap-scroll;
+    @extend .group_wrap-scroll--md;
+    @extend .tab_container-lighter;
+    @extend .group_content-between--md;
+    border: 0;
+    max-width: min-content;
+    margin: 0 auto;
+    @include md {
+        max-width: none;
     }
 }
 .tab_container-lighter {

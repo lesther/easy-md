@@ -231,7 +231,7 @@
                             <li>1 Traslado en ambulancia (Trimestral)</li>
                             <li>1 Traslado en ambulancia (Trimestral)</li>
                         </ul>
-                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto">
+                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto popup_cart-toggle">
                             Adquiere este plan
                         </a>
                     </div>
@@ -259,7 +259,7 @@
                             <li>Estratificación y control poblacional</li>
                             <li>Hasta 3 Beneficiarios</li>
                         </ul>
-                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto">
+                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto popup_cart-toggle">
                             Adquiere este plan
                         </a>
                     </div>
@@ -283,7 +283,7 @@
                             <li>Consultas psicológicas por chat y videollamadas</li>
                             <li>Estratificación y control poblacional</li>
                         </ul>
-                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto">
+                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto popup_cart-toggle">
                             Adquiere este plan
                         </a>
                     </div>
@@ -306,7 +306,7 @@
                             <li>Consultas psicológicas por chat y videollamadas</li>
                             <li>Estratificación y control poblacional</li>
                         </ul>
-                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto">
+                        <a href="" class="btn_sm-1_clic btn_primary-accent_clic btn_hover-primary-highlight_clic flex_width-auto popup_cart-toggle">
                             Adquiere este plan
                         </a>
                     </div>
@@ -400,6 +400,264 @@
             </div>
         </div>
     </footer>
+
+    <!-- popup -->
+    <div class="popup">
+        <div class="popup__wrap popup__wrap-no-pad popup__wrap-light popup__wrap-lg">
+            <div class="group group_spacing-sm">
+                <!-- close -->
+                <a href="" class="material-icons btn_link-gray popup_close">
+                    close
+                </a>
+                <div class="popup_container popup_cart">
+                    <div class="group group_spacing-none">
+                        <!-- top -->
+                            <div class="popup_header-lighter">
+                                <label class="text_md text_spacing-none text_weight-bold h-spacing-right-xl">
+                                    Tu compra EasyMD
+                                </label>
+                            </div>
+        
+                        <!-- body -->
+                            <div class="h-spacing-top-sm popup_body-wrapper">
+                                <div class="tab">
+                                    <div class="tab_head">
+                                        <div class="tab_btn-oval_container tab_head-container tab_head-container--steps">
+                                            <button class="tab_btn-oval text_sm tab_btn tab_btn--active" data-id="payment_info">
+                                                Tu información
+                                            </button>
+                                            <button class="tab_btn-oval text_sm tab_btn" data-id="payment_detail">
+                                                Detalles de pago
+                                            </button>
+                                            <button class="tab_btn-oval text_sm tab_btn" data-id="payment_confirm">
+                                                Confirma tu compra
+                                            </button>
+                                            <button class="tab_btn-oval text_sm tab_btn" data-id="payment_success">
+                                                Compra exitosa
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tab_content tab_content--active" id="payment_info">
+                                        <div class="group group_inline--md group_align-start--md group_row-reverse--md">
+                                            <div class="box_light box_outline group_spacing-lg group flex_width-auto--md group_xs--md">
+                                                <p class="text_weight-bold text_md">Tu orden</p>
+                                                <div class="group group_spacing-sm">
+                                                    <div class="group group_inline group_spacing-xs">
+                                                        <div class="profile_lighter profile_md profile flex_width-auto h-corner-sm-1">
+                                                            
+                                                        </div>
+                                                        <div class="group group_spacing-xxs">
+                                                            <p class="text_gray text_spacing-none">
+                                                                Plan VIP CLIC Health
+                                                            </p>
+                                                            <p class="text_weight-bold text_spacing-none text_sm">
+                                                                $8.50
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="divider"></div>
+                                                    <div class="group group_content-between group_inline">
+                                                        <p class="text_spacing-none text_gray">Subtotal</p>
+                                                        <p class="text_spacing-none text_gray text_sm">$8.50</p>
+                                                    </div>
+                                                    <div class="divider"></div>
+                                                    <div class="group group_content-between group_inline">
+                                                        <p class="text_spacing-none">Subtotal</p>
+                                                        <p class="text_spacing-none">$8.50</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box_light box_outline group_spacing-lg group flex_fill">
+                                                <p class="text_weight-bold text_md">Tu información</p>
+                                                <div class="group">
+                                                    <div>
+                                                        <label for="" class="text_gray text_spacing-sm">
+                                                            Nombre completo*
+                                                        </label>
+                                                        <input type="text" class="text_field text_field-block">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="text_gray text_spacing-sm">
+                                                            Correo electrónico*
+                                                        </label>
+                                                        <input type="text" class="text_field text_field-block">
+                                                    </div>
+                                                    <div>
+                                                        <label for="" class="text_gray text_spacing-sm">
+                                                            Fecha de nacimiento*
+                                                        </label>
+                                                        <input type="date" class="text_field text_field-block">
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                        <a href="" class="btn btn_primary-highlight_clic">Siguiente</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab_content" id="payment_detail">
+                                    <div class="group group_inline--md group_align-start--md group_row-reverse--md">
+                                        <div class="box_light box_outline group_spacing-lg group flex_width-auto--md group_xs--md">
+                                            <p class="text_weight-bold text_md">Tu orden</p>
+                                            <div class="group group_spacing-sm">
+                                                <div class="group group_inline group_spacing-xs">
+                                                    <div class="profile_lighter profile_md profile flex_width-auto h-corner-sm-1">
+                                                        
+                                                    </div>
+                                                    <div class="group group_spacing-xxs">
+                                                        <p class="text_gray text_spacing-none">
+                                                            Plan VIP CLIC Health
+                                                        </p>
+                                                        <p class="text_weight-bold text_spacing-none text_sm">
+                                                            $8.50
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="group group_content-between group_inline">
+                                                    <p class="text_spacing-none text_gray">Subtotal</p>
+                                                    <p class="text_spacing-none text_gray text_sm">$8.50</p>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="group group_content-between group_inline">
+                                                    <p class="text_spacing-none">Subtotal</p>
+                                                    <p class="text_spacing-none">$8.50</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box_light box_outline group_spacing-lg group flex_fill">
+                                            <p class="text_weight-bold text_md">Detalles de pago</p>
+                                            <div class="group">
+                                                <div>
+                                                    <label for="" class="text_gray text_spacing-sm">
+                                                        Numero de tarjeta*
+                                                    </label>
+                                                    <input type="text" class="text_field text_field-block">
+                                                </div>
+                                                <div>
+                                                    <div class="group group_inline--sm">
+                                                        <div>
+                                                            <label for="" class="text_gray text_spacing-sm">
+                                                                CVV*
+                                                            </label>
+                                                            <input type="number" class="text_field text_field-block">
+                                                        </div>
+                                                        <div>
+                                                            <label for="" class="text_gray text_spacing-sm">
+                                                                Expiración*
+                                                            </label>
+                                                            <input type="date" class="text_field text_field-block">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                    <a href="" class="btn btn_primary-highlight_clic">Siguiente</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="tab_content" id="payment_confirm">
+                                    <div class="group group_inline--md group_align-start--md group_row-reverse--md">
+                                        <div class="box_light box_outline group_spacing-lg group flex_width-auto--md group_xs--md">
+                                            <p class="text_weight-bold text_md">Tu orden</p>
+                                            <div class="group group_spacing-sm">
+                                                <div class="group group_inline group_spacing-xs">
+                                                    <div class="profile_lighter profile_md profile flex_width-auto h-corner-sm-1">
+                                                        
+                                                    </div>
+                                                    <div class="group group_spacing-xxs">
+                                                        <p class="text_gray text_spacing-none">
+                                                            Plan VIP CLIC Health
+                                                        </p>
+                                                        <p class="text_weight-bold text_spacing-none text_sm">
+                                                            $8.50
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="group group_content-between group_inline">
+                                                    <p class="text_spacing-none text_gray">Subtotal</p>
+                                                    <p class="text_spacing-none text_gray text_sm">$8.50</p>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="group group_content-between group_inline">
+                                                    <p class="text_spacing-none">Subtotal</p>
+                                                    <p class="text_spacing-none">$8.50</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box_light box_outline group_spacing-lg group flex_fill">
+                                            <p class="text_weight-bold text_md">Revisa los datos de tu compra</p>
+                                            <div class="group">
+                                                <div class="group group_inline--lg group_content-between group_spacing-xs">
+                                                    <label for="">
+                                                        Nombre completo
+                                                    </label>
+                                                    <p class="text_gray text_align-right--md">
+                                                        Ana Maria Lopez
+                                                    </p>
+                                                </div>
+                                                <div class="group group_inline--lg group_content-between group_spacing-xs">
+                                                    <label for="">
+                                                        Fecha de nacimiento
+                                                    </label>
+                                                    <p class="text_gray text_align-right--md">
+                                                        01/01/1991
+                                                    </p>
+                                                </div>
+                                                <div class="group group_inline--lg group_content-between group_spacing-xs">
+                                                    <label for="">
+                                                        Correo electrónico
+                                                    </label>
+                                                    <p class="text_gray text_align-right--md">
+                                                        hola@ejemplo.com
+                                                    </p>
+                                                </div>
+                                                <div class="group group_inline--lg group_content-between group_spacing-xs">
+                                                    <label for="">
+                                                        Numero de tarjeta
+                                                    </label>
+                                                    <p class="text_gray text_align-right--md">
+                                                        0000 0000 0000 0000
+                                                    </p>
+                                                </div>
+                                                <div class="group group_inline--lg group_content-between group_spacing-xs">
+                                                    <label for="">
+                                                        Expiración
+                                                    </label>
+                                                    <p class="text_gray text_align-right--md">
+                                                        12/2034
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                    <a href="" class="btn btn_primary-highlight_clic">Pagar ahora</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="tab_content" id="payment_success">
+                                    <div class="box group group_content-center group_align-center">
+                                        <div class="h-max-width-md text_align-center">
+                                            <img src="../images/mobile_verified.png" alt="mobile-verified" width="150" class="h-display-inline-block h-spacing-bottom-md">
+                                            <h3 class="title_primary-highlight_clic title_sm title_align-center title_spacing-lg title_weight-bold">
+                                                ¡Ya tienes tu plan CLIC Health!
+                                            </h3>
+                                            <p class="text_gray text_align-center">
+                                                Gracias por tu compra, pronto recibirás un correo electrónico con los siguientes pasos para que puedas hacer uso de tus beneficios CLIC Health.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_overlay popup_close"></div>
+    </div>
 
     <!-- preloader -->
     <script src="../js/pre_min.js" defer></script>

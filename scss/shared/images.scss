@@ -44,7 +44,7 @@ $profile-font: var(--profile-font);
 	}
 }
 .profile img {
-	@include corner(100%);
+	@include corner(inherit);
 	width: 100%;
 	overflow: hidden;
 	height: 100%;
