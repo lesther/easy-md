@@ -28,6 +28,9 @@
     .divider_vertical-md#{$size} {
         height: 20px
     }
+    .divider_vertical-column#{$size} {
+        height: auto
+    }
 }
 
 // Generate

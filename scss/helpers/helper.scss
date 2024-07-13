@@ -7,6 +7,9 @@
 		text-decoration: underline;
 	}
 }
+.h-text-line-through {
+	text-decoration: line-through
+}
 
 // transition
 .h-transition-03 {
@@ -551,6 +554,9 @@
 	}
 	.h-max-width-sm#{$size} {
 		max-width: 200px;
+	}
+	.h-max-width-sm-1#{$size} {
+		max-width: 250px;
 	}
 	.h-max-width-sm-1#{$size} {
 		max-width: 300px;

@@ -65,6 +65,8 @@
 .popup_container {
 	display: none;
 }
+.popup_success--active .popup_success,
+.popup_login--active .popup_login,
 .popup_cart--active .popup_cart,
 .popup_plans--active .popup_plans,
 .popup_new-affiliate-remove--active .popup_new-affiliate-remove,

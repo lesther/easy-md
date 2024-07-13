@@ -67,3 +67,31 @@
 .active .icon_group-btn {
     background-color: $primary-color--accent;
 }
+.icon_fav:hover,
+a.icon_fav:hover,
+a.icon_fav {
+    color: $danger-color;
+}
+.icon_fav:hover {
+    @include transform(scale(1.3));
+}
+.icon_fav {
+    background-color: $light-color;
+    @include width-height(40px, 40px);
+    @include corner(100%);
+    @include material-icons;
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+}
+.icon_fav:before {
+    content: "\e87e";
+    @include position(absolute, 0, 0, 0, 0, 20px, 20px);
+    margin: auto;
+}
+.icon_fav-bottom-right {
+    @include position(absolute, null, 0, null, 0, 40px, 40px);
+}
+.active.icon_fav-light:before {
+    content: "\e87d";
+}

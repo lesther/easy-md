@@ -57,6 +57,23 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("panel_date-card--active panel_active");
   });
 
+  //calendar
+  $(".panel_calendar-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").addClass("panel_section--active panel_section-active");
+  });
+
+  $(".calendar_body-days_number").click(function(e) {
+    e.preventDefault();
+    $(".calendar_body-days_number").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(".clean_selected").click(function(e) {
+    e.preventDefault();
+    $(".calendar_body-days_number").removeClass("active");
+  });
+
   //popup
   $(".popup_personal-info-toggle").click(function(e) {
     e.preventDefault();
@@ -98,6 +115,16 @@ $(document).ready(function() {
     $("#body_wrapper").toggleClass("popup_cart--active popup_active");
   });
 
+  $(".popup_login-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_login--active popup_active");
+  });
+
+  $(".popup_success-toggle").click(function(e) {
+    e.preventDefault();
+    $("#body_wrapper").toggleClass("popup_success--active popup_active");
+  });
+
   // close
   $(".panel_close, .panel_cancel").click(function(e) {
     e.preventDefault();
@@ -109,6 +136,12 @@ $(document).ready(function() {
     e.preventDefault();
 
     $("#body_wrapper").removeClass();
+  });
+
+  //fav
+  $(".icon_fav").click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
   });
 });
 

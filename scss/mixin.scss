@@ -21,6 +21,11 @@
 		@content;
 	}
 }
+@mixin lg-1 {
+	@media (min-width: #{$screen-lg-1}) {
+		@content;
+	}
+}
 
 @mixin xl {
 	@media (min-width: #{$screen-xl}) {

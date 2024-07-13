@@ -169,6 +169,7 @@
         right: 0;
         padding: 10px;
         background-color: $light-color;
+        z-index: 2;
     }
     .btn_new-consultation--flat {
         padding: 0;
@@ -208,6 +209,9 @@
     #body_wrapper {
         padding-bottom: 50px;
     }
+    #body_wrapper.h-inner-spacing-none {
+        padding-bottom: 0;
+    }
 }
 
 //popup plans
@@ -246,4 +250,174 @@
 //box soft clic
 .box_primary-accent_clic {
     background-color: rgba($color: $primary-color--accent_clic, $alpha: 0.4);
+}
+
+//calendar
+.calendar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.calendar_header {
+    @extend .group;
+    @extend .group_inline;
+    @extend .group_align-center;
+    @extend .group_content-center;
+}
+.calendar_header-nav {
+    color: $primary-color;
+    @extend .btn_circle-sm;
+    @extend .btn_transparent;
+    font-size: 20px;
+}
+a.calendar_header-nav:hover {
+    color: $primary-color--highlight !important;
+}
+//days
+.calendar_body-name,
+.calendar_body-days {
+    text-transform: uppercase;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include lg {
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    @include lg-1 {
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
+.calendar_body-name {
+    margin-top: 10px;
+    @extend .text_xs;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    height: 30px;
+    font-weight: bold;
+}
+.calendar_body-days {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    @extend .text_sm;
+}
+.calendar_body-days > * {
+    @include corner(100%);
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color: $gray-text-color;
+    position: relative;
+}
+
+.calendar_body-days_number {
+    background-color: rgba($color: $primary-color--highlight, $alpha: 0.1);
+    color: $primary-color--highlight;
+    font-weight: bold;
+}
+.calendar_body-days_number.active,
+.calendar_body-days_number.selected,
+.calendar_body-days_number:hover,
+a.calendar_body-days_number:hover {
+    background-color: $primary-color--highlight;
+    color: $light-color;
+}
+.calendar_body-days_number.today:before {
+    content: "";
+    @include position(absolute, null, 4px, 0, 0, 4px, 4px);
+    background-color: $primary-color--highlight;
+    margin: auto;
+    @include corner(100%);
+    @include transition(0.3s);
+}
+.calendar_body-days_number.selected.today:before,
+a.calendar_body-days_number.today:hover:before {
+    background-color: $light-color;
+}
+
+//containers
+.box_calendar {
+    @extend .box_light;
+    border: 1px solid $gray-border-color;
+    @include lg {
+        @include shadow(0px 0px 50px #00000029);
+        @include position(absolute, 0, null, null, 0, auto, auto);
+        border-color: transparent;
+    }
+    z-index: 1;
+}
+.box_calendar-agend {
+    position: relative;
+    @extend .group;
+    @include lg {
+        @include transition(0.3s);
+        // padding-right: 200px;
+    }
+}
+.box_calendar-hours {
+    @extend .group;
+    @extend .group_spacing-xs;
+    @include lg {
+        @include position(absolute, 20px, null, null null, 20px, 0, calc(100% - 40px));
+        overflow: hidden;
+        @include transition(0.3s);
+    }
+}
+//active
+@include lg {
+    .panel_calendar {
+        position: initial;
+    }
+    .panel_calendar .panel_section {
+        @include transform(initial)
+    }
+    .panel_section-active .box_calendar-hours {
+        width: calc(200px - 30px);
+    }
+    .panel_section-active .box_calendar-agend {
+        padding-right: 200px;
+    }
+}
+
+//panel
+.box_hour-container {
+    position: relative;
+}
+.box_hour {
+    @extend .box_highlight-primary-highlight;
+    @extend .box_sm;
+    @extend .group;
+    @extend .group_spacing-xxs;
+    @extend .flex_fill;
+}
+.box_hour-checkbox {
+    display: block;
+}
+.box_hour-checkbox.inactive input:checked ~ .box_hour-checkbox_number,
+.box_hour-checkbox.inactive .box_hour-checkbox_number  {
+    background-color: transparent;
+    @include opacity(40);
+    pointer-events: none;
+}
+.box_hour-checkbox input {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.box_hour-checkbox_number {
+    @extend .btn_light;
+    @extend .btn_outline-primary-highlight;
+    @extend .btn_hover-primary-highlight;
+    @extend .btn_block;
+    cursor: pointer;
+}
+.box_hour-checkbox input:checked ~ .box_hour-checkbox_number {
+    color: $light-color;
+    background-color: $primary-color--highlight;
 }

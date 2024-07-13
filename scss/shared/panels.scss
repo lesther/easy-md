@@ -66,6 +66,9 @@
 .panel_active.panel_section-active .panel_section {
     @include transform(translateX(100%));
 }
+.panel_section-active *[class*="h-z"]{
+    z-index: initial;
+}
 
 //close
 .popup_close,

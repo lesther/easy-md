@@ -125,6 +125,9 @@
     .group_full-width#{$size} {
         max-width: 100%;
     }
+    .group_xxs#{$size} {
+        max-width: 250px;
+    }
     .group_xs#{$size} {
         max-width: 300px;
     }
