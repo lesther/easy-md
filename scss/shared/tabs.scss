@@ -90,6 +90,69 @@
     color: $primary-color;
     background-color: $lighter-color;
 }
+//mobile
+@include only-mobile {
+    .tab {
+        overflow: hidden;
+    }
+    .tab_head {
+        overflow: initial;
+    }
+    .tab_head-container--steps.tab_btn-oval_container {
+        margin: 0;
+        position: relative;
+        max-width: 100%;
+        overflow: initial;
+        background-color: transparent;
+        justify-content: center;
+    }
+    .tab_head-container--steps .tab_btn--active {
+        @include corner(30px);
+    }
+    .tab_head-container--steps .tab_btn {
+        @include transition(0s);
+    }
+    .tab_head-container--steps .tab_btn:not(.tab_btn--active) {
+        padding: 0;
+        @include position(absolute, 0, null, 0, null, 0, 0);
+        border: 0;
+        font-size: 0;
+    }
+    .tab_head-container--steps .tab_btn--active + .tab_btn {
+        visibility: visible;
+        @include opacity(100);
+        color: transparent;
+        right: 0;
+        left: auto;
+        display: block;
+    }
+    .tab_head-container--steps .tab_btn:before {
+        content: "\e5cb";
+        @include material-icons;
+        @include position(absolute, 15px, null, 0, auto, 30px, 30px);
+        background-color: $primary-color--highlight;
+        @include transition(0s);
+        @include corner(100%);
+        color: $light-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+    .tab_head-container--steps .tab_btn--active:before {
+        content: none;
+    }
+    .tab_head-container--steps .tab_btn--active ~ .tab_btn:before {
+        content: none;
+    }
+    .tab_head-container--steps .tab_btn.tab_btn--active + .tab_btn:before {
+        content: "\e5e1";
+        @include position(absolute, 15px, null, auto, 0, 30px, 30px);
+    }
+    .tab_head-container--steps .tab_btn--active + .tab_btn:hover:before {
+        background-color: $primary-color--accent;
+    }
+}
 ///container oval
 .tab_btn-oval_container {
     @extend .group;
