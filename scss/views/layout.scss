@@ -93,6 +93,17 @@
         color: $primary-color;
     }
 }
+.slider_nav-lg {
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    align-items: center;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background: transparent;
+    color: $primary-color;
+}
 .slider_nav-next {
     @extend .slider_nav;
     right: 0px;
