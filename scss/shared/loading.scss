@@ -159,7 +159,7 @@ body.loading {
 .preloader_wrap-section {
     @extend .preloader_wrap;
     position: absolute;
-    z-index: 999;
+    z-index: 10;
     overflow: hidden;
 }
 .preloader_wrap-transparent {

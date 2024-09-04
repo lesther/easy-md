@@ -239,12 +239,24 @@
 }
 .btn_fixed-right {
 	@include position(fixed, 90px, null, null, 25px,  null, null);
-	z-index: 2;
+	z-index: 999;
 	@include md {
 		right: 55px;
 	}
 	@include lg {
 		top: 150px;
+	}
+}
+//z-index fixes
+.popup_active,
+.panel_active,
+.menu_active {
+	.btn_fixed
+	.btn_fixed-bottom-right,
+	.btn_fixed-bottom-left,
+	.btn_fixed-left,
+	.btn_fixed-right {
+		z-index: 0;
 	}
 }
 //group
